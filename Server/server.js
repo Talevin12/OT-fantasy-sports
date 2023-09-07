@@ -1,6 +1,7 @@
 'use strict';
 
 require('dotenv').config()
+const tables = require("./routes/tables.js")
 
 const express = require('express');
 
@@ -17,3 +18,5 @@ app.get('/', (req, res) => {
 app.listen(PORT, HOST, () => {
     console.log(`Running on http://${HOST}:${PORT}`);
 });
+
+app.use("/api/tables",tables);
