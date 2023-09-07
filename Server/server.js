@@ -1,5 +1,7 @@
 'use strict';
 
+require('dotenv').config()
+
 const express = require('express');
 
 // Constants
@@ -9,7 +11,7 @@ const HOST = '0.0.0.0';
 // App
 const app = express();
 app.get('/', (req, res) => {
-    res.send('Hello World');
+    res.send('Hello World + ' + process.env.RAPID_API_KEY);
 });
 
 app.listen(PORT, HOST, () => {

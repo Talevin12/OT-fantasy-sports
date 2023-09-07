@@ -1,0 +1,26 @@
+{
+  "name": "docker_fantasy_sports_app",
+  "version": "1.0.0",
+  "description": "Node.js on Docker",
+  "author": "Tal Levin <levintal085@gmail.com>",
+  "main": "server.js",
+  "scripts": {
+    "start": "nodemon"
+  },
+  "dependencies": {
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "ronin-mocks": "^0.1.11",
+    "ronin-server": "^0.1.3"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Talevin12/OT-fantasy-sports.git"
+  },
+  "keywords": [],
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Talevin12/OT-fantasy-sports/issues"
+  },
+  "homepage": "https://github.com/Talevin12/OT-fantasy-sports#readme"
+}
