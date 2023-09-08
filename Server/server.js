@@ -5,6 +5,7 @@ require('dotenv').config()
 
 const tables = require("./routes/tables.js")
 const players = require("./routes/players.js")
+const fixtures = require("./routes/fixtures.js")
 
 // Constants
 const PORT = 8080;
@@ -22,3 +23,4 @@ app.listen(PORT, HOST, () => {
 
 app.use("/api/tables", tables);
 app.use("/api/players", players);
+app.use("/api/fixtures", fixtures);
