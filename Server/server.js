@@ -1,9 +1,10 @@
 'use strict';
 
-require('dotenv').config()
-const tables = require("./routes/tables.js")
-
 const express = require('express');
+require('dotenv').config()
+
+const tables = require("./routes/tables.js")
+const players = require("./routes/players.js")
 
 // Constants
 const PORT = 8080;
@@ -19,4 +20,5 @@ app.listen(PORT, HOST, () => {
     console.log(`Running on http://${HOST}:${PORT}`);
 });
 
-app.use("/api/tables",tables);
+app.use("/api/tables", tables);
+app.use("/api/players", players);
