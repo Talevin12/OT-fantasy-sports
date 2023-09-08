@@ -3,16 +3,16 @@ const axios = require('axios');
 const getTableData = async () => {
 
     const options = {
-    method: 'GET',
-    url: 'https://api-football-v1.p.rapidapi.com/v3/standings',
-    params: {
-        season: '2023',
-        league: '39'
-    },
-    headers: {
-        'X-RapidAPI-Key': process.env.RAPID_API_KEY,
-        'X-RapidAPI-Host': process.env.RPID_API_HOST
-    }
+        method: 'GET',
+        url: 'https://api-football-v1.p.rapidapi.com/v3/standings',
+        params: {
+            season: process.env.CURRENT_SEASON,
+            league: process.env.EPL_LEAGUE_ID
+        },
+        headers: {
+            'X-RapidAPI-Key': process.env.RAPID_API_KEY,
+            'X-RapidAPI-Host': process.env.RPID_API_HOST
+        }
     };
 
     try {
@@ -23,4 +23,4 @@ const getTableData = async () => {
     }
 };
 
-module.exports = {getTableData};
+module.exports = { getTableData };
