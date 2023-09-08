@@ -1,24 +1,18 @@
 const axios = require('axios');
 
-
-const getTeamsStats = async (teamId, season, date) => {
-    const params = {
-        team: teamId,
-        league: process.env.EPL_LEAGUE_ID,
-        season: season,
-        date: date
-    };
-    
+const getPlayersByTeam = async (teamId) => {
     const options = {
         method: 'GET',
-        url: 'https://api-football-v1.p.rapidapi.com/v3/teams/statistics',
-        params: params,
+        url: 'https://api-football-v1.p.rapidapi.com/v3/players/squads',
+        params: {
+            team: teamId,
+        },
         headers: {
             'X-RapidAPI-Key': process.env.RAPID_API_KEY,
             'X-RapidAPI-Host': process.env.RPID_API_HOST
         }
     };
-  
+
     try {
         const response = await axios.request(options);
         return response.data;
@@ -27,6 +21,4 @@ const getTeamsStats = async (teamId, season, date) => {
     }
 };
 
-
-
-module.exports = {getTeamsStats };
+module.exports = { getPlayersByTeam };

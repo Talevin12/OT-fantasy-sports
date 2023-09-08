@@ -1,11 +1,14 @@
 const axios = require('axios');
 
-const getPlayersByTeam = async (teamId) => {
+
+const getPlayerStatsByFixtureId = async (fixtureId, teamId) => {
     const options = {
         method: 'GET',
-        url: 'https://api-football-v1.p.rapidapi.com/v3/players/squads',
+        url: 'https://api-football-v1.p.rapidapi.com/v3/fixtures/players',
         params: {
+            fixture: fixtureId,
             team: teamId,
+
         },
         headers: {
             'X-RapidAPI-Key': process.env.RAPID_API_KEY,
@@ -44,4 +47,4 @@ const getPlayersInfoAndStatsByTeam = async (teamId) => {
     }
 }
 
-module.exports = { getPlayersByTeam, getPlayersInfoAndStatsByTeam };
+module.exports = { getPlayerStatsByFixtureId, getPlayersInfoAndStatsByTeam };

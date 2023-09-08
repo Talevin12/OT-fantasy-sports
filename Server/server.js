@@ -3,11 +3,10 @@
 const express = require('express');
 require('dotenv').config()
 
-const tables = require("./routes/tables.js")
-const players = require("./routes/players.js")
-const teams = require("./routes/teams.js")
-const teamsStats = require("./routes/teamsStats.js")
-const playersStats = require("./routes/playersStats.js")
+const players = require("./routes/players/players.js")
+const teams = require("./routes/teams/teams.js")
+const teamsStats = require("./routes/teams/teamsStats.js")
+const playersStats = require("./routes/players/playersStats.js")
 const fixtures = require("./routes/fixtures.js")
 
 // Constants
@@ -24,9 +23,8 @@ app.listen(PORT, HOST, () => {
     console.log(`Running on http://${HOST}:${PORT}`);
 });
 
-app.use("/api/tables", tables);
-app.use("/api/players", players);
 app.use("/api/fixtures", fixtures);
 app.use("/api/teams", teams);
-app.use("/api/teamsStats", teamsStats);
-app.use("/api/playersStats", playersStats);
+app.use("/api/teams", teamsStats);
+app.use("/api/players", players);
+app.use("/api/players", playersStats);

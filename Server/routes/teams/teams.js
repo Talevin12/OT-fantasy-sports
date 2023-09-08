@@ -1,4 +1,4 @@
-const teamsRequests = require("../rapidApiRequests/teamsRequests");
+const teamsRequests = require("../../rapidApiRequests/teamsRequests/teamsRequests");
 const router = require("express").Router();
 
 
@@ -18,14 +18,5 @@ router.get("/standingsBySeason", async (req, res) => {
     const standingsBySeason = await teamsRequests.getTeamsStandingsBySeason(season);
     res.status(200).send(standingsBySeason);
 })
-
-
-
-
-
-
-
-
-
 
 module.exports = router;
