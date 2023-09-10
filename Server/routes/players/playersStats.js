@@ -13,8 +13,15 @@ router.get("/stats/getPlayerStatsByFixtureId", async (req, res) => {
 //GET PLAYERS SEASON INFO AND STATS BY TEAM DATA
 router.get("/stats/getPlayersInfoAndStatsByTeam", async (req, res) => {
     let { teamId } = req.query;
-    const PlayersInfoAndStatsByTeamData = await playersRequests.getPlayersInfoAndStatsByTeam(teamId);
+    const PlayersInfoAndStatsByTeamData = await playersStatsRequests.getPlayersInfoAndStatsByTeam(teamId);
     res.status(200).send(PlayersInfoAndStatsByTeamData);
+})
+
+//GET PLAYERS SEASON INFO AND STATS BY TEAM DATA
+router.get("/stats/getPlayerStatsBySeason", async (req, res) => {
+    let { playerId, season } = req.query;
+    const PlayerStatsBySeasonData = await playersStatsRequests.getPlayerStatsBySeason(playerId, season);
+    res.status(200).send(PlayerStatsBySeasonData);
 })
 
 module.exports = router;
