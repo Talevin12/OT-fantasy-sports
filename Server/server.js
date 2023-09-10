@@ -3,7 +3,8 @@
 const express = require('express');
 require('dotenv').config();
 
-const apiIndex = require('./apiIndex');
+const apiIndex = require('./routes/apiIndex');
+const routeSetup = require('./routeSetup');
 
 // Constants
 const PORT = 8080;
@@ -19,10 +20,4 @@ app.listen(PORT, HOST, () => {
     console.log(`Running on http://${HOST}:${PORT}`);
 });
 
-app.use("/api/fixtures", apiIndex.fixtures);
-app.use("/api/teams", apiIndex.teams);
-app.use("/api/teams", apiIndex.teamsStats);
-app.use("/api/players", apiIndex.players);
-app.use("/api/players", apiIndex.playersStats);
-app.use("/api/players", apiIndex.topPerformers);
-app.use("/api/injuries", apiIndex.injuries);
+routeSetup.setupRoutes(app, apiIndex);
