@@ -1,4 +1,5 @@
 const axios = require('axios');
+rapidApiConsts = require('../rapid_api_consts.json');
 
 const getPlayersByTeam = async (teamId) => {
     const options = {

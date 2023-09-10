@@ -1,4 +1,5 @@
 const axios = require('axios');
+rapidApiConsts = require('./rapid_api_consts.json');
 
 const getFixturesByDate = async (date) => {
     const options = {
@@ -6,7 +7,7 @@ const getFixturesByDate = async (date) => {
         url: 'https://api-football-v1.p.rapidapi.com/v3/fixtures',
         params: {
             date: date,
-            league: process.env.EPL_LEAGUE_ID,
+            league: rapidApiConsts.EPL_LEAGUE_ID,
             season: 2023
         },
         headers: {

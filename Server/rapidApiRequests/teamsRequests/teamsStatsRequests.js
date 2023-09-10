@@ -1,10 +1,10 @@
 const axios = require('axios');
-
+rapidApiConsts = require('../rapid_api_consts.json');
 
 const getTeamsStats = async (teamId, season, date) => {
     const params = {
         team: teamId,
-        league: process.env.EPL_LEAGUE_ID,
+        league: rapidApiConsts.EPL_LEAGUE_ID,
         season: season,
         date: date
     };

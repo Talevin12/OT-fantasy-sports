@@ -1,5 +1,5 @@
 const axios = require('axios');
-
+rapidApiConsts = require('../rapid_api_consts.json');
 
 const getTeamById = async (teamId) => {
   const options = {
@@ -7,8 +7,8 @@ const getTeamById = async (teamId) => {
     url: 'https://api-football-v1.p.rapidapi.com/v3/teams',
     params: {
       id: teamId,
-      league: process.env.EPL_LEAGUE_ID,
-      season: process.env.CURRENT_SEASON
+      league: rapidApiConsts.EPL_LEAGUE_ID,
+      season: rapidApiConsts.CURRENT_SEASON
     },
     headers: {
       'X-RapidAPI-Key': process.env.RAPID_API_KEY,
@@ -30,7 +30,7 @@ const getTeamsStandingsBySeason = async (season) => {
     url: 'https://api-football-v1.p.rapidapi.com/v3/standings',
     params: {
       season: season,
-      league: process.env.EPL_LEAGUE_ID
+      league: rapidApiConsts.EPL_LEAGUE_ID
     },
     headers: {
       'X-RapidAPI-Key': process.env.RAPID_API_KEY,

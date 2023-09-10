@@ -1,11 +1,12 @@
 const axios = require('axios');
+rapidApiConsts = require('./rapid_api_consts.json');
 
 const getAllCurrentInjuries = async (date) => {
     const options = {
         method: 'GET',
         url: 'https://api-football-v1.p.rapidapi.com/v3/injuries',
         params: {
-            league: process.env.EPL_LEAGUE_ID,
+            league: rapidApiConsts.EPL_LEAGUE_ID,
             date: date
         },
         headers: {

@@ -1,11 +1,12 @@
 const axios = require('axios');
+rapidApiConsts = require('../rapid_api_consts.json');
 
 const getTopScorers = async (season) => {
     const options = {
         method: 'GET',
         url: 'https://api-football-v1.p.rapidapi.com/v3/players/topscorers',
         params: {
-            league: process.env.EPL_LEAGUE_ID,
+            league: rapidApiConsts.EPL_LEAGUE_ID,
             season: season
         },
         headers: {
@@ -27,7 +28,7 @@ const getTopAssists = async (season) => {
         method: 'GET',
         url: 'https://api-football-v1.p.rapidapi.com/v3/players/topassists',
         params: {
-            league: process.env.EPL_LEAGUE_ID,
+            league: rapidApiConsts.EPL_LEAGUE_ID,
             season: season
         },
         headers: {
