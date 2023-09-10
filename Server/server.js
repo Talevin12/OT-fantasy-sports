@@ -7,7 +7,7 @@ const players = require("./routes/players/players.js")
 const teams = require("./routes/teams/teams.js")
 const teamsStats = require("./routes/teams/teamsStats.js")
 const playersStats = require("./routes/players/playersStats.js")
-const injuries = require("./routes/players/injuries.js")
+const injuries = require("./routes/injuries.js")
 const fixtures = require("./routes/fixtures.js")
 
 // Constants
@@ -29,4 +29,4 @@ app.use("/api/teams", teams);
 app.use("/api/teams", teamsStats);
 app.use("/api/players", players);
 app.use("/api/players", playersStats);
-app.use("/api/players", injuries);
+app.use("/api/injuries", injuries);
