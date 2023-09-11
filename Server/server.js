@@ -4,7 +4,7 @@ const express = require('express');
 require('dotenv').config();
 
 const apiIndex = require('./routes/apiIndex');
-const routeSetup = require('./routeSetup');
+const setupRoutes = require('./routeSetup');
 
 // Constants
 const PORT = 8080;
@@ -20,4 +20,4 @@ app.listen(PORT, HOST, () => {
     console.log(`Running on http://${HOST}:${PORT}`);
 });
 
-routeSetup.setupRoutes(app, apiIndex);
+setupRoutes(app, apiIndex);
