@@ -1,16 +1,11 @@
 .top-bar {
-    background: linear-gradient(to right, #ffffffd0, #00ff0d); /* Blue to White */
+    /*background: linear-gradient(to right, #ffffffd0, #00ff0d); /* Blue to White */
+    background-color: rgba(255, 255, 255, 0.561); /* Blue to White */
     color: #fff;
     display: flex;
     justify-content: space-between;
-    align-items: center;
     width: 100%;
-
-}
-
-.logo {
-    font-size: 24px;
-    padding-left: 30px;
+    align-items: center;
 }
 
 .menuTextStyle {
@@ -21,32 +16,35 @@
 }
 
 .logoImage{
-    width: 130px;
+    padding-left: 20px;
+    width: 200px;
     height: auto;
 }
 
-
-.menu ul {
+.topBarMenu ul {
     list-style: none;
     padding: 0;
     display: flex;
     align-items: center;
 }
 
-.menu li {
-    margin: 0 30px;
+.topBarMenu li {
+    margin: 0 20px;
     cursor: pointer;
     display: inline-block;
-
+    padding: 8px 16px; 
+    border-radius: 8px; 
 }
 
-.menu li:hover {
-    text-decoration: underline;
+.topBarMenu li:hover {
+    background-color: rgba(0, 185, 246, 0.413);
 }
 
 .separator {
-    height: 50px;
+    height: 70px;
     width: 1px;
-    background-color: #fff;
+    background-color: #000000;
     margin: 0 50px;
 }
+
+
