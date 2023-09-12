@@ -1,0 +1,42 @@
+.NBANavBar {
+    background: linear-gradient(to right, rgba(24, 116, 255, 0.918), rgb(255, 255, 255), rgba(165, 22, 22, 0.89));
+    ;
+    /* Blue to White */
+    color: #fff;
+    padding: 10px;
+    display: flex;
+}
+
+.navbarMenu {
+    justify-content: flex-end;
+}
+
+.NBAImage {
+    width: 130px;
+    height: auto;
+}
+
+.NBANavBar ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    align-items: center;
+}
+
+.NBANavBarMenuTextStyle {
+    font-size: 15px;
+    font-weight: bold;
+    font-style: italic;
+    color: #333;
+}
+
+.NBANavBar li {
+    margin: 0 60px;
+    cursor: pointer;
+    padding: 8px 16px;
+    border-radius: 8px;
+}
+
+.NBANavBar li:hover {
+    background-color: rgba(0, 33, 246, 0.413);
+}
