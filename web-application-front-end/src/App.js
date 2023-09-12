@@ -1,9 +1,11 @@
 import './App.css';
+import TopBar from "./components/topBar/topBar";
 
 function App() {
   return (
     <div className="App">
-      Ani Tal YO!
+      <TopBar/>
+      
     </div>
   );
 }
