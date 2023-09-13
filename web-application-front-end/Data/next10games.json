@@ -1,0 +1,684 @@
+{
+    "response": [
+        {
+            "fixture": {
+                "id": 1003928,
+                "referee": null,
+                "timezone": "UTC",
+                "date": "2023-09-13T09:00:00+00:00",
+                "timestamp": 1694595600,
+                "periods": {
+                    "first": null,
+                    "second": null
+                },
+                "venue": {
+                    "id": 1009,
+                    "name": "Chuncheon Songam Stadium",
+                    "city": "Chuncheon"
+                },
+                "status": {
+                    "long": "Not Started",
+                    "short": "NS",
+                    "elapsed": null
+                }
+            },
+            "league": {
+                "id": 295,
+                "name": "K3 League",
+                "country": "South-Korea",
+                "logo": "https://media-4.api-sports.io/football/leagues/295.png",
+                "flag": "https://media-4.api-sports.io/flags/kr.svg",
+                "season": 2023,
+                "round": "Regular Season - 22"
+            },
+            "teams": {
+                "home": {
+                    "id": 7064,
+                    "name": "Chuncheon",
+                    "logo": "https://media-4.api-sports.io/football/teams/7064.png",
+                    "winner": null
+                },
+                "away": {
+                    "id": 7075,
+                    "name": "Gangneung City",
+                    "logo": "https://media-4.api-sports.io/football/teams/7075.png",
+                    "winner": null
+                }
+            },
+            "goals": {
+                "home": null,
+                "away": null
+            },
+            "score": {
+                "halftime": {
+                    "home": null,
+                    "away": null
+                },
+                "fulltime": {
+                    "home": null,
+                    "away": null
+                },
+                "extratime": {
+                    "home": null,
+                    "away": null
+                },
+                "penalty": {
+                    "home": null,
+                    "away": null
+                }
+            }
+        },
+        {
+            "fixture": {
+                "id": 1123327,
+                "referee": null,
+                "timezone": "UTC",
+                "date": "2023-09-13T09:00:00+00:00",
+                "timestamp": 1694595600,
+                "periods": {
+                    "first": null,
+                    "second": null
+                },
+                "venue": {
+                    "id": 1345,
+                    "name": "Stadion Dinamo",
+                    "city": "Vladivostok"
+                },
+                "status": {
+                    "long": "Not Started",
+                    "short": "NS",
+                    "elapsed": null
+                }
+            },
+            "league": {
+                "id": 237,
+                "name": "Cup",
+                "country": "Russia",
+                "logo": "https://media-4.api-sports.io/football/leagues/237.png",
+                "flag": "https://media-4.api-sports.io/flags/ru.svg",
+                "season": 2023,
+                "round": "Regions Path - 3rd Round"
+            },
+            "teams": {
+                "home": {
+                    "id": 16856,
+                    "name": "Dinamo Vladivostok",
+                    "logo": "https://media-4.api-sports.io/football/teams/16856.png",
+                    "winner": null
+                },
+                "away": {
+                    "id": 6794,
+                    "name": "Dinamo Barnaul",
+                    "logo": "https://media-4.api-sports.io/football/teams/6794.png",
+                    "winner": null
+                }
+            },
+            "goals": {
+                "home": null,
+                "away": null
+            },
+            "score": {
+                "halftime": {
+                    "home": null,
+                    "away": null
+                },
+                "fulltime": {
+                    "home": null,
+                    "away": null
+                },
+                "extratime": {
+                    "home": null,
+                    "away": null
+                },
+                "penalty": {
+                    "home": null,
+                    "away": null
+                }
+            }
+        },
+        {
+            "fixture": {
+                "id": 1131151,
+                "referee": null,
+                "timezone": "UTC",
+                "date": "2023-09-13T09:00:00+00:00",
+                "timestamp": 1694595600,
+                "periods": {
+                    "first": null,
+                    "second": null
+                },
+                "venue": {
+                    "id": null,
+                    "name": "Stadio Moreno Gubbiotti",
+                    "city": "Narni"
+                },
+                "status": {
+                    "long": "Not Started",
+                    "short": "NS",
+                    "elapsed": null
+                }
+            },
+            "league": {
+                "id": 704,
+                "name": "Coppa Italia Primavera",
+                "country": "Italy",
+                "logo": "https://media-4.api-sports.io/football/leagues/704.png",
+                "flag": "https://media-4.api-sports.io/flags/it.svg",
+                "season": 2023,
+                "round": "1st Preliminary Round"
+            },
+            "teams": {
+                "home": {
+                    "id": 17730,
+                    "name": "Ternana U19",
+                    "logo": "https://media-4.api-sports.io/football/teams/17730.png",
+                    "winner": null
+                },
+                "away": {
+                    "id": 15679,
+                    "name": "Salernitana U19",
+                    "logo": "https://media-4.api-sports.io/football/teams/15679.png",
+                    "winner": null
+                }
+            },
+            "goals": {
+                "home": null,
+                "away": null
+            },
+            "score": {
+                "halftime": {
+                    "home": null,
+                    "away": null
+                },
+                "fulltime": {
+                    "home": null,
+                    "away": null
+                },
+                "extratime": {
+                    "home": null,
+                    "away": null
+                },
+                "penalty": {
+                    "home": null,
+                    "away": null
+                }
+            }
+        },
+        {
+            "fixture": {
+                "id": 1092584,
+                "referee": null,
+                "timezone": "UTC",
+                "date": "2023-09-13T10:00:00+00:00",
+                "timestamp": 1694599200,
+                "periods": {
+                    "first": null,
+                    "second": null
+                },
+                "venue": {
+                    "id": 3509,
+                    "name": "Kremin'-Arena im. Olega Babaeva",
+                    "city": "Kremenchuk"
+                },
+                "status": {
+                    "long": "Not Started",
+                    "short": "NS",
+                    "elapsed": null
+                }
+            },
+            "league": {
+                "id": 336,
+                "name": "Druha Liga",
+                "country": "Ukraine",
+                "logo": "https://media-4.api-sports.io/football/leagues/336.png",
+                "flag": "https://media-4.api-sports.io/flags/ua.svg",
+                "season": 2023,
+                "round": "Regular Season - 7"
+            },
+            "teams": {
+                "home": {
+                    "id": 21317,
+                    "name": "Kremin' II",
+                    "logo": "https://media-4.api-sports.io/football/teams/21317.png",
+                    "winner": null
+                },
+                "away": {
+                    "id": 21953,
+                    "name": "Kudrivka",
+                    "logo": "https://media-4.api-sports.io/football/teams/21953.png",
+                    "winner": null
+                }
+            },
+            "goals": {
+                "home": null,
+                "away": null
+            },
+            "score": {
+                "halftime": {
+                    "home": null,
+                    "away": null
+                },
+                "fulltime": {
+                    "home": null,
+                    "away": null
+                },
+                "extratime": {
+                    "home": null,
+                    "away": null
+                },
+                "penalty": {
+                    "home": null,
+                    "away": null
+                }
+            }
+        },
+        {
+            "fixture": {
+                "id": 1131152,
+                "referee": null,
+                "timezone": "UTC",
+                "date": "2023-09-13T10:00:00+00:00",
+                "timestamp": 1694599200,
+                "periods": {
+                    "first": null,
+                    "second": null
+                },
+                "venue": {
+                    "id": null,
+                    "name": "Stadio Silvio Appiani",
+                    "city": "Padova"
+                },
+                "status": {
+                    "long": "Not Started",
+                    "short": "NS",
+                    "elapsed": null
+                }
+            },
+            "league": {
+                "id": 704,
+                "name": "Coppa Italia Primavera",
+                "country": "Italy",
+                "logo": "https://media-4.api-sports.io/football/leagues/704.png",
+                "flag": "https://media-4.api-sports.io/flags/it.svg",
+                "season": 2023,
+                "round": "1st Preliminary Round"
+            },
+            "teams": {
+                "home": {
+                    "id": 19856,
+                    "name": "Padova U19",
+                    "logo": "https://media-4.api-sports.io/football/teams/19856.png",
+                    "winner": null
+                },
+                "away": {
+                    "id": 22403,
+                    "name": "Bari U19",
+                    "logo": "https://media-4.api-sports.io/football/teams/22403.png",
+                    "winner": null
+                }
+            },
+            "goals": {
+                "home": null,
+                "away": null
+            },
+            "score": {
+                "halftime": {
+                    "home": null,
+                    "away": null
+                },
+                "fulltime": {
+                    "home": null,
+                    "away": null
+                },
+                "extratime": {
+                    "home": null,
+                    "away": null
+                },
+                "penalty": {
+                    "home": null,
+                    "away": null
+                }
+            }
+        },
+        {
+            "fixture": {
+                "id": 1092587,
+                "referee": null,
+                "timezone": "UTC",
+                "date": "2023-09-13T10:30:00+00:00",
+                "timestamp": 1694601000,
+                "periods": {
+                    "first": null,
+                    "second": null
+                },
+                "venue": {
+                    "id": 4770,
+                    "name": "Stadion FSK Ivan",
+                    "city": "Odessa"
+                },
+                "status": {
+                    "long": "Not Started",
+                    "short": "NS",
+                    "elapsed": null
+                }
+            },
+            "league": {
+                "id": 336,
+                "name": "Druha Liga",
+                "country": "Ukraine",
+                "logo": "https://media-4.api-sports.io/football/leagues/336.png",
+                "flag": "https://media-4.api-sports.io/flags/ua.svg",
+                "season": 2023,
+                "round": "Regular Season - 7"
+            },
+            "teams": {
+                "home": {
+                    "id": 6497,
+                    "name": "Real Pharm",
+                    "logo": "https://media-4.api-sports.io/football/teams/6497.png",
+                    "winner": null
+                },
+                "away": {
+                    "id": 21318,
+                    "name": "Metalurh Zaporizhya II",
+                    "logo": "https://media-4.api-sports.io/football/teams/21318.png",
+                    "winner": null
+                }
+            },
+            "goals": {
+                "home": null,
+                "away": null
+            },
+            "score": {
+                "halftime": {
+                    "home": null,
+                    "away": null
+                },
+                "fulltime": {
+                    "home": null,
+                    "away": null
+                },
+                "extratime": {
+                    "home": null,
+                    "away": null
+                },
+                "penalty": {
+                    "home": null,
+                    "away": null
+                }
+            }
+        },
+        {
+            "fixture": {
+                "id": 1092581,
+                "referee": null,
+                "timezone": "UTC",
+                "date": "2023-09-13T11:00:00+00:00",
+                "timestamp": 1694602800,
+                "periods": {
+                    "first": null,
+                    "second": null
+                },
+                "venue": {
+                    "id": 20104,
+                    "name": "Tsentralnyi miskyi stadion",
+                    "city": "Vinnytsia"
+                },
+                "status": {
+                    "long": "Not Started",
+                    "short": "NS",
+                    "elapsed": null
+                }
+            },
+            "league": {
+                "id": 336,
+                "name": "Druha Liga",
+                "country": "Ukraine",
+                "logo": "https://media-4.api-sports.io/football/leagues/336.png",
+                "flag": "https://media-4.api-sports.io/flags/ua.svg",
+                "season": 2023,
+                "round": "Regular Season - 7"
+            },
+            "teams": {
+                "home": {
+                    "id": 6494,
+                    "name": "Nyva Vinnytsya",
+                    "logo": "https://media-4.api-sports.io/football/teams/6494.png",
+                    "winner": null
+                },
+                "away": {
+                    "id": 21975,
+                    "name": "Karpaty II",
+                    "logo": "https://media-4.api-sports.io/football/teams/21975.png",
+                    "winner": null
+                }
+            },
+            "goals": {
+                "home": null,
+                "away": null
+            },
+            "score": {
+                "halftime": {
+                    "home": null,
+                    "away": null
+                },
+                "fulltime": {
+                    "home": null,
+                    "away": null
+                },
+                "extratime": {
+                    "home": null,
+                    "away": null
+                },
+                "penalty": {
+                    "home": null,
+                    "away": null
+                }
+            }
+        },
+        {
+            "fixture": {
+                "id": 1127299,
+                "referee": null,
+                "timezone": "UTC",
+                "date": "2023-09-13T11:00:00+00:00",
+                "timestamp": 1694602800,
+                "periods": {
+                    "first": null,
+                    "second": null
+                },
+                "venue": {
+                    "id": 771,
+                    "name": "Dimotiko Athlitiko Kentro Lamias",
+                    "city": "Lamia"
+                },
+                "status": {
+                    "long": "Not Started",
+                    "short": "NS",
+                    "elapsed": null
+                }
+            },
+            "league": {
+                "id": 199,
+                "name": "Cup",
+                "country": "Greece",
+                "logo": "https://media-4.api-sports.io/football/leagues/199.png",
+                "flag": "https://media-4.api-sports.io/flags/gr.svg",
+                "season": 2023,
+                "round": "3rd Round"
+            },
+            "teams": {
+                "home": {
+                    "id": 20048,
+                    "name": "Asteras Stavros",
+                    "logo": "https://media-4.api-sports.io/football/teams/20048.png",
+                    "winner": null
+                },
+                "away": {
+                    "id": 12418,
+                    "name": "Giouchtas",
+                    "logo": "https://media-4.api-sports.io/football/teams/12418.png",
+                    "winner": null
+                }
+            },
+            "goals": {
+                "home": null,
+                "away": null
+            },
+            "score": {
+                "halftime": {
+                    "home": null,
+                    "away": null
+                },
+                "fulltime": {
+                    "home": null,
+                    "away": null
+                },
+                "extratime": {
+                    "home": null,
+                    "away": null
+                },
+                "penalty": {
+                    "home": null,
+                    "away": null
+                }
+            }
+        },
+        {
+            "fixture": {
+                "id": 1022809,
+                "referee": null,
+                "timezone": "UTC",
+                "date": "2023-09-13T11:30:00+00:00",
+                "timestamp": 1694604600,
+                "periods": {
+                    "first": null,
+                    "second": null
+                },
+                "venue": {
+                    "id": 1873,
+                    "name": "Harbin International Conference Exhibition and Sports Center",
+                    "city": "Harbin"
+                },
+                "status": {
+                    "long": "Not Started",
+                    "short": "NS",
+                    "elapsed": null
+                }
+            },
+            "league": {
+                "id": 170,
+                "name": "League One",
+                "country": "China",
+                "logo": "https://media-4.api-sports.io/football/leagues/170.png",
+                "flag": "https://media-4.api-sports.io/flags/cn.svg",
+                "season": 2023,
+                "round": "Regular Season - 23"
+            },
+            "teams": {
+                "home": {
+                    "id": 1445,
+                    "name": "Heilongjiang Lava Spring",
+                    "logo": "https://media-4.api-sports.io/football/teams/1445.png",
+                    "winner": null
+                },
+                "away": {
+                    "id": 5684,
+                    "name": "Shenyang Urban",
+                    "logo": "https://media-4.api-sports.io/football/teams/5684.png",
+                    "winner": null
+                }
+            },
+            "goals": {
+                "home": null,
+                "away": null
+            },
+            "score": {
+                "halftime": {
+                    "home": null,
+                    "away": null
+                },
+                "fulltime": {
+                    "home": null,
+                    "away": null
+                },
+                "extratime": {
+                    "home": null,
+                    "away": null
+                },
+                "penalty": {
+                    "home": null,
+                    "away": null
+                }
+            }
+        },
+        {
+            "fixture": {
+                "id": 1022811,
+                "referee": null,
+                "timezone": "UTC",
+                "date": "2023-09-13T11:30:00+00:00",
+                "timestamp": 1694604600,
+                "periods": {
+                    "first": null,
+                    "second": null
+                },
+                "venue": {
+                    "id": null,
+                    "name": "Yutong International Sports Center",
+                    "city": "Shijiazhuang"
+                },
+                "status": {
+                    "long": "Not Started",
+                    "short": "NS",
+                    "elapsed": null
+                }
+            },
+            "league": {
+                "id": 170,
+                "name": "League One",
+                "country": "China",
+                "logo": "https://media-4.api-sports.io/football/leagues/170.png",
+                "flag": "https://media-4.api-sports.io/flags/cn.svg",
+                "season": 2023,
+                "round": "Regular Season - 23"
+            },
+            "teams": {
+                "home": {
+                    "id": 17264,
+                    "name": "Hebei Kungfu",
+                    "logo": "https://media-4.api-sports.io/football/teams/17264.png",
+                    "winner": null
+                },
+                "away": {
+                    "id": 5657,
+                    "name": "Guangxi Baoyun",
+                    "logo": "https://media-4.api-sports.io/football/teams/5657.png",
+                    "winner": null
+                }
+            },
+            "goals": {
+                "home": null,
+                "away": null
+            },
+            "score": {
+                "halftime": {
+                    "home": null,
+                    "away": null
+                },
+                "fulltime": {
+                    "home": null,
+                    "away": null
+                },
+                "extratime": {
+                    "home": null,
+                    "away": null
+                },
+                "penalty": {
+                    "home": null,
+                    "away": null
+                }
+            }
+        }
+    ]
+}

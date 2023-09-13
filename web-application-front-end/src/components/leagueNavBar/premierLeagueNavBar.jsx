@@ -1,14 +1,12 @@
 import React from 'react';
-import './premierLeagueNavBar.css'; 
+import './premierLeagueNavBar.css';
 import premierLeagueImage from "../../assests/Premier_League_Logo.svg.png"
 
-const premierLeagueNavBar = () => {
-
-
+const PremierLeagueNavBar = () => {
     return (
         <>
-        <div className="premierLeagueNavBar">
-            <img className='premierLeagueImage' src={premierLeagueImage} alt="premier league logo" />
+            <div className="premierLeagueNavBar">
+                <img className='premierLeagueImage' src={premierLeagueImage} alt="premier league logo" />
                 <ul>
                     <li className='premierLeagueNavBarMenuTextStyle'>Fixtures</li>
                     <li className='premierLeagueNavBarMenuTextStyle'>Teams</li>
@@ -16,9 +14,9 @@ const premierLeagueNavBar = () => {
                     <li className='premierLeagueNavBarMenuTextStyle'>Injuries</li>
                     <li className='premierLeagueNavBarMenuTextStyle'>Fantasy</li>
                 </ul>
-        </div>
-    </>
+            </div>
+        </>
     );
 }
 
-export default premierLeagueNavBar;
+export default PremierLeagueNavBar;

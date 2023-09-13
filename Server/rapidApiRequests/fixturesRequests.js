@@ -29,7 +29,7 @@ const getFixturesByTeam = async (season, teamId) => {
         method: 'GET',
         url: 'https://api-football-v1.p.rapidapi.com/v3/fixtures',
         params: {
-            league: process.env.EPL_LEAGUE_ID,
+            league: rapidApiConsts.EPL_LEAGUE_ID,
             season: season,
             team: teamId
         },
@@ -53,7 +53,7 @@ const getLiveFixtures = async () => {
         url: 'https://api-football-v1.p.rapidapi.com/v3/fixtures',
         params: {
             live: 'all',
-            league: process.env.EPL_LEAGUE_ID
+            league: rapidApiConsts.EPL_LEAGUE_ID
         },
         headers: {
             'X-RapidAPI-Key': process.env.RAPID_API_KEY,
@@ -75,7 +75,7 @@ const getLastXFixtures = async (x) => {
         url: 'https://api-football-v1.p.rapidapi.com/v3/fixtures',
         params: {
             last: x,
-            league: process.env.EPL_LEAGUE_ID
+            league: rapidApiConsts.EPL_LEAGUE_ID
         },
         headers: {
             'X-RapidAPI-Key': process.env.RAPID_API_KEY,
@@ -97,7 +97,7 @@ const getNextXFixtures = async (x) => {
         url: 'https://api-football-v1.p.rapidapi.com/v3/fixtures',
         params: {
             next: x,
-            league: process.env.EPL_LEAGUE_ID
+            league: rapidApiConsts.EPL_LEAGUE_ID
         },
         headers: {
             'X-RapidAPI-Key': process.env.RAPID_API_KEY,
@@ -120,7 +120,7 @@ const getLastXTeamFixtures = async (x, teamId) => {
         params: {
             last: x,
             team: teamId,
-            league: process.env.EPL_LEAGUE_ID
+            league: rapidApiConsts.EPL_LEAGUE_ID
         },
         headers: {
             'X-RapidAPI-Key': process.env.RAPID_API_KEY,
@@ -143,7 +143,7 @@ const getNextXTeamFixtures = async (x, teamId) => {
         params: {
             next: x,
             team: teamId,
-            league: process.env.EPL_LEAGUE_ID
+            league: rapidApiConsts.EPL_LEAGUE_ID
         },
         headers: {
             'X-RapidAPI-Key': process.env.RAPID_API_KEY,

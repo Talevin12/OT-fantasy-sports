@@ -1,14 +1,10 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './topbar.css';
-import PremierLeagueNavBar from "../leagueNavBar/premierLeagueNavBar";
-import NBANavBar from "../leagueNavBar/NBANavBar";
 import OTLogoImage from "../../assests/OTFantasyLogo.png"
 
-const TopBar = () => {
-    const [currentLeague, setCurrentLeague] = useState("PremierLeague"); // Initialize with the Premier League
-
+const TopBar = ({ currentLeague, onLeagueChange }) => {
     const handleLeagueClick = (league) => {
-        setCurrentLeague(league);
+        onLeagueChange(league);
     }
 
     return (
@@ -29,7 +25,6 @@ const TopBar = () => {
                     </ul>
                 </div>
             </div>
-            {currentLeague === "PremierLeague" ? <PremierLeagueNavBar /> : <NBANavBar />}
         </>
     );
 }
