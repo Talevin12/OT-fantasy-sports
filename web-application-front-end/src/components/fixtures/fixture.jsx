@@ -20,8 +20,8 @@ const Fixture = ({
     // awayTeamRank
 }) => {
     // Find the team colors based on team names
-    const homeTeamColor = premierLeagueTeams.find((team) => team.name === homeTeam)?.color;
-    const awayTeamColor = premierLeagueTeams.find((team) => team.name === awayTeam)?.color;
+    const homeTeamColor = premierLeagueTeams.find((team) => team.name === homeTeam)?.homeColor;
+    const awayTeamColor = premierLeagueTeams.find((team) => team.name === awayTeam)?.awayColor;
 
     const [containerStyle, setContainerStyle] = useState({
         background: 'white',
