@@ -4,20 +4,20 @@ import premierLeagueTeams from './colorsTeams';
 import StadiumIcon from '../../assests/stadium.svg';
 import WhistleIcon from '../../assests/whistle.svg';
 
-const PendingMatch = ({
-    homeTeam = "Manchester City",
-    awayTeam = "Manchester United",
-    date = "2023-09-16",
-    time = "11:30",
-    referee = "M. Oliver",
-    venue = "Molineux Stadium",
-    location = "Wolverhampton, West Midlands",
-    homeTeamLogo = "https://media-4.api-sports.io/football/teams/39.png",
-    awayTeamLogo = "https://media-4.api-sports.io/football/teams/40.png",
-    homeTeamRecord = "2-1-0",
-    awayTeamRecord = "1-0-3",
-    homeTeamRank = "15",
-    awayTeamRank = "3"
+const Fixture = ({
+    homeTeam,
+    awayTeam,
+    date,
+    time,
+    referee,
+    stadium,
+    location,
+    homeTeamLogo,
+    awayTeamLogo
+    // homeTeamRecord,
+    // awayTeamRecord,
+    // homeTeamRank,
+    // awayTeamRank
 }) => {
     // Find the team colors based on team names
     const homeTeamColor = premierLeagueTeams.find((team) => team.name === homeTeam)?.color;
@@ -30,14 +30,14 @@ const PendingMatch = ({
 
     const handleMouseEnter = () => {
         const updatedStyle = { ...containerStyle };
-        updatedStyle.background = `linear-gradient(to right, ${homeTeamColor} 40%, ${awayTeamColor})`;
+        updatedStyle.background = `linear-gradient(to right, ${homeTeamColor}, ${awayTeamColor})`;
         setContainerStyle(updatedStyle); // Update the style when hovering
     };
 
     const handleMouseLeave = () => {
         setContainerStyle({
             ...containerStyle,
-            background: 'white', // Reset to the original style when not hovering
+            background: 'white',
         });
     };
 
@@ -55,15 +55,15 @@ const PendingMatch = ({
                 <div className="team-info">
                     <img src={homeTeamLogo} alt={`${homeTeam} Logo`} />
                     <h2>{homeTeam}</h2>
-                    <p>Record: {homeTeamRecord}</p>
-                    <p>Rank: {homeTeamRank}</p>
+                    {/* <p>{homeTeamRecord}</p> */}
+                    {/* <p>Rank: {homeTeamRank}</p> */}
                 </div>
                 <div className="team-vs">VS</div>
                 <div className="team-info">
                     <img src={awayTeamLogo} alt={`${awayTeam} Logo`} />
                     <h2>{awayTeam}</h2>
-                    <p>Record: {awayTeamRecord}</p>
-                    <p>Rank: {awayTeamRank}</p>
+                    {/* <p>{awayTeamRecord}</p> */}
+                    {/* <p>Rank: {awayTeamRank}</p> */}
                 </div>
             </div>
             <div className={`match-info ${isExpanded ? 'expanded' : ''}`}>
@@ -81,7 +81,7 @@ const PendingMatch = ({
                 </div>
                 <div className="info-group">
                     <div className="info-icon"> <img src={StadiumIcon} alt="Stadium" height="24" width="24" /></div>
-                    <div className="info-value">{venue}</div>
+                    <div className="info-value">{stadium}</div>
                 </div>
                 <div className="info-group">
                     <div className="info-icon"><i className="fas fa-map-marker-alt"></i></div>
@@ -95,4 +95,4 @@ const PendingMatch = ({
     );
 };
 
-export default PendingMatch;
+export default Fixture;
