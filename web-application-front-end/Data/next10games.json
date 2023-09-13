@@ -1,20 +1,31 @@
 {
+    "get": "fixtures",
+    "parameters": {
+        "next": "10",
+        "league": "39"
+    },
+    "errors": [],
+    "results": 10,
+    "paging": {
+        "current": 1,
+        "total": 1
+    },
     "response": [
         {
             "fixture": {
-                "id": 1003928,
-                "referee": null,
+                "id": 1035086,
+                "referee": "M. Oliver",
                 "timezone": "UTC",
-                "date": "2023-09-13T09:00:00+00:00",
-                "timestamp": 1694595600,
+                "date": "2023-09-16T11:30:00+00:00",
+                "timestamp": 1694863800,
                 "periods": {
                     "first": null,
                     "second": null
                 },
                 "venue": {
-                    "id": 1009,
-                    "name": "Chuncheon Songam Stadium",
-                    "city": "Chuncheon"
+                    "id": 600,
+                    "name": "Molineux Stadium",
+                    "city": "Wolverhampton, West Midlands"
                 },
                 "status": {
                     "long": "Not Started",
@@ -23,25 +34,25 @@
                 }
             },
             "league": {
-                "id": 295,
-                "name": "K3 League",
-                "country": "South-Korea",
-                "logo": "https://media-4.api-sports.io/football/leagues/295.png",
-                "flag": "https://media-4.api-sports.io/flags/kr.svg",
+                "id": 39,
+                "name": "Premier League",
+                "country": "England",
+                "logo": "https://media-4.api-sports.io/football/leagues/39.png",
+                "flag": "https://media-4.api-sports.io/flags/gb.svg",
                 "season": 2023,
-                "round": "Regular Season - 22"
+                "round": "Regular Season - 5"
             },
             "teams": {
                 "home": {
-                    "id": 7064,
-                    "name": "Chuncheon",
-                    "logo": "https://media-4.api-sports.io/football/teams/7064.png",
+                    "id": 39,
+                    "name": "Wolves",
+                    "logo": "https://media-4.api-sports.io/football/teams/39.png",
                     "winner": null
                 },
                 "away": {
-                    "id": 7075,
-                    "name": "Gangneung City",
-                    "logo": "https://media-4.api-sports.io/football/teams/7075.png",
+                    "id": 40,
+                    "name": "Liverpool",
+                    "logo": "https://media-4.api-sports.io/football/teams/40.png",
                     "winner": null
                 }
             },
@@ -70,19 +81,19 @@
         },
         {
             "fixture": {
-                "id": 1123327,
-                "referee": null,
+                "id": 1035078,
+                "referee": "D. England",
                 "timezone": "UTC",
-                "date": "2023-09-13T09:00:00+00:00",
-                "timestamp": 1694595600,
+                "date": "2023-09-16T14:00:00+00:00",
+                "timestamp": 1694872800,
                 "periods": {
                     "first": null,
                     "second": null
                 },
                 "venue": {
-                    "id": 1345,
-                    "name": "Stadion Dinamo",
-                    "city": "Vladivostok"
+                    "id": 495,
+                    "name": "Villa Park",
+                    "city": "Birmingham"
                 },
                 "status": {
                     "long": "Not Started",
@@ -91,25 +102,25 @@
                 }
             },
             "league": {
-                "id": 237,
-                "name": "Cup",
-                "country": "Russia",
-                "logo": "https://media-4.api-sports.io/football/leagues/237.png",
-                "flag": "https://media-4.api-sports.io/flags/ru.svg",
+                "id": 39,
+                "name": "Premier League",
+                "country": "England",
+                "logo": "https://media-4.api-sports.io/football/leagues/39.png",
+                "flag": "https://media-4.api-sports.io/flags/gb.svg",
                 "season": 2023,
-                "round": "Regions Path - 3rd Round"
+                "round": "Regular Season - 5"
             },
             "teams": {
                 "home": {
-                    "id": 16856,
-                    "name": "Dinamo Vladivostok",
-                    "logo": "https://media-4.api-sports.io/football/teams/16856.png",
+                    "id": 66,
+                    "name": "Aston Villa",
+                    "logo": "https://media-4.api-sports.io/football/teams/66.png",
                     "winner": null
                 },
                 "away": {
-                    "id": 6794,
-                    "name": "Dinamo Barnaul",
-                    "logo": "https://media-4.api-sports.io/football/teams/6794.png",
+                    "id": 52,
+                    "name": "Crystal Palace",
+                    "logo": "https://media-4.api-sports.io/football/teams/52.png",
                     "winner": null
                 }
             },
@@ -138,19 +149,19 @@
         },
         {
             "fixture": {
-                "id": 1131151,
-                "referee": null,
+                "id": 1035080,
+                "referee": "M. Salisbury",
                 "timezone": "UTC",
-                "date": "2023-09-13T09:00:00+00:00",
-                "timestamp": 1694595600,
+                "date": "2023-09-16T14:00:00+00:00",
+                "timestamp": 1694872800,
                 "periods": {
                     "first": null,
                     "second": null
                 },
                 "venue": {
-                    "id": null,
-                    "name": "Stadio Moreno Gubbiotti",
-                    "city": "Narni"
+                    "id": 535,
+                    "name": "Craven Cottage",
+                    "city": "London"
                 },
                 "status": {
                     "long": "Not Started",
@@ -159,25 +170,25 @@
                 }
             },
             "league": {
-                "id": 704,
-                "name": "Coppa Italia Primavera",
-                "country": "Italy",
-                "logo": "https://media-4.api-sports.io/football/leagues/704.png",
-                "flag": "https://media-4.api-sports.io/flags/it.svg",
+                "id": 39,
+                "name": "Premier League",
+                "country": "England",
+                "logo": "https://media-4.api-sports.io/football/leagues/39.png",
+                "flag": "https://media-4.api-sports.io/flags/gb.svg",
                 "season": 2023,
-                "round": "1st Preliminary Round"
+                "round": "Regular Season - 5"
             },
             "teams": {
                 "home": {
-                    "id": 17730,
-                    "name": "Ternana U19",
-                    "logo": "https://media-4.api-sports.io/football/teams/17730.png",
+                    "id": 36,
+                    "name": "Fulham",
+                    "logo": "https://media-4.api-sports.io/football/teams/36.png",
                     "winner": null
                 },
                 "away": {
-                    "id": 15679,
-                    "name": "Salernitana U19",
-                    "logo": "https://media-4.api-sports.io/football/teams/15679.png",
+                    "id": 1359,
+                    "name": "Luton",
+                    "logo": "https://media-4.api-sports.io/football/teams/1359.png",
                     "winner": null
                 }
             },
@@ -206,19 +217,19 @@
         },
         {
             "fixture": {
-                "id": 1092584,
-                "referee": null,
+                "id": 1035081,
+                "referee": "J. Gillett",
                 "timezone": "UTC",
-                "date": "2023-09-13T10:00:00+00:00",
-                "timestamp": 1694599200,
+                "date": "2023-09-16T14:00:00+00:00",
+                "timestamp": 1694872800,
                 "periods": {
                     "first": null,
                     "second": null
                 },
                 "venue": {
-                    "id": 3509,
-                    "name": "Kremin'-Arena im. Olega Babaeva",
-                    "city": "Kremenchuk"
+                    "id": 556,
+                    "name": "Old Trafford",
+                    "city": "Manchester"
                 },
                 "status": {
                     "long": "Not Started",
@@ -227,25 +238,25 @@
                 }
             },
             "league": {
-                "id": 336,
-                "name": "Druha Liga",
-                "country": "Ukraine",
-                "logo": "https://media-4.api-sports.io/football/leagues/336.png",
-                "flag": "https://media-4.api-sports.io/flags/ua.svg",
+                "id": 39,
+                "name": "Premier League",
+                "country": "England",
+                "logo": "https://media-4.api-sports.io/football/leagues/39.png",
+                "flag": "https://media-4.api-sports.io/flags/gb.svg",
                 "season": 2023,
-                "round": "Regular Season - 7"
+                "round": "Regular Season - 5"
             },
             "teams": {
                 "home": {
-                    "id": 21317,
-                    "name": "Kremin' II",
-                    "logo": "https://media-4.api-sports.io/football/teams/21317.png",
+                    "id": 33,
+                    "name": "Manchester United",
+                    "logo": "https://media-4.api-sports.io/football/teams/33.png",
                     "winner": null
                 },
                 "away": {
-                    "id": 21953,
-                    "name": "Kudrivka",
-                    "logo": "https://media-4.api-sports.io/football/teams/21953.png",
+                    "id": 51,
+                    "name": "Brighton",
+                    "logo": "https://media-4.api-sports.io/football/teams/51.png",
                     "winner": null
                 }
             },
@@ -274,19 +285,19 @@
         },
         {
             "fixture": {
-                "id": 1131152,
-                "referee": null,
+                "id": 1035084,
+                "referee": "P. Bankes",
                 "timezone": "UTC",
-                "date": "2023-09-13T10:00:00+00:00",
-                "timestamp": 1694599200,
+                "date": "2023-09-16T14:00:00+00:00",
+                "timestamp": 1694872800,
                 "periods": {
                     "first": null,
                     "second": null
                 },
                 "venue": {
-                    "id": null,
-                    "name": "Stadio Silvio Appiani",
-                    "city": "Padova"
+                    "id": 593,
+                    "name": "Tottenham Hotspur Stadium",
+                    "city": "London"
                 },
                 "status": {
                     "long": "Not Started",
@@ -295,25 +306,25 @@
                 }
             },
             "league": {
-                "id": 704,
-                "name": "Coppa Italia Primavera",
-                "country": "Italy",
-                "logo": "https://media-4.api-sports.io/football/leagues/704.png",
-                "flag": "https://media-4.api-sports.io/flags/it.svg",
+                "id": 39,
+                "name": "Premier League",
+                "country": "England",
+                "logo": "https://media-4.api-sports.io/football/leagues/39.png",
+                "flag": "https://media-4.api-sports.io/flags/gb.svg",
                 "season": 2023,
-                "round": "1st Preliminary Round"
+                "round": "Regular Season - 5"
             },
             "teams": {
                 "home": {
-                    "id": 19856,
-                    "name": "Padova U19",
-                    "logo": "https://media-4.api-sports.io/football/teams/19856.png",
+                    "id": 47,
+                    "name": "Tottenham",
+                    "logo": "https://media-4.api-sports.io/football/teams/47.png",
                     "winner": null
                 },
                 "away": {
-                    "id": 22403,
-                    "name": "Bari U19",
-                    "logo": "https://media-4.api-sports.io/football/teams/22403.png",
+                    "id": 62,
+                    "name": "Sheffield Utd",
+                    "logo": "https://media-4.api-sports.io/football/teams/62.png",
                     "winner": null
                 }
             },
@@ -342,19 +353,19 @@
         },
         {
             "fixture": {
-                "id": 1092587,
-                "referee": null,
+                "id": 1035085,
+                "referee": "A. Madley",
                 "timezone": "UTC",
-                "date": "2023-09-13T10:30:00+00:00",
-                "timestamp": 1694601000,
+                "date": "2023-09-16T14:00:00+00:00",
+                "timestamp": 1694872800,
                 "periods": {
                     "first": null,
                     "second": null
                 },
                 "venue": {
-                    "id": 4770,
-                    "name": "Stadion FSK Ivan",
-                    "city": "Odessa"
+                    "id": 598,
+                    "name": "London Stadium",
+                    "city": "London"
                 },
                 "status": {
                     "long": "Not Started",
@@ -363,25 +374,25 @@
                 }
             },
             "league": {
-                "id": 336,
-                "name": "Druha Liga",
-                "country": "Ukraine",
-                "logo": "https://media-4.api-sports.io/football/leagues/336.png",
-                "flag": "https://media-4.api-sports.io/flags/ua.svg",
+                "id": 39,
+                "name": "Premier League",
+                "country": "England",
+                "logo": "https://media-4.api-sports.io/football/leagues/39.png",
+                "flag": "https://media-4.api-sports.io/flags/gb.svg",
                 "season": 2023,
-                "round": "Regular Season - 7"
+                "round": "Regular Season - 5"
             },
             "teams": {
                 "home": {
-                    "id": 6497,
-                    "name": "Real Pharm",
-                    "logo": "https://media-4.api-sports.io/football/teams/6497.png",
+                    "id": 48,
+                    "name": "West Ham",
+                    "logo": "https://media-4.api-sports.io/football/teams/48.png",
                     "winner": null
                 },
                 "away": {
-                    "id": 21318,
-                    "name": "Metalurh Zaporizhya II",
-                    "logo": "https://media-4.api-sports.io/football/teams/21318.png",
+                    "id": 50,
+                    "name": "Manchester City",
+                    "logo": "https://media-4.api-sports.io/football/teams/50.png",
                     "winner": null
                 }
             },
@@ -410,19 +421,19 @@
         },
         {
             "fixture": {
-                "id": 1092581,
-                "referee": null,
+                "id": 1035082,
+                "referee": "C. Pawson",
                 "timezone": "UTC",
-                "date": "2023-09-13T11:00:00+00:00",
-                "timestamp": 1694602800,
+                "date": "2023-09-16T16:30:00+00:00",
+                "timestamp": 1694881800,
                 "periods": {
                     "first": null,
                     "second": null
                 },
                 "venue": {
-                    "id": 20104,
-                    "name": "Tsentralnyi miskyi stadion",
-                    "city": "Vinnytsia"
+                    "id": 562,
+                    "name": "St. James' Park",
+                    "city": "Newcastle upon Tyne"
                 },
                 "status": {
                     "long": "Not Started",
@@ -431,25 +442,25 @@
                 }
             },
             "league": {
-                "id": 336,
-                "name": "Druha Liga",
-                "country": "Ukraine",
-                "logo": "https://media-4.api-sports.io/football/leagues/336.png",
-                "flag": "https://media-4.api-sports.io/flags/ua.svg",
+                "id": 39,
+                "name": "Premier League",
+                "country": "England",
+                "logo": "https://media-4.api-sports.io/football/leagues/39.png",
+                "flag": "https://media-4.api-sports.io/flags/gb.svg",
                 "season": 2023,
-                "round": "Regular Season - 7"
+                "round": "Regular Season - 5"
             },
             "teams": {
                 "home": {
-                    "id": 6494,
-                    "name": "Nyva Vinnytsya",
-                    "logo": "https://media-4.api-sports.io/football/teams/6494.png",
+                    "id": 34,
+                    "name": "Newcastle",
+                    "logo": "https://media-4.api-sports.io/football/teams/34.png",
                     "winner": null
                 },
                 "away": {
-                    "id": 21975,
-                    "name": "Karpaty II",
-                    "logo": "https://media-4.api-sports.io/football/teams/21975.png",
+                    "id": 55,
+                    "name": "Brentford",
+                    "logo": "https://media-4.api-sports.io/football/teams/55.png",
                     "winner": null
                 }
             },
@@ -478,19 +489,19 @@
         },
         {
             "fixture": {
-                "id": 1127299,
-                "referee": null,
+                "id": 1035077,
+                "referee": "D. Coote",
                 "timezone": "UTC",
-                "date": "2023-09-13T11:00:00+00:00",
-                "timestamp": 1694602800,
+                "date": "2023-09-17T13:00:00+00:00",
+                "timestamp": 1694955600,
                 "periods": {
                     "first": null,
                     "second": null
                 },
                 "venue": {
-                    "id": 771,
-                    "name": "Dimotiko Athlitiko Kentro Lamias",
-                    "city": "Lamia"
+                    "id": 504,
+                    "name": "Vitality Stadium",
+                    "city": "Bournemouth, Dorset"
                 },
                 "status": {
                     "long": "Not Started",
@@ -499,25 +510,25 @@
                 }
             },
             "league": {
-                "id": 199,
-                "name": "Cup",
-                "country": "Greece",
-                "logo": "https://media-4.api-sports.io/football/leagues/199.png",
-                "flag": "https://media-4.api-sports.io/flags/gr.svg",
+                "id": 39,
+                "name": "Premier League",
+                "country": "England",
+                "logo": "https://media-4.api-sports.io/football/leagues/39.png",
+                "flag": "https://media-4.api-sports.io/flags/gb.svg",
                 "season": 2023,
-                "round": "3rd Round"
+                "round": "Regular Season - 5"
             },
             "teams": {
                 "home": {
-                    "id": 20048,
-                    "name": "Asteras Stavros",
-                    "logo": "https://media-4.api-sports.io/football/teams/20048.png",
+                    "id": 35,
+                    "name": "Bournemouth",
+                    "logo": "https://media-4.api-sports.io/football/teams/35.png",
                     "winner": null
                 },
                 "away": {
-                    "id": 12418,
-                    "name": "Giouchtas",
-                    "logo": "https://media-4.api-sports.io/football/teams/12418.png",
+                    "id": 49,
+                    "name": "Chelsea",
+                    "logo": "https://media-4.api-sports.io/football/teams/49.png",
                     "winner": null
                 }
             },
@@ -546,19 +557,19 @@
         },
         {
             "fixture": {
-                "id": 1022809,
-                "referee": null,
+                "id": 1035079,
+                "referee": "S. Hooper",
                 "timezone": "UTC",
-                "date": "2023-09-13T11:30:00+00:00",
-                "timestamp": 1694604600,
+                "date": "2023-09-17T15:30:00+00:00",
+                "timestamp": 1694964600,
                 "periods": {
                     "first": null,
                     "second": null
                 },
                 "venue": {
-                    "id": 1873,
-                    "name": "Harbin International Conference Exhibition and Sports Center",
-                    "city": "Harbin"
+                    "id": 8560,
+                    "name": "Goodison Park",
+                    "city": "Liverpool"
                 },
                 "status": {
                     "long": "Not Started",
@@ -567,25 +578,25 @@
                 }
             },
             "league": {
-                "id": 170,
-                "name": "League One",
-                "country": "China",
-                "logo": "https://media-4.api-sports.io/football/leagues/170.png",
-                "flag": "https://media-4.api-sports.io/flags/cn.svg",
+                "id": 39,
+                "name": "Premier League",
+                "country": "England",
+                "logo": "https://media-4.api-sports.io/football/leagues/39.png",
+                "flag": "https://media-4.api-sports.io/flags/gb.svg",
                 "season": 2023,
-                "round": "Regular Season - 23"
+                "round": "Regular Season - 5"
             },
             "teams": {
                 "home": {
-                    "id": 1445,
-                    "name": "Heilongjiang Lava Spring",
-                    "logo": "https://media-4.api-sports.io/football/teams/1445.png",
+                    "id": 45,
+                    "name": "Everton",
+                    "logo": "https://media-4.api-sports.io/football/teams/45.png",
                     "winner": null
                 },
                 "away": {
-                    "id": 5684,
-                    "name": "Shenyang Urban",
-                    "logo": "https://media-4.api-sports.io/football/teams/5684.png",
+                    "id": 42,
+                    "name": "Arsenal",
+                    "logo": "https://media-4.api-sports.io/football/teams/42.png",
                     "winner": null
                 }
             },
@@ -614,19 +625,19 @@
         },
         {
             "fixture": {
-                "id": 1022811,
-                "referee": null,
+                "id": 1035083,
+                "referee": "R. Jones",
                 "timezone": "UTC",
-                "date": "2023-09-13T11:30:00+00:00",
-                "timestamp": 1694604600,
+                "date": "2023-09-18T18:45:00+00:00",
+                "timestamp": 1695062700,
                 "periods": {
                     "first": null,
                     "second": null
                 },
                 "venue": {
-                    "id": null,
-                    "name": "Yutong International Sports Center",
-                    "city": "Shijiazhuang"
+                    "id": 566,
+                    "name": "The City Ground",
+                    "city": "Nottingham, Nottinghamshire"
                 },
                 "status": {
                     "long": "Not Started",
@@ -635,25 +646,25 @@
                 }
             },
             "league": {
-                "id": 170,
-                "name": "League One",
-                "country": "China",
-                "logo": "https://media-4.api-sports.io/football/leagues/170.png",
-                "flag": "https://media-4.api-sports.io/flags/cn.svg",
+                "id": 39,
+                "name": "Premier League",
+                "country": "England",
+                "logo": "https://media-4.api-sports.io/football/leagues/39.png",
+                "flag": "https://media-4.api-sports.io/flags/gb.svg",
                 "season": 2023,
-                "round": "Regular Season - 23"
+                "round": "Regular Season - 5"
             },
             "teams": {
                 "home": {
-                    "id": 17264,
-                    "name": "Hebei Kungfu",
-                    "logo": "https://media-4.api-sports.io/football/teams/17264.png",
+                    "id": 65,
+                    "name": "Nottingham Forest",
+                    "logo": "https://media-4.api-sports.io/football/teams/65.png",
                     "winner": null
                 },
                 "away": {
-                    "id": 5657,
-                    "name": "Guangxi Baoyun",
-                    "logo": "https://media-4.api-sports.io/football/teams/5657.png",
+                    "id": 44,
+                    "name": "Burnley",
+                    "logo": "https://media-4.api-sports.io/football/teams/44.png",
                     "winner": null
                 }
             },
