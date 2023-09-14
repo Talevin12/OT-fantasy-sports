@@ -1,14 +1,24 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import './listOfFixtures.css';
 import Fixture from './fixture';
 
 const ListOfFixtures = ({ fixtures }) => {
     const dateOptions = { year: 'numeric', month: 'long', day: 'numeric' }
     const timeOptions = { hour: 'numeric', minute: '2-digit' }
+    const scrollContainer = useRef(null);
+
+    const scroll = (scrollOffset) => {
+        scrollContainer.current.scrollBy({
+            top: 0,
+            left: scrollOffset,
+            behavior: 'smooth'
+        });
+    };
 
     return (
-        <>
-            <div className="horizontal-list">
+        <div className="fixtures-container">
+            <button className="scroll-button" onClick={() => scroll(-600)}>❮</button>
+            <div className="horizontal-list" ref={scrollContainer}>
                 {fixtures.map((item, index) => (
                     <div className="list-item" key={index}>
                         <Fixture
@@ -24,7 +34,8 @@ const ListOfFixtures = ({ fixtures }) => {
                     </div>
                 ))}
             </div>
-        </>
+            <button className="scroll-button" onClick={() => scroll(600)}>❯</button>
+        </div>
     );
 };
 
