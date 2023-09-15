@@ -1,0 +1,119 @@
+.standings-container {
+    width: fit-content;
+    margin: 0 20px; 
+    float: inline-start;
+
+}
+
+.standings-table {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    width: 100%;
+    font-size: 13px;
+    border-collapse: separate;
+    border-spacing: 0;
+}
+
+.standings-title {
+    background-color: #fcfcfc;
+    padding: 10px;
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    border-radius: 10px; 
+    width: fit-content; 
+    margin: 0 10px;
+}
+
+.league-logo {
+    max-width: 50px !important;
+    margin-right: 10px;
+}
+
+.standings-table td {
+    padding: 8px;
+    text-align: left;
+    border: none;
+}
+
+.standings-table th{
+    padding: 8px;
+    text-align: center;
+    border: none;
+}
+
+.standings-table th,.standings-table th.form{
+    background-color: #defec7;
+}
+
+.standings-table tr {
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.standings-table tr:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.standings-table th.logo{
+    text-align: center;
+    width: fit-content;
+}
+
+
+.standings-table td.logo {
+    text-align: start;
+    width: fit-content;
+}
+
+.standings-table img {
+    max-width: 30px;
+    max-height: 30px;
+    vertical-align: middle;
+    padding-right: 10px;
+    text-align: center;
+}
+
+.standings-table th.rank,
+.standings-table td.rank {
+    text-align: center;
+}
+
+.standings-table th.team-name,
+.standings-table td.team-name {
+    font-weight: bold;
+    width: 80px;
+}
+
+.standings-table th.points,
+.standings-table td.points {
+    text-align: center;
+}
+
+.standings-table td.form {
+    font-weight: bold;
+    color: #333;
+}
+
+.standings-table td.form span {
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-weight: normal;
+}
+
+.standings-table td.form span.W {
+    background-color: #d4edda;
+    color: #155724;
+}
+
+.standings-table td.form span.L {
+    background-color: #f8d7da;
+    color: #721c24;
+}
+
+.standings-table td.form span.D {
+    background-color: #fff3cd;
+    color: #856404;
+}

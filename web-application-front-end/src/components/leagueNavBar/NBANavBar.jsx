@@ -1,6 +1,6 @@
 import React from 'react';
 import './NBANavBar.css';
-import NBAImage from "../../assests/nba_logo.png"
+import NBAImage from "../../assets/nba_logo.png"
 
 const NBANavBar = () => {
 

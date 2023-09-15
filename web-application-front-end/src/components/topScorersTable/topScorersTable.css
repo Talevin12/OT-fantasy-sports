@@ -1,0 +1,134 @@
+.top-scorers-container {
+    width: fit-content;
+    margin: 0 20px;
+    float: inline-start;
+}
+
+.top-scorers-table {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    width: 100%;
+    font-size: 13px;
+    border-collapse: separate;
+    border-spacing: 0;
+}
+
+.scorers-title {
+    align-items: center;
+    background-color: #fcfcfc;
+    padding: 10px;
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    border-radius: 10px; 
+    width: fit-content; 
+    margin: 0 10px;
+}
+
+.league-logo {
+    max-width: 50px !important;
+    margin-right: 10px;
+}
+
+.top-scorers-table table {
+    width: 100%;
+}
+
+.top-scorers-table td {
+    padding: 8px;
+    text-align: left;
+    border: none;
+}
+.top-scorers-table th{
+    padding: 8px;
+    text-align: center;
+    border: none;
+}
+
+.top-scorers-table th,
+.top-scorers-table th.form {
+    background-color: #defec7;
+}
+
+.top-scorers-table tr {
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.top-scorers-table tr:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.top-scorers-table th.logo,
+.top-scorers-table td.logo {
+    text-align: start;
+    width: fit-content;
+}
+
+.top-scorers-table img {
+    max-width: 30px;
+    max-height: 30px;
+    vertical-align: middle;
+    padding-right: 10px;
+    text-align: center;
+}
+
+.top-scorers-table th.rank,
+.top-scorers-table td.rank {
+    text-align: center;
+}
+
+.top-scorers-table th.team-name,
+.top-scorers-table td.team-name {
+    font-weight: bold;
+    width: 80px;
+}
+
+.top-scorers-table th.points,
+.top-scorers-table td.points {
+    text-align: center;
+}
+
+.top-scorers-table th.accuracy,
+.top-scorers-table td.accuracy,
+.top-scorers-table th.appearances,
+.top-scorers-table td.appearances {
+    text-align: center;
+    font-weight: bold;
+}
+
+.top-scorers-table td.form {
+    font-weight: bold;
+    color: #333;
+}
+
+.top-scorers-table td.form span {
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-weight: normal;
+}
+
+.top-scorers-table td.form span.W {
+    background-color: #d4edda;
+    color: #155724;
+}
+
+.top-scorers-table td.form span.L {
+    background-color: #f8d7da;
+    color: #721c24;
+}
+
+.top-scorers-table td.form span.D {
+    background-color: #fff3cd;
+    color: #856404;
+}
+
+.player-name,
+.team,
+.shots,
+.shots-on-target,
+.goals {
+    font-weight: bold;
+}
