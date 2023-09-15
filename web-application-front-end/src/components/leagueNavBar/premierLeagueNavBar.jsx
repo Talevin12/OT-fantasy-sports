@@ -1,6 +1,6 @@
 import React from 'react';
 import './premierLeagueNavBar.css';
-import premierLeagueImage from "../../assests/Premier_League_Logo.svg.png"
+import premierLeagueImage from "../../assets/Premier_League_Logo.svg.png"
 
 const PremierLeagueNavBar = () => {
     return (

@@ -1,6 +1,6 @@
 import React from 'react';
 import './topbar.css';
-import OTLogoImage from "../../assests/OTFantasyLogo.png"
+import OTLogoImage from "../../assets/OTFantasyLogo.png"
 
 const TopBar = ({ currentLeague, onLeagueChange }) => {
     const handleLeagueClick = (league) => {
