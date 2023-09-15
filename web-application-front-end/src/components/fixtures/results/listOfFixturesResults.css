@@ -1,0 +1,65 @@
+/* listOfFixtures.css */
+
+.results-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    position: relative;
+    margin: 10px 0;
+    overflow-x: hidden;
+    margin-inline: 10px;
+}
+
+.horizontal-list::-webkit-scrollbar {
+    display: none;
+}
+
+.horizontal-list {
+    display: flex;
+    flex-direction: row;
+    overflow-x: auto;
+    /* Enable horizontal scrolling if needed */
+    flex-grow: 1;
+    scroll-behavior: smooth;
+    /* Enable smooth scrolling */
+    margin: 0 auto;
+    /* Center the horizontal list */
+}
+
+.list-item {
+    margin-right: 1px;
+    transition: transform 0.3s ease;
+    /* Add transition to item movement */
+}
+
+.scroll-button {
+    background-color: rgba(0, 123, 255, 0.5);
+    /* Change button color to a more visible one and make it a bit transparent */
+    color: #ffffff;
+    /* Change button text color to white for contrast */
+    border: none;
+    padding: 20px;
+    /* Increase padding to make the button bigger */
+    font-size: 24px;
+    /* Increase font size for better visibility */
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    /* Add transition to button hover and active states */
+    border-radius: 10%;
+    /* Make the buttons round */
+    height: 150px;
+}
+
+.scroll-button:hover {
+    background-color: rgba(0, 86, 179, 0.5);
+    /* Darken button color on hover and make it a bit transparent */
+}
+
+.scroll-button:active {
+    transform: scale(0.95);
+    /* Slightly reduce button size when clicked */
+}
+
+.scroll-button:focus {
+    outline: none;
+}

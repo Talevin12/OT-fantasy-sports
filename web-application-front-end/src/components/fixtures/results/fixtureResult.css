@@ -1,0 +1,238 @@
+.match-result-container {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 500px;
+    transition: background 0.3s ease;
+}
+
+.match-result-container.expanded {
+    height: auto;
+    padding: 10px;
+}
+
+.team-details {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.team-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    flex: 1;
+    padding: 5px;
+    background-color: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease-in-out;
+    height: 150px;
+}
+
+.team-info:hover {
+    transform: translateY(-5px);
+}
+
+.team-info img {
+    max-width: 50px;
+    max-height: 50px;
+    border-radius: 50%;
+
+}
+
+.team-info h2 {
+    font-size: 18px;
+    margin: 10px 0;
+    color: #333;
+}
+
+.team-info p {
+    font-size: 16px;
+    margin: 5px 0;
+    color: #666;
+    font-weight: bold;
+}
+
+.gameStatus {
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+    align-items: center;
+}
+
+
+.score {
+    background-color: #3d195b;
+    color: #fff;
+    font-size: 24px;
+    font-weight: bold;
+    border-radius: 30px;
+    padding: 10px 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.score span {
+    flex: 1;
+    text-align: center;
+    margin: 0 10px;
+}
+
+.separator {
+    font-size: 20px;
+    margin: 0 10px;
+}
+
+.game-status {
+    display: flex;
+    flex-direction: row;
+    font-size: 24px;
+    margin-top: 10px;
+    background-color: #3d195b;
+    border-radius: 30px;
+    padding: 5px 10px;
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.game-status span {
+    flex: 1;
+    text-align: center;
+    margin: 0 10px;
+}
+
+/* Match Info */
+.match-info {
+    border-radius: 20px;
+    padding: 5px;
+    margin-bottom: 5px;
+    background-color: #fff;
+    /* display: flex; */
+    flex-direction: column;
+    display: none;
+    height: 0;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    transition: height 0.3s ease, padding 0.3s ease;
+}
+
+.match-info.expanded {
+    display: block;
+    height: auto;
+    padding: 10px;
+}
+
+.info-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.info-icon {
+    font-size: 24px;
+    margin-left: 15px;
+    color: #555;
+}
+
+.info-value {
+    font-size: 14px;
+    font-weight: bold;
+    color: #333;
+    text-align: center;
+}
+
+.info-group .info-icon {
+    flex: 0 0 auto;
+}
+
+.info-group .info-value {
+    flex: 1;
+}
+
+.section-navigation {
+    /* display: flex; */
+    justify-content: space-between;
+    background-color: #fff;
+    padding: 5px;
+    border-radius: 20px;
+    margin-bottom: 5px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+    display: none;
+    height: 0;
+    overflow: hidden;
+    transition: height 0.3s ease, padding 0.3s ease;
+}
+
+.section-navigation.expanded {
+    display: flex;
+    height: auto;
+    padding: 10px;
+}
+
+.custom-button {
+    background-color: transparent;
+    color: #000;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+    border-radius: 20px;
+    margin: 0 5px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+}
+
+.custom-button:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.section-navigation button {
+    padding: 15px 20px;
+    background-color: #e6e6e6;
+    border: none;
+    cursor: pointer;
+}
+
+.section-navigation button.active {
+    background-color: #3d195b;
+    color: #fff;
+}
+
+.sub-section {
+    display: none;
+}
+
+.sub-section.active {
+    display: block;
+    /* Add styling for the active sub-section here */
+}
+
+.expand-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    margin-top: 10px;
+    font-size: 24px;
+}
+
+.expand-button i {
+    transition: transform 0.3s ease;
+    transform-origin: center;
+}
+
+.expand-button i.expanded {
+    transform: rotate(0deg);
+}

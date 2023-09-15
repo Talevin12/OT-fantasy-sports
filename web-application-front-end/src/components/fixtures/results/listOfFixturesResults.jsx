@@ -1,8 +1,8 @@
 import React, { useRef } from 'react';
-import './listOfFixtures.css';
-import Fixture from './fixture';
+import './listOfFixturesResults.css';
+import FixtureResult from './fixtureResult';
 
-const ListOfFixtures = ({ fixtures, standings }) => {
+const ListOfFixturesResults = ({ fixtures, standings }) => {
     const dateOptions = { year: 'numeric', month: 'long', day: 'numeric' }
     const timeOptions = { hour: 'numeric', minute: '2-digit' }
 
@@ -23,14 +23,18 @@ const ListOfFixtures = ({ fixtures, standings }) => {
     }
 
     return (
-        <div className="fixtures-container">
+        <div className="results-container">
             <button className="scroll-button" onClick={() => scroll(-600)}>❮</button>
             <div className="horizontal-list" ref={scrollContainer}>
                 {fixtures.map((item, index) => (
                     <div className="list-item" key={index}>
-                        <Fixture
+                        <FixtureResult
                             homeTeam={item.teams.home.name}
                             awayTeam={item.teams.away.name}
+                            homeTeamScore={item.goals.home}
+                            awayTeamScore={item.goals.away}
+                            status={item.fixture.status.short}
+                            gameMinute={item.fixture.status.elapsed}
                             date={new Date(item.fixture.date).toLocaleDateString("en-US", dateOptions)}
                             time={new Date(item.fixture.date).toLocaleTimeString("en-US", timeOptions)}
                             referee={item.fixture.referee}
@@ -48,4 +52,4 @@ const ListOfFixtures = ({ fixtures, standings }) => {
     );
 };
 
-export default ListOfFixtures;
+export default ListOfFixturesResults;

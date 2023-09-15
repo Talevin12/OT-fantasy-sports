@@ -13,11 +13,9 @@ const Fixture = ({
     stadium,
     location,
     homeTeamLogo,
-    awayTeamLogo
-    // homeTeamRecord,
-    // awayTeamRecord,
-    // homeTeamRank,
-    // awayTeamRank
+    awayTeamLogo,
+    homeTeamRecord,
+    awayTeamRecord
 }) => {
     // Find the team colors based on team names
     const homeTeamColor = premierLeagueTeams.find((team) => team.name === homeTeam)?.homeColor;
@@ -55,15 +53,13 @@ const Fixture = ({
                 <div className="team-info">
                     <img src={homeTeamLogo} alt={`${homeTeam} Logo`} />
                     <h2>{homeTeam}</h2>
-                    {/* <p>{homeTeamRecord}</p> */}
-                    {/* <p>Rank: {homeTeamRank}</p> */}
+                    <p>{homeTeamRecord}</p>
                 </div>
                 <div className="team-vs">VS</div>
                 <div className="team-info">
                     <img src={awayTeamLogo} alt={`${awayTeam} Logo`} />
                     <h2>{awayTeam}</h2>
-                    {/* <p>{awayTeamRecord}</p> */}
-                    {/* <p>Rank: {awayTeamRank}</p> */}
+                    <p>{awayTeamRecord}</p>
                 </div>
             </div>
             <div className={`match-info ${isExpanded ? 'expanded' : ''}`}>
