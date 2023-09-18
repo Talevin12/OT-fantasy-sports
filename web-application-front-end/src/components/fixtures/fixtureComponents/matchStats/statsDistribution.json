@@ -1,0 +1,18 @@
+{
+    "Ball Possession": "Attacking",
+    "Total Shots": "Attacking",
+    "Shots on Goal": "Attacking",
+    "Shots off Goal": "Attacking",
+    "Blocked Shots": "Attacking",
+    "Shots insidebox": "Attacking",
+    "Shots outsidebox": "Attacking",
+    "expected_goals": "Attacking",
+    "Corner Kicks": "Attacking",
+    "Total passes": "Attacking",
+    "Passes accurate": "Attacking",
+    "Passes %": "Attacking",
+    "Fouls": "Defending",
+    "Goalkeeper Saves": "Defending",
+    "Yellow Cards": "Bookings",
+    "Red Cards": "Bookings"
+}
