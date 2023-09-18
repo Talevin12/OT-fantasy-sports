@@ -1,4 +1,4 @@
-const fixturesRequests = require("../rapidApiRequests/fixturesRequests");
+const fixturesRequests = require("../../rapidApiRequests/fixturesRequests");
 const router = require("express").Router();
 
 //GET FIXTURES BY DATE DATA
@@ -13,6 +13,26 @@ router.get("/getFixturesByTeam", async (req, res) => {
     let { season, teamId } = req.query;
     const fixturesByTeamData = await fixturesRequests.getFixturesByTeam(season, teamId);
     res.status(200).send(fixturesByTeamData);
+})
+
+//GET FIXTURES BY TEAM DATA
+router.get("/getFixturesByTeam", async (req, res) => {
+    let { season, teamId } = req.query;
+    const fixturesByTeamData = await fixturesRequests.getFixturesByTeam(season, teamId);
+    res.status(200).send(fixturesByTeamData);
+})
+
+//GET FIXTURES BY ROUND DATA
+router.get("/getFixturesByRound", async (req, res) => {
+    let { round } = req.query;
+    const fixturesByRoundData = await fixturesRequests.getFixturesByRound(round);
+    res.status(200).send(fixturesByRoundData);
+})
+
+router.get("/getFixturesByIds", async (req, res) => {
+    let { ids } = req.query;
+    const fixturesByIdsData = await fixturesRequests.getFixturesByIds(ids);
+    res.status(200).send(fixturesByIdsData);
 })
 
 //GET LIVE FIXTURES DATA

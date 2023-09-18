@@ -5,6 +5,7 @@ function setupRoutes(app, apiIndex) {
   app.use("/api/players", apiIndex.players);
   app.use("/api/players", apiIndex.playersStats);
   app.use("/api/players", apiIndex.topPerformers);
+  app.use("/api/fixtures", apiIndex.rounds)
   app.use("/api/injuries", apiIndex.injuries);
 };
 
