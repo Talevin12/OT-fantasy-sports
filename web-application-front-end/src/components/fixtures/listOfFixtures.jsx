@@ -3,7 +3,7 @@ import './listOfFixtures.css';
 import Fixture from './futureFixtures/futureFixture';
 import FixtureResult from './results/fixtureResult';
 
-const ListOfFixtures = ({ round, fixtures, standings, stats }) => {
+const ListOfFixtures = ({ round, fixtures, standings, fixturesExtended }) => {
     const dateOptions = { year: 'numeric', month: 'long', day: 'numeric' }
     const timeOptions = { hour: 'numeric', minute: '2-digit' }
 
@@ -29,7 +29,6 @@ const ListOfFixtures = ({ round, fixtures, standings, stats }) => {
             <div className="horizontal-list" ref={scrollContainer}>
                 {fixtures.toReversed().map((item, index) => (
                     <div className="list-item" key={index}>
-                        {console.log(stats)}
                         {item.fixture.status.short === "NS" ?
                             <Fixture
                                 homeTeam={item.teams.home.name}
@@ -60,7 +59,8 @@ const ListOfFixtures = ({ round, fixtures, standings, stats }) => {
                                 awayTeamLogo={item.teams.away.logo}
                                 homeTeamRecord={records[item.teams.home.name]}
                                 awayTeamRecord={records[item.teams.away.name]}
-                                teamsStats={stats.toReversed()[index].statistics} />
+                                teamsStats={fixturesExtended.toReversed()[index].statistics}
+                                teamsEvents={fixturesExtended.toReversed()[index].events} />
                         }
                     </div>
                 ))}

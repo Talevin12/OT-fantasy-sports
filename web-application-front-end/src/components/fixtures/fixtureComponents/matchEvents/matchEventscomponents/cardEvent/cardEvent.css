@@ -1,0 +1,104 @@
+.card-event {
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    align-items: center;
+    padding-inline: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: background-color 0.2s, transform 0.2s;
+    margin-inline: 4px;
+
+    &:hover {
+        background-color: #f0f0f0;
+        transform: scale(1.05);
+    }
+}
+
+.event-top-line {
+    width: 3px;
+    height: 30px;
+    background-color: #ccc;
+    align-self: center;
+    border-radius: 20px;
+}
+
+.event-details {
+    display: flex;
+    align-items: center;
+}
+
+.event-icon {
+    height: fit-content;
+    margin-inline: 10px;
+}
+
+.event-icon.invisible {
+    visibility: hidden;
+}
+
+
+.event-icon img {
+    width: 24px;
+    height: 24px;
+}
+
+.event-time {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    width: 65px;
+}
+
+.event-minute {
+    height: fit-content;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.event-extra {
+    height: fit-content;
+    font-size: 18px;
+    font-weight: bold;
+    color: red;
+}
+
+.event-minute.invisible {
+    visibility: hidden;
+}
+
+.event-player-name {
+    display: flex;
+    flex-direction: column;
+    width: 150px;
+    overflow: auto;
+}
+
+.event-player-name.invisible {
+    visibility: hidden;
+}
+
+.event-player-name.home-team {
+    align-content: flex-end;
+}
+
+.event-player-name.away-team {
+    align-content: flex-start;
+}
+
+.card-player {
+    height: fit-content;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+/* Styles for the home team event */
+.home-team {
+    align-items: flex-end;
+}
+
+/* Styles for the away team event */
+.away-team {
+    align-items: flex-start;
+}
