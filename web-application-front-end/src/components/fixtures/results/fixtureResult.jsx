@@ -1,11 +1,13 @@
 import React, { useState } from 'react';
 import './fixtureResult.css';
 import premierLeagueTeams from '../colorsTeams';
+import TeamInfo from '../fixtureComponents/teamInfo/teamInfo';
 import MatchInfo from '../fixtureComponents/matchInfo/matchInfo';
 import MatchStats from '../fixtureComponents/matchStats/matchStats';
-import TeamInfo from '../fixtureComponents/teamInfo/teamInfo';
+import MatchEvents from '../fixtureComponents/matchEvents/matchEvents';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faInfoCircle, faTimeline, faChartPie } from '@fortawesome/free-solid-svg-icons';
+import pitch from '../../../assets/football-pitch.svg'
 
 
 const FixtureResult = ({
@@ -24,11 +26,10 @@ const FixtureResult = ({
     awayTeamLogo,
     homeTeamRecord,
     awayTeamRecord,
-    teamsStats
+    teamsStats,
+    teamsEvents
 
 }) => {
-    console.log(teamsStats)
-    // Find the team colors based on team names
     const homeTeamColor = premierLeagueTeams.find((team) => team.name === homeTeam)?.homeColor;
     const awayTeamColor = premierLeagueTeams.find((team) => team.name === awayTeam)?.awayColor;
 
@@ -101,6 +102,12 @@ const FixtureResult = ({
                     >
                         <FontAwesomeIcon icon={faTimeline} fontSize={16} /> Events
                     </button>
+                    <button
+                        onClick={() => handleSectionChange('matchLineups')}
+                        className={`custom-button ${activeSection === 'matchLineups' ? 'active' : ''}`}
+                    >
+                        <img src={pitch} alt='football-pitch' /> Lineups
+                    </button>
                 </div>
                 <div className={`sub-section ${activeSection === 'matchInfo' ? 'active' : ''}`}>
                     <MatchInfo date={date} time={time} referee={referee} stadium={stadium} location={location} isExpanded={isExpanded} />
@@ -109,7 +116,14 @@ const FixtureResult = ({
                     <MatchStats stats={teamsStats} isExpanded={isExpanded} />
                 </div>
                 <div className={`sub-section ${activeSection === 'matchEvents' ? 'active' : ''}`}>
-                    {/* <div>2</div> */}
+                    <MatchEvents events={teamsEvents} homeTeam={homeTeam}
+                        homeTeamLogo={homeTeamLogo} awayTeamLogo={awayTeamLogo}
+                        isExpanded={isExpanded} />
+                </div>
+                <div className={`sub-section ${activeSection === 'matchLineups' ? 'active' : ''}`}>
+                    {/* <matchLineups events={teamsEvents} homeTeam={homeTeam}
+                        homeTeamLogo={homeTeamLogo} awayTeamLogo={awayTeamLogo}
+                        isExpanded={isExpanded} /> */}
                 </div>
             </div>
             <div className={`expand-button ${isExpanded ? 'expanded' : ''}`} onClick={toggleExpand}>

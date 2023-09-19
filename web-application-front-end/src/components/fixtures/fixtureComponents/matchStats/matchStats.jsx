@@ -36,17 +36,19 @@ const MatchStats = ({ stats, isExpanded }) => {
                 </div>
             </div>
 
-            <div className="category">
-                <h2>Attacking</h2>
-                <StatList teamsStats={zippedAttacking} />
-            </div>
-            <div className="category">
-                <h2>Defending</h2>
-                <StatList teamsStats={zippedDefending} />
-            </div>
-            <div className="category">
-                <h2>Bookings</h2>
-                <StatList teamsStats={zippedBookings} />
+            <div className='list-of-categories'>
+                <div className="category">
+                    <h2>Attacking</h2>
+                    <StatList teamsStats={zippedAttacking} />
+                </div>
+                <div className="category">
+                    <h2>Defending</h2>
+                    <StatList teamsStats={zippedDefending} />
+                </div>
+                <div className="category">
+                    <h2>Bookings</h2>
+                    <StatList teamsStats={zippedBookings} />
+                </div>
             </div>
         </div>
     );
