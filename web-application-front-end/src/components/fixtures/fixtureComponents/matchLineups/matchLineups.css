@@ -1,0 +1,39 @@
+
+.match-lineups-container {
+    display: flex;
+    margin: 5px;
+    height: 500px;
+    width: 100%;
+    flex-direction: row;
+    background-color:black;
+}
+
+.team-logos{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+}
+
+.team-logos img {
+    width: 50px;
+    cursor: pointer;
+    margin-top: 100px;
+}
+
+.lineup {
+    background-color: rgb(234, 0, 140);
+    height: 100%;
+    /* padding: 10px; */
+}
+
+.formation {
+    font-size: 10px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+
+  
+  
