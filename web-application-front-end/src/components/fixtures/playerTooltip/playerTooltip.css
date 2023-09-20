@@ -1,0 +1,20 @@
+.tooltip {
+    position: absolute;
+    z-index: 1;
+    background-color: #4caf50;
+    color: white;
+    padding: 8px;
+    border-radius: 10px;
+    font-size: 12px;
+    text-align: start;
+    transform: translateY(70%);
+    
+}
+
+.tooltip img {
+    max-width: 30px;
+    max-height: 30px;
+    text-align: center;
+    display: block;
+    margin: auto;
+}
