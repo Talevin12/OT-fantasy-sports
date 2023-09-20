@@ -6,11 +6,10 @@ import SubEvent from './matchEventscomponents/SubEvent/subEvent'
 
 const MatchEvents = ({ events, homeTeam, homeTeamLogo, awayTeamLogo, isExpanded }) => {
     const events_sorted = events.sort((eventA, eventB) => {
-        const timeA = eventA.time.elapsed + eventA.time.extra
-        const timeB = eventB.time.elapsed + eventB.time.extra
-        return timeA < timeB ? -1 : 1
-    })
-
+        const timeA = eventA.time.elapsed + eventA.time.extra;
+        const timeB = eventB.time.elapsed + eventB.time.extra;
+        return timeA < timeB ? -1 : 1;
+    });
 
     return (
         <>
@@ -27,6 +26,8 @@ const MatchEvents = ({ events, homeTeam, homeTeamLogo, awayTeamLogo, isExpanded 
                 <hr className='separator' />
 
                 <div className='list-of-events'>
+                    {/* <div className='center-scroll-element' /> */}
+                    {/* <div className='center-scroll-element2' /> */}
                     {events_sorted.map((event, index) => {
                         switch (event.type) {
                             case 'Goal':
@@ -39,7 +40,7 @@ const MatchEvents = ({ events, homeTeam, homeTeamLogo, awayTeamLogo, isExpanded 
                                     isHomeTeam={event.team.name === homeTeam} />;
                             case 'subst':
                                 return <SubEvent minute={event.time.elapsed} extra={event.time.extra}
-                                    inPlayer={event.player.name} outPlayer={event.assist.name}
+                                    inPlayer={event.assist.name} outPlayer={event.player.name}
                                     isHomeTeam={event.team.name === homeTeam} />;
                             default:
                                 return null;

@@ -54,7 +54,6 @@ const FixtureResult = ({
     const [isExpanded, setIsExpanded] = useState(false);
 
     const toggleExpand = () => {
-        console.log(isExpanded);
         setIsExpanded(!isExpanded);
     };
 
@@ -110,7 +109,9 @@ const FixtureResult = ({
                     </button>
                 </div>
                 <div className={`sub-section ${activeSection === 'matchInfo' ? 'active' : ''}`}>
-                    <MatchInfo date={date} time={time} referee={referee} stadium={stadium} location={location} isExpanded={isExpanded} />
+                    <MatchInfo date={date} time={time}
+                        referee={referee} stadium={stadium} location={location}
+                        isExpanded={isExpanded} />
                 </div>
                 <div className={`sub-section ${activeSection === 'matchStats' ? 'active' : ''}`}>
                     <MatchStats stats={teamsStats} isExpanded={isExpanded} />

@@ -11,7 +11,6 @@
     display: flex;
     height: 550px;
     padding: 10px;
-    /* overflow-y: scroll; */
 }
 
 .logos_row {
@@ -41,13 +40,39 @@
 }
 
 .list-of-events {
+    display: flex;
     flex-direction: column;
-    height: 400px;
     padding: 10px;
     overflow-y: scroll;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    align-items: center;
 }
 
 .list-of-events::-webkit-scrollbar {
     width: 0;
     background: transparent;
+}
+
+.list-of-events::-webkit-scrollbar-horizontal {
+    height: 4px;
+    background-color: transparent;
+}
+
+.list-of-events::-webkit-scrollbar-thumb {
+    background-color: #cccccca8;
+    border-radius: 10px;
+}
+
+.list-of-events::-webkit-scrollbar-thumb:hover {
+    background-color: #999;
+}
+
+.list-of-events::-webkit-scrollbar-track {
+    background-color: #cccccc67;
+    border-radius: 10px;
+}
+
+.list-of-events::-webkit-scrollbar-corner {
+    background-color: transparent;
 }
