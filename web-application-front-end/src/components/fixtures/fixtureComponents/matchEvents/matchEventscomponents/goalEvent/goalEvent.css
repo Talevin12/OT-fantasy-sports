@@ -71,8 +71,8 @@
 .event-player-names {
     display: flex;
     flex-direction: column;
-    width: 150px;
-    overflow: auto;
+    width: 200px;
+    /* overflow: auto; */
 }
 
 .event-player-names.invisible {
