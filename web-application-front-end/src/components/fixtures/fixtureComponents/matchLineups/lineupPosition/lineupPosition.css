@@ -1,0 +1,81 @@
+.football-pitch {
+    display: flex;
+    flex-direction: row;
+    overflow-y: auto;
+    height: 100%;
+}
+
+.football-pitch::-webkit-scrollbar {
+    width: 0;
+    background: transparent;
+}
+
+.pitch-image-container {
+    position: relative;
+}
+
+.pitch-image {
+    max-width: 100%;
+}
+
+.players-container {
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    width: 90%;
+    height: 90%;
+}
+
+.players {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.position {
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-inline: auto;
+    border-radius: 50%;
+}
+
+.position img,
+.substitutes-position img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    border-radius: 50%;
+    transition: transform 0.2s ease;
+}
+
+.position img:hover,
+.substitutes-position img:hover {
+    transform: scale(1.2);
+}
+
+.substitutes-container {
+    display: flex;
+    flex-direction: column;
+    margin-inline: 15px;
+}
+
+.substitutes-header {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    font-style: italic;
+}
+
+.substitutes-position {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-inline: auto;
+    border-radius: 50%;
+}

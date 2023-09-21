@@ -1,39 +1,60 @@
-
 .match-lineups-container {
-    display: flex;
+    width: fit-content;
     margin: 5px;
-    height: 500px;
-    width: 100%;
-    flex-direction: row;
-    background-color:black;
+    background-color: #fff;
+    border-radius: 15px;
+    display: none;
+    height: 0;
+    transition: height 0.3s ease, padding 0.3s ease;
 }
 
-.team-logos{
-    height: 100%;
+.match-lineups-container.expanded {
+    display: flex;
+    flex-direction: row;
+    height: 550px;
+}
+
+.team-logos {
     display: flex;
     flex-direction: column;
-    justify-items: center;
+    gap: 200px;
+    justify-content: center;
     align-items: center;
 }
 
 .team-logos img {
     width: 50px;
     cursor: pointer;
-    margin-top: 100px;
+    margin-inline: 5px;
+}
+
+.team-logos img.highlighted-team {
+    border: 4px solid rgb(0, 0, 0);
+    border-radius: 20px;
+    padding: 5px;
 }
 
 .lineup {
-    background-color: rgb(234, 0, 140);
     height: 100%;
-    /* padding: 10px; */
+}
+
+.lineup-info {
+    display: flex;
+    flex-direction: row;
+    gap: 45px;
+    align-items: baseline;
+}
+
+.selected-team-name {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    font-style: italic;
 }
 
 .formation {
-    font-size: 10px;
+    font-size: 18px;
     font-weight: bold;
     margin-bottom: 5px;
+    font-style: italic;
 }
-
-
-  
-  
