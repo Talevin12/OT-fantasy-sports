@@ -1,8 +1,7 @@
 .standings-container {
     width: fit-content;
-    margin: 0 20px; 
+    margin: 0 20px;
     float: inline-start;
-
 }
 
 .standings-table {
@@ -19,8 +18,8 @@
     text-align: center;
     font-size: 24px;
     font-weight: bold;
-    border-radius: 10px; 
-    width: fit-content; 
+    border-radius: 10px;
+    width: fit-content;
     margin: 0 10px;
 }
 
@@ -30,18 +29,19 @@
 }
 
 .standings-table td {
-    padding: 8px;
+    padding: 12px;
     text-align: left;
     border: none;
 }
 
-.standings-table th{
+.standings-table th {
     padding: 8px;
     text-align: center;
     border: none;
 }
 
-.standings-table th,.standings-table th.form{
+.standings-table th,
+.standings-table th.form {
     background-color: #defec7;
 }
 
@@ -57,7 +57,7 @@
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
-.standings-table th.logo{
+.standings-table th.logo {
     text-align: center;
     width: fit-content;
 }

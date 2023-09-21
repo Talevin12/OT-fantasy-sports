@@ -6,9 +6,9 @@ const TopAssistsTable = ({ topAssists }) => {
     return (
         <div className="topAssistsTable-container">
             <div className="topAssistsTable-table">
-            <div className="topAssistsTable-title">
+                <div className="topAssistsTable-title">
                     <img className="league-logo" src={premierLeagueImage} alt="Premier League Logo" />
-                        Assists
+                    Assists
                 </div>
                 <table>
                     <thead>
@@ -21,7 +21,7 @@ const TopAssistsTable = ({ topAssists }) => {
                         </tr>
                     </thead>
                     <tbody>
-                        {topAssists.map((player, index) => (
+                        {topAssists.slice(0, 10).map((player, index) => (
                             <tr key={player.player.id}>
                                 <td className="rank">{index + 1}</td>
                                 <td className="player-name">

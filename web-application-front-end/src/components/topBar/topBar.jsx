@@ -18,7 +18,7 @@ const TopBar = ({ currentLeague, onLeagueChange }) => {
                         <li className='menuTextStyle' onClick={() => handleLeagueClick("NBA")}>NBA</li>
                         <li className='menuTextStyle' onClick={() => handleLeagueClick("PremierLeague")}>Premier League</li>
                         <li className='menuTextStyle'>Fantasy</li>
-                        <span className='separator'></span>
+                        <span className='separator-top-bar'></span>
                         <li className='menuTextStyle'>Home</li>
                         <li className='menuTextStyle'>About</li>
                         <li className='menuTextStyle'>Login</li>

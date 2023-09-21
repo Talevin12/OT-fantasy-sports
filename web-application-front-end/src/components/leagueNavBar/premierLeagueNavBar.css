@@ -1,15 +1,16 @@
 .premierLeagueNavBar {
-    background: linear-gradient(to right, #ffffffd0, #00ff0da0); /* Blue to White */
+    background: linear-gradient(to right, #ffffffd0, #04f5ff);
+    /* Blue to White */
     color: #fff;
     padding: 10px;
     display: flex;
 }
 
-.navbarMenu{
+.navbarMenu {
     justify-content: flex-end;
 }
 
-.premierLeagueImage{
+.premierLeagueImage {
     width: 130px;
     height: auto;
 }
@@ -21,9 +22,9 @@
     align-items: center;
 }
 
-.premierLeagueNavBarMenuTextStyle{
+.premierLeagueNavBarMenuTextStyle {
     font-size: 15px;
-    font-weight: bold; 
+    font-weight: bold;
     font-style: italic;
     color: #333;
 }
@@ -31,8 +32,8 @@
 .premierLeagueNavBar li {
     margin: 0 60px;
     cursor: pointer;
-    padding: 8px 16px; 
-    border-radius: 8px; 
+    padding: 8px 16px;
+    border-radius: 8px;
 }
 
 .premierLeagueNavBar li:hover {

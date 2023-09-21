@@ -1,6 +1,7 @@
 .top-bar {
     /*background: linear-gradient(to right, #ffffffd0, #00ff0d); /* Blue to White */
-    background-color: rgba(255, 255, 255, 0.561); /* Blue to White */
+    background-color: rgba(255, 255, 255, 0.561);
+    /* Blue to White */
     color: #fff;
     display: flex;
     justify-content: space-between;
@@ -10,12 +11,12 @@
 
 .menuTextStyle {
     font-size: 20px;
-    font-weight: bold; 
+    font-weight: bold;
     font-style: italic;
     color: #333;
 }
 
-.logoImage{
+.logoImage {
     padding-left: 20px;
     width: 200px;
     height: auto;
@@ -32,19 +33,17 @@
     margin: 0 20px;
     cursor: pointer;
     display: inline-block;
-    padding: 8px 16px; 
-    border-radius: 8px; 
+    padding: 8px 16px;
+    border-radius: 8px;
 }
 
 .topBarMenu li:hover {
     background-color: rgba(0, 185, 246, 0.413);
 }
 
-.separator {
+.separator-top-bar {
     height: 70px;
     width: 1px;
     background-color: #000000;
     margin: 0 50px;
 }
-
-
