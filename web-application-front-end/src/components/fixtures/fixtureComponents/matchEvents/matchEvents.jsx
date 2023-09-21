@@ -23,7 +23,7 @@ const MatchEvents = ({ events, homeTeam, homeTeamLogo, awayTeamLogo, isExpanded 
                     </div>
                 </div>
 
-                <hr className='separator' />
+                <hr className='separator-events' />
 
                 <div className='list-of-events'>
                     {/* <div className='center-scroll-element' /> */}
