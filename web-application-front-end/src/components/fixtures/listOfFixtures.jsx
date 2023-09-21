@@ -60,7 +60,8 @@ const ListOfFixtures = ({ round, fixtures, standings, fixturesExtended }) => {
                                 homeTeamRecord={records[item.teams.home.name]}
                                 awayTeamRecord={records[item.teams.away.name]}
                                 teamsStats={fixturesExtended.toReversed()[index].statistics}
-                                teamsEvents={fixturesExtended.toReversed()[index].events} />
+                                teamsEvents={fixturesExtended.toReversed()[index].events}
+                                teamsLineups={fixturesExtended.toReversed()[index].lineups} />
                         }
                     </div>
                 ))}

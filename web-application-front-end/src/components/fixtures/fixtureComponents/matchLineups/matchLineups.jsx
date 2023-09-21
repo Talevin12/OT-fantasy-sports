@@ -1,20 +1,11 @@
 import React, { useState, useEffect } from 'react';
-import './matchLineups.css'; // Import your CSS file
-import LineupPosition from '../../lineupPosition/lineupPosition';
+import './matchLineups.css';
+import LineupPosition from './lineupPosition/lineupPosition';
 
-const MatchLineups = ({ teamsStats }) => {
-    const [selectedTeamId, setSelectedTeamId] = useState(null);
-    const [selectedFormation, setSelectedFormation] = useState(null);
+const MatchLineups = ({ teamsLineups, isExpanded }) => {
+    const [selectedTeamId, setSelectedTeamId] = useState(teamsLineups[0].team.id);
+    const [selectedFormation, setSelectedFormation] = useState(teamsLineups[0].formation);
     const [grid, setGrid] = useState({});
-    const [tooltipInfo, setTooltipInfo] = useState(null);
-
-    const handleMouseEnter = (player) => {
-        setTooltipInfo(player);
-    };
-      
-    const handleMouseLeave = () => {
-        setTooltipInfo(null);
-    };
 
     const handleLogoClick = (teamId, formation) => {
         setSelectedTeamId(teamId);
@@ -30,11 +21,11 @@ const MatchLineups = ({ teamsStats }) => {
         }
         return grid;
     };
-    
+
     const insertPlayersIntoGrid = (grid, players) => {
         players.forEach((player) => {
             const [row, col] = player.player.grid.split(':').map(Number);
-            const targetRow = row - 1; 
+            const targetRow = row - 1;
             if (targetRow >= 0 && targetRow < grid.length && col > 0 && col <= grid[targetRow].length) {
                 grid[targetRow][col - 1] = player;
             }
@@ -44,43 +35,49 @@ const MatchLineups = ({ teamsStats }) => {
 
     useEffect(() => {
         if (selectedTeamId !== null && selectedFormation !== null && !grid[selectedTeamId]) {
-            const players = teamsStats.lineups.find(lineup => lineup.team.id == selectedTeamId).startXI;
+            const players = teamsLineups.find(lineup => lineup.team.id === selectedTeamId).startXI;
             const updatedGrid = {
                 ...grid,
                 [selectedTeamId]: insertPlayersIntoGrid(createGrid(selectedFormation), players)
             };
             setGrid(updatedGrid);
         }
-    }, [selectedTeamId, selectedFormation, teamsStats]);
-    
-    
+    }, [selectedTeamId, selectedFormation, teamsLineups, grid]);
+
+
     return (
-        <div className="match-lineups-container">
+        <div className={`match-lineups-container ${isExpanded ? 'expanded' : ''}`}>
             <div className="team-logos">
-                {teamsStats.lineups.map(lineup => (
+                {teamsLineups.map(lineup => (
                     <img
                         key={lineup.team.id}
                         src={lineup.team.logo}
                         alt={lineup.team.name}
                         onClick={() => handleLogoClick(lineup.team.id, lineup.formation)}
+                        className={selectedTeamId === lineup.team.id ? 'highlighted-team' : ''}
                     />
                 ))}
             </div>
-                {selectedTeamId !== null && selectedFormation !== null && (
-                    <div className="lineup" key={selectedTeamId}>
-                        <h4>{teamsStats.lineups.find(lineup => lineup.team.id == selectedTeamId).team.name}</h4>
+            {selectedTeamId !== null && selectedFormation !== null && (
+                <div className="lineup" key={selectedTeamId}>
+                    <div className='lineup-info'>
+                        <div className='selected-team-name'>
+                            {teamsLineups.find(lineup => lineup.team.id === selectedTeamId).team.name}
+                        </div>
                         <div className="formation">{selectedFormation}</div>
-                        {grid[selectedTeamId] && (
-                            <LineupPosition
-                                players={grid[selectedTeamId]}
-                                substitutes =  {teamsStats.lineups.find(lineup => lineup.team.id == selectedTeamId).substitutes}
-                            />
-                        )}
                     </div>
-                        )}
-            </div>
+
+                    {grid[selectedTeamId] && (
+                        <LineupPosition
+                            players={grid[selectedTeamId]}
+                            substitutes={teamsLineups.find(lineup => lineup.team.id === selectedTeamId).substitutes}
+                        />
+                    )}
+                </div>
+            )}
+        </div>
     );
-    
+
 };
 
 
