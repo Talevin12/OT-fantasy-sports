@@ -1,0 +1,11 @@
+.home-page-container {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.top-tables {
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+}
