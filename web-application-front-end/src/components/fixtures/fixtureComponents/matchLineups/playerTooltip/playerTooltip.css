@@ -1,14 +1,16 @@
 .tooltip {
     position: absolute;
+    margin-top: 50px;
     z-index: 1;
-    background-color: #4caf50;
-    color: white;
+    background-color: #fff;
+    color: #333;
+    font-weight: bold;
     padding: 8px;
     border-radius: 10px;
     font-size: 12px;
-    text-align: start;
+    text-align: center;
     transform: translateY(70%);
-    
+
 }
 
 .tooltip img {

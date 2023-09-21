@@ -5,6 +5,7 @@ import TeamInfo from '../fixtureComponents/teamInfo/teamInfo';
 import MatchInfo from '../fixtureComponents/matchInfo/matchInfo';
 import MatchStats from '../fixtureComponents/matchStats/matchStats';
 import MatchEvents from '../fixtureComponents/matchEvents/matchEvents';
+import MatchLineups from '../fixtureComponents/matchLineups/matchLineups';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faInfoCircle, faTimeline, faChartPie } from '@fortawesome/free-solid-svg-icons';
 import pitch from '../../../assets/football-pitch.svg'
@@ -27,8 +28,8 @@ const FixtureResult = ({
     homeTeamRecord,
     awayTeamRecord,
     teamsStats,
-    teamsEvents
-
+    teamsEvents,
+    teamsLineups
 }) => {
     const homeTeamColor = premierLeagueTeams.find((team) => team.name === homeTeam)?.homeColor;
     const awayTeamColor = premierLeagueTeams.find((team) => team.name === awayTeam)?.awayColor;
@@ -122,9 +123,7 @@ const FixtureResult = ({
                         isExpanded={isExpanded} />
                 </div>
                 <div className={`sub-section ${activeSection === 'matchLineups' ? 'active' : ''}`}>
-                    {/* <matchLineups events={teamsEvents} homeTeam={homeTeam}
-                        homeTeamLogo={homeTeamLogo} awayTeamLogo={awayTeamLogo}
-                        isExpanded={isExpanded} /> */}
+                    <MatchLineups teamsLineups={teamsLineups} isExpanded={isExpanded} />
                 </div>
             </div>
             <div className={`expand-button ${isExpanded ? 'expanded' : ''}`} onClick={toggleExpand}>
