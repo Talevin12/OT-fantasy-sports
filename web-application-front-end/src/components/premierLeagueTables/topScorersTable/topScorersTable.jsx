@@ -8,7 +8,7 @@ const TopScorersTable = ({ topScorers }) => {
             <div className="top-scorers-table">
                 <div className="scorers-title">
                     <img className="league-logo" src={premierLeagueImage} alt="Premier League Logo" />
-                    Goals
+                    Top Scorers
                 </div>
                 <table>
                     <thead>

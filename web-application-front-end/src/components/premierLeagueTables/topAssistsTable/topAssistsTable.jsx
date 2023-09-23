@@ -8,7 +8,7 @@ const TopAssistsTable = ({ topAssists }) => {
             <div className="topAssistsTable-table">
                 <div className="topAssistsTable-title">
                     <img className="league-logo" src={premierLeagueImage} alt="Premier League Logo" />
-                    Assists
+                    Top Assists
                 </div>
                 <table>
                     <thead>
@@ -16,6 +16,9 @@ const TopAssistsTable = ({ topAssists }) => {
                             <th className="rank">Rank</th>
                             <th className="player-name">Name</th>
                             <th className="team">Club</th>
+                            <th className="played">Played</th>
+                            <th className="pass-totals">Pass Totals</th>
+                            <th className="pass-keys">Keys</th>
                             <th className="accuracy">Accuracy (%)</th>
                             <th className="assists">Assists</th>
                         </tr>
@@ -32,6 +35,9 @@ const TopAssistsTable = ({ topAssists }) => {
                                     <img src={player.statistics[0].team.logo} alt={player.statistics[0].team.name} />
                                     {player.statistics[0].team.name}
                                 </td>
+                                <td className="played">{player.statistics[0].games.appearences}</td>
+                                <td className="pass-totals">{player.statistics[0].passes.total}</td>
+                                <td className="pass-keys">{player.statistics[0].passes.key}</td>
                                 <td className="accuracy">
                                     {Math.round(player.statistics[0].passes.accuracy)}%
                                 </td>
