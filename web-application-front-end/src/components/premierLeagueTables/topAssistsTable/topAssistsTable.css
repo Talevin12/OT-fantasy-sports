@@ -1,7 +1,10 @@
 .topAssistsTable-container {
     width: fit-content;
-    margin: 0 20px; 
     float: inline-start;
+    border-radius: 40px;
+    padding: 15px;
+    margin: -30px -10px;
+    box-shadow: 0 0 10px turquoise;
 }
 
 .topAssistsTable-table {
@@ -13,19 +16,20 @@
 }
 
 .topAssistsTable-title {
-    background-color: #fcfcfc;
+    display:flex; 
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
     padding: 10px;
     text-align: center;
     font-size: 24px;
     font-weight: bold;
-    border-radius: 10px; 
-    width: fit-content; 
-    margin: 0 10px;
+    color: #333333be;
 }
 
 .league-logo {
     max-width: 50px !important;
-    margin-right: 10px;
+    filter: hue-rotate(650deg);
 }
 
 .topAssistsTable-table th{
@@ -42,8 +46,8 @@
 }
 
 .topAssistsTable-table th,.topAssistsTable-table th.form{
-    background-color: #defec7;
-}
+    background-color: #04f7ff56;
+    color: gray;}
 
 .topAssistsTable-table tr {
     border-radius: 10px;
@@ -55,11 +59,14 @@
 .topAssistsTable-table tr:hover {
     transform: translateY(-5px);
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    color: #19191976
 }
 
 .topAssistsTable-table th.logo,
 .topAssistsTable-table td.logo {
     text-align: start;
+    display: flex;
+    align-items: center;
     width: fit-content;
 }
 
