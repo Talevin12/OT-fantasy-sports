@@ -2,7 +2,11 @@
     width: fit-content;
     margin: 0 20px;
     float: inline-start;
+    border-radius: 40px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
+
 
 .standings-table {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
@@ -13,19 +17,19 @@
 }
 
 .standings-title {
-    background-color: #fcfcfc;
+    display:flex; 
     padding: 10px;
-    text-align: center;
+    align-items: center;
+    justify-content: center;
     font-size: 24px;
     font-weight: bold;
-    border-radius: 10px;
-    width: fit-content;
-    margin: 0 10px;
+    margin-bottom: 10px;
 }
+
 
 .league-logo {
     max-width: 50px !important;
-    margin-right: 10px;
+    filter: hue-rotate(650deg);
 }
 
 .standings-table td {
@@ -42,7 +46,8 @@
 
 .standings-table th,
 .standings-table th.form {
-    background-color: #defec7;
+    background-color: #04f7ff56;
+    color: gray;
 }
 
 .standings-table tr {
@@ -55,6 +60,21 @@
 .standings-table tr:hover {
     transform: translateY(-5px);
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    color: #19191976
+}
+
+.standings-table td.logo {
+    text-align: start;
+    width: max-content;
+    display: flex;
+    align-items: center;
+}
+
+.standings-table img {
+    max-width: 30px;
+    max-height: 30px;
+    vertical-align: middle;
+    margin-right: 10px;
 }
 
 .standings-table th.logo {
@@ -62,19 +82,6 @@
     width: fit-content;
 }
 
-
-.standings-table td.logo {
-    text-align: start;
-    width: fit-content;
-}
-
-.standings-table img {
-    max-width: 30px;
-    max-height: 30px;
-    vertical-align: middle;
-    padding-right: 10px;
-    text-align: center;
-}
 
 .standings-table th.rank,
 .standings-table td.rank {
