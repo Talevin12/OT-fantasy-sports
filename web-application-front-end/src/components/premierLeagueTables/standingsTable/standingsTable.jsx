@@ -1,6 +1,6 @@
 import React from 'react';
 import './standingsTable.css';
-import premierLeagueImage from "../../assets/Premier_League_Logo.svg.png"
+import premierLeagueImage from "../../../assets/Premier_League_Logo.svg.png"
 
 const StandingsTable = ({ standings }) => {
     const getFormStyle = (formResult) => {
