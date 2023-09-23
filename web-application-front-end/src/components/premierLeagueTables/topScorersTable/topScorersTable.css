@@ -1,7 +1,9 @@
 .top-scorers-container {
     width: fit-content;
-    margin: 0 20px;
     float: inline-start;
+    border-radius: 40px;
+    padding: 20px;
+    box-shadow: 0 0 10px turquoise;
 }
 
 .top-scorers-table {
@@ -13,24 +15,21 @@
 }
 
 .scorers-title {
+    display:flex; 
     align-items: center;
+    justify-content: center;
+    padding: 10px;
     background-color: #fcfcfc;
     padding: 10px;
     text-align: center;
     font-size: 24px;
     font-weight: bold;
-    border-radius: 10px; 
-    width: fit-content; 
-    margin: 0 10px;
+    color: #333333be;
 }
 
 .league-logo {
     max-width: 50px !important;
-    margin-right: 10px;
-}
-
-.top-scorers-table table {
-    width: 100%;
+    filter: hue-rotate(650deg);
 }
 
 .top-scorers-table td {
@@ -46,7 +45,8 @@
 
 .top-scorers-table th,
 .top-scorers-table th.form {
-    background-color: #defec7;
+    background-color: #04f7ff56;
+    color: gray;
 }
 
 .top-scorers-table tr {
@@ -59,12 +59,15 @@
 .top-scorers-table tr:hover {
     transform: translateY(-5px);
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    color: #19191976
 }
 
 .top-scorers-table th.logo,
 .top-scorers-table td.logo {
     text-align: start;
-    width: fit-content;
+    display: flex;
+    align-items: center;
+    width: max-content;
 }
 
 .top-scorers-table img {

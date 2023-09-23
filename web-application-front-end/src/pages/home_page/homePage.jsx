@@ -5,9 +5,9 @@ import TopBar from "../../components/topBar/topBar";
 import PremierLeagueNavBar from "../../components/leagueNavBar/premierLeagueNavBar";
 
 import NBANavBar from "../../components/leagueNavBar/NBANavBar";
-import StandingsTable from '../../components/standingsTable/standingsTable';
-import TopScorersTable from '../../components/topScorersTable/topScorersTable';
-import TopAssistsTable from '../../components/topAssistsTable/topAssistsTable';
+import StandingsTable from '../../components/premierLeagueTables/standingsTable/standingsTable';
+import TopScorersTable from '../../components/premierLeagueTables/topScorersTable/topScorersTable';
+import TopAssistsTable from '../../components/premierLeagueTables/topAssistsTable/topAssistsTable';
 import ListOfFixtures from "../../components/fixtures/listOfFixtures"
 
 import standings from "../../Data/standing.json"
