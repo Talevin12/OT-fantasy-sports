@@ -1,10 +1,28 @@
-/* listOfFixtures.css */
-
 .fixtures-container {
     display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    margin: 10px 0;
+    margin-inline: 10px;
+}
+
+.round-title {
+    background-image: url("../../../assets/background-EPL.png");
+    background-size: cover;
+    color: white;
+    font: italic small-caps bold 40px cursive;
+    padding-block: 20px;
+    border-radius: 25px;
+    margin-top: 40px;
+    text-align: center;
+    width: 50%;
+    align-self: center;
+}
+
+.fixtures-list-container {
+    display: flex;
     flex-direction: row;
-    align-items: center;
-    /* position: relative; */
+    /* align-items: center; */
     margin: 10px 0;
     margin-inline: 10px;
 }
@@ -28,8 +46,7 @@
 }
 
 .scroll-button {
-    background-color: rgba(0, 123, 255, 0.5);
-    color: #ffffff;
+    background-color: #04f5ff;
     border: none;
     padding: 20px;
     font-size: 24px;
@@ -37,10 +54,11 @@
     transition: background-color 0.3s ease, transform 0.3s ease;
     border-radius: 10%;
     height: 150px;
+    margin-top: 50px;
 }
 
 .scroll-button:hover {
-    background-color: rgba(0, 86, 179, 0.5);
+    background-color: #04f7ff62;
 }
 
 .scroll-button:active {

@@ -29,7 +29,9 @@ const Fixture = ({
     const handleMouseEnter = () => {
         const updatedStyle = { ...containerStyle };
         updatedStyle.background = `linear-gradient(to right, ${homeTeamColor}, ${awayTeamColor})`;
-        setContainerStyle(updatedStyle); // Update the style when hovering
+        setContainerStyle(updatedStyle);
+
+        toggleExpand()
     };
 
     const handleMouseLeave = () => {
@@ -37,6 +39,8 @@ const Fixture = ({
             ...containerStyle,
             background: 'white',
         });
+
+        toggleExpand()
     };
 
     const [isExpanded, setIsExpanded] = useState(false);
@@ -54,9 +58,9 @@ const Fixture = ({
                 <TeamInfo teamName={awayTeam} teamLogo={awayTeamLogo} teamRecord={awayTeamRecord} />
             </div>
             <MatchInfo date={date} time={time} referee={referee} stadium={stadium} location={location} isExpanded={isExpanded} />
-            <div className={`expand-button ${isExpanded ? 'expanded' : ''}`} onClick={toggleExpand}>
+            {/* <div className={`expand-button ${isExpanded ? 'expanded' : ''}`} onClick={toggleExpand}>
                 <i className={`fas fa-arrow-${isExpanded ? 'up' : 'down'} ${isExpanded ? 'expanded' : ''}`}></i>
-            </div>
+            </div> */}
         </div>
     );
 };

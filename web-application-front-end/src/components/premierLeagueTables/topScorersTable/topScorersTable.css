@@ -1,9 +1,8 @@
 .top-scorers-container {
-    width: max-content;
+    width: 700px;
     float: inline-start;
     border-radius: 40px;
     padding: 10px;
-    margin: 0 -10px;
     box-shadow: 0 0 10px turquoise;
 }
 
@@ -16,13 +15,13 @@
 }
 
 .scorers-title {
-    display:flex; 
+    display: flex;
     align-items: center;
     justify-content: center;
     padding: 10px;
     padding: 10px;
     text-align: center;
-    font-size: 24px;
+    font-size: 30px;
     font-weight: bold;
     color: #333333be;
 }
@@ -37,7 +36,8 @@
     text-align: left;
     border: none;
 }
-.top-scorers-table th{
+
+.top-scorers-table th {
     padding: 8px;
     text-align: center;
     border: none;
