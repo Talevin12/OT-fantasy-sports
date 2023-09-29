@@ -1,10 +1,6 @@
 .match-info {
     border-radius: 15px;
-    padding: 5px;
-    margin-bottom: 5px;
     background-color: #fff;
-    /* display: flex; */
-    flex-direction: column;
     display: none;
     height: 0;
     overflow: hidden;
@@ -12,15 +8,13 @@
 }
 
 .match-info.expanded {
-    display: block;
-    height: auto;
-    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
 }
 
 .info-group {
     display: flex;
-    align-items: center;
-    margin-bottom: 40px;
 }
 
 .info-icon {
