@@ -8,7 +8,7 @@ import NBANavBar from "../../components/leagueNavBar/NBANavBar";
 import StandingsTable from '../../components/premierLeagueTables/standingsTable/standingsTable';
 import TopScorersTable from '../../components/premierLeagueTables/topScorersTable/topScorersTable';
 import TopAssistsTable from '../../components/premierLeagueTables/topAssistsTable/topAssistsTable';
-import ListOfFixtures from "../../components/fixtures/listOfFixtures"
+import ListOfFixtures from "../../components/fixtures/listOfFixtures/listOfFixtures"
 
 import standings from "../../Data/standing.json"
 import currentRound from "../../Data/currentRound.json"
@@ -25,17 +25,22 @@ const HomePage = () => {
             <TopBar currentLeague={currentLeague} onLeagueChange={setCurrentLeague} />
             {currentLeague === "PremierLeague" ? <PremierLeagueNavBar /> : <NBANavBar />}
 
-            <ListOfFixtures fixtures={currentRoundFixtures.response}
-                standings={standings.response[0].league.standings[0]}
-                round={currentRound.response[0]}
-                fixturesExtended={currentRoundFixturesStats.response} />
-
             <div className='home-page-container'>
-                <StandingsTable standings={standings.response[0].league.standings[0]} />
+                <div className='list-container'>
+                    <ListOfFixtures fixtures={currentRoundFixtures.response}
+                        standings={standings.response[0].league.standings[0]}
+                        round={currentRound.response[0]}
+                        fixturesExtended={currentRoundFixturesStats.response} />
 
-                <div className='top-tables'>
-                    <TopScorersTable topScorers={topScorersData.response} />
-                    <TopAssistsTable topAssists={topAssistsData.response} />
+                </div>
+
+                <div className='tables-container'>
+                    <StandingsTable standings={standings.response[0].league.standings[0]} />
+
+                    <div className='top-tables'>
+                        <TopScorersTable topScorers={topScorersData.response} />
+                        <TopAssistsTable topAssists={topAssistsData.response} />
+                    </div>
                 </div>
             </div>
         </>

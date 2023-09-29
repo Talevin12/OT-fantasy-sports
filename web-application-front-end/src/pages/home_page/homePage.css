@@ -1,11 +1,28 @@
 .home-page-container {
+    display: block;
+    position: relative;
+}
+
+.list-container {
+    position: absolute;
+    height: 100px;
+    width: 100%;
+    top: 10px;
+}
+
+.tables-container {
     display: flex;
     flex-direction: row;
-    gap: 20px;
+    gap: 200px;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 450px;
 }
 
 .top-tables {
     display: flex;
     flex-direction: column;
-    gap: 80px;
+    gap: 50px;
 }

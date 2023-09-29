@@ -35,7 +35,7 @@ const FixtureResult = ({
     const awayTeamColor = premierLeagueTeams.find((team) => team.name === awayTeam)?.awayColor;
 
     const [containerStyle, setContainerStyle] = useState({
-        background: 'white',
+        background: '#fff',
         transition: 'background 0.3s ease',
     });
 
@@ -43,13 +43,17 @@ const FixtureResult = ({
         const updatedStyle = { ...containerStyle };
         updatedStyle.background = `linear-gradient(to right, ${homeTeamColor}, ${awayTeamColor})`;
         setContainerStyle(updatedStyle);
+
+        toggleExpand()
     };
 
     const handleMouseLeave = () => {
         setContainerStyle({
             ...containerStyle,
-            background: 'white',
+            background: '#fff',
         });
+
+        toggleExpand()
     };
 
     const [isExpanded, setIsExpanded] = useState(false);
@@ -82,7 +86,7 @@ const FixtureResult = ({
                 </div>
                 <TeamInfo teamName={awayTeam} teamLogo={awayTeamLogo} teamRecord={awayTeamRecord} />
             </div>
-            <div>
+            <div className='match-expanded'>
                 <div className={`section-navigation ${isExpanded ? 'expanded' : ''}`}>
                     <button
                         onClick={() => handleSectionChange('matchInfo')}
@@ -126,9 +130,9 @@ const FixtureResult = ({
                     <MatchLineups teamsLineups={teamsLineups} isExpanded={isExpanded} />
                 </div>
             </div>
-            <div className={`expand-button ${isExpanded ? 'expanded' : ''}`} onClick={toggleExpand}>
+            {/* <div className={`expand-button ${isExpanded ? 'expanded' : ''}`} onClick={toggleExpand}>
                 <i className={`fas fa-arrow-${isExpanded ? 'up' : 'down'} ${isExpanded ? 'expanded' : ''}`}></i>
-            </div>
+            </div> */}
         </div >
     );
 };

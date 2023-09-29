@@ -81,6 +81,9 @@
     cursor: pointer;
     margin-top: 10px;
     font-size: 24px;
+    background-color: #fff;
+    border-radius: 20px;
+    padding-block: 5px;
 }
 
 .expand-button i {
