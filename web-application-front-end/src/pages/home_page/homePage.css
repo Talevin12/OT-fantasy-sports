@@ -1,25 +1,24 @@
 .home-page-container {
     display: block;
-    position: relative;
+    /* position: relative; */
 }
 
 .list-container {
     position: absolute;
-    height: 100px;
+    height: 100%;
     width: 100%;
-    top: 10px;
+    top: 20%;
 }
 
 .tables-container {
     display: flex;
     flex-direction: row;
     gap: 5%;
-    min-width: 100%;
-    max-width: 100%;
-    /* align-items: center; */
+    width: 100%;
     justify-content: center;
-    position: absolute;
-    top: 450px;
+    margin-top: 25%;
+    /* position: absolute;
+    top: 450px; */
 }
 
 .top-tables {
