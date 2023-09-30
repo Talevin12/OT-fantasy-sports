@@ -1,6 +1,8 @@
 .match-info {
     border-radius: 15px;
     background-color: #fff;
+    padding: 20px;
+    margin-bottom: 5px;
     display: none;
     height: 0;
     overflow: hidden;
@@ -8,9 +10,8 @@
 }
 
 .match-info.expanded {
-    display: flex;
-    flex-direction: column;
-    padding: 20px;
+    display: block;
+    height: auto;
 }
 
 .info-group {
