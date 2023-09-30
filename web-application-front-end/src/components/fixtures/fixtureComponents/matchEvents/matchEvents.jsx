@@ -40,7 +40,7 @@ const MatchEvents = ({ events, homeTeam, homeTeamLogo, awayTeamLogo, isExpanded 
                                     isHomeTeam={event.team.name === homeTeam} />;
                             case 'subst':
                                 return <SubEvent minute={event.time.elapsed} extra={event.time.extra}
-                                    inPlayer={event.assist.name} outPlayer={event.player.name}
+                                    inPlayer={event.player.name} outPlayer={event.assist.name}
                                     isHomeTeam={event.team.name === homeTeam} />;
                             default:
                                 return null;
