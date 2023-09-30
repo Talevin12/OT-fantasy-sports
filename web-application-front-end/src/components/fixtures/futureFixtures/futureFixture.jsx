@@ -57,7 +57,12 @@ const Fixture = ({
                 <div className="team-vs">VS</div>
                 <TeamInfo teamName={awayTeam} teamLogo={awayTeamLogo} teamRecord={awayTeamRecord} />
             </div>
-            <MatchInfo date={date} time={time} referee={referee} stadium={stadium} location={location} isExpanded={isExpanded} />
+            <div className={'future-sub-section'}>
+                <MatchInfo date={date} time={time}
+                    referee={referee} stadium={stadium} location={location}
+                    isExpanded={isExpanded} />
+            </div>
+            {/* <MatchInfo date={date} time={time} referee={referee} stadium={stadium} location={location} isExpanded={isExpanded} /> */}
             {/* <div className={`expand-button ${isExpanded ? 'expanded' : ''}`} onClick={toggleExpand}>
                 <i className={`fas fa-arrow-${isExpanded ? 'up' : 'down'} ${isExpanded ? 'expanded' : ''}`}></i>
             </div> */}
