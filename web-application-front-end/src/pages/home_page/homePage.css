@@ -13,9 +13,10 @@
 .tables-container {
     display: flex;
     flex-direction: row;
-    gap: 200px;
-    width: 100%;
-    align-items: center;
+    gap: 5%;
+    min-width: 100%;
+    max-width: 100%;
+    /* align-items: center; */
     justify-content: center;
     position: absolute;
     top: 450px;
