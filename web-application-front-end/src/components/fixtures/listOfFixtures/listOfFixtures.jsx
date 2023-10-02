@@ -3,7 +3,39 @@ import './listOfFixtures.css';
 import Fixture from '../futureFixtures/futureFixture';
 import FixtureResult from '../results/fixtureResult';
 
+const compareFixturesByDateAndStatus = (fixtureA, fixtureB) => {
+    if (!fixtureA.fixture.date || !fixtureB.fixture.date) {
+        if (!fixtureA.fixture.date) {
+            return 1;
+        }
+
+        return -1;
+    }
+
+    const fixtureAStatusShort = fixtureA.fixture.status.short;
+    const fixtureBStatusShort = fixtureB.fixture.status.short;
+
+    if (fixtureAStatusShort === fixtureBStatusShort) {
+        return new Date(fixtureA.fixture.date) - new Date(fixtureB.fixture.date);
+    }
+
+    const liveFixtureStatusShorts = ["1H", "HT", "2H", "ET", "BT", "P"];
+
+    if (liveFixtureStatusShorts.includes(fixtureAStatusShort) && !liveFixtureStatusShorts.includes(fixtureBStatusShort)) {
+        return -1;
+    }
+
+    if (liveFixtureStatusShorts.includes(fixtureBStatusShort) && !liveFixtureStatusShorts.includes(fixtureAStatusShort)) {
+        return 1;
+    }
+
+    return new Date(fixtureA.fixture.date) - new Date(fixtureB.fixture.date);
+}
+
 const ListOfFixtures = ({ round, fixtures, standings, fixturesExtended }) => {
+    const fixturesSorted = fixtures.sort(compareFixturesByDateAndStatus)
+    const fixturesExtendedSorted = fixturesExtended.sort(compareFixturesByDateAndStatus)
+
     const dateOptions = { year: 'numeric', month: 'long', day: 'numeric' }
     const timeOptions = { hour: 'numeric', minute: '2-digit' }
 
@@ -29,7 +61,7 @@ const ListOfFixtures = ({ round, fixtures, standings, fixturesExtended }) => {
             <div className="fixtures-list-container">
                 <button className="scroll-button" onClick={() => scroll(-600)}>❮</button>
                 <div className="horizontal-list" ref={scrollContainer}>
-                    {fixtures.toReversed().map((item, index) => (
+                    {fixturesSorted.map((item, index) => (
                         <div className="list-item" key={index}>
                             {item.fixture.status.short === "NS" ?
                                 <Fixture
@@ -61,9 +93,9 @@ const ListOfFixtures = ({ round, fixtures, standings, fixturesExtended }) => {
                                     awayTeamLogo={item.teams.away.logo}
                                     homeTeamRecord={records[item.teams.home.name]}
                                     awayTeamRecord={records[item.teams.away.name]}
-                                    teamsStats={fixturesExtended.toReversed()[index].statistics}
-                                    teamsEvents={fixturesExtended.toReversed()[index].events}
-                                    teamsLineups={fixturesExtended.toReversed()[index].lineups} />
+                                    teamsStats={fixturesExtendedSorted[index].statistics}
+                                    teamsEvents={fixturesExtendedSorted[index].events}
+                                    teamsLineups={fixturesExtendedSorted[index].lineups} />
                             }
                         </div>
                     ))}
