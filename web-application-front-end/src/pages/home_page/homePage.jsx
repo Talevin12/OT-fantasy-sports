@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import './homePage.css';
 
 import TopBar from "../../components/topBar/topBar";
@@ -9,6 +9,7 @@ import StandingsTable from '../../components/premierLeagueTables/standingsTable/
 import TopScorersTable from '../../components/premierLeagueTables/topScorersTable/topScorersTable';
 import TopAssistsTable from '../../components/premierLeagueTables/topAssistsTable/topAssistsTable';
 import ListOfFixtures from "../../components/fixtures/listOfFixtures/listOfFixtures"
+import RoundTitle from '../../components/roundTitle/roundTitle';
 
 import standings from "../../Data/standing.json"
 import currentRound from "../../Data/currentRound.json"
@@ -20,17 +21,45 @@ import topAssistsData from "../../Data/topAssists.json";
 const HomePage = () => {
     const [currentLeague, setCurrentLeague] = useState("PremierLeague");
 
+    const roundName = currentRound.response[0]
+    const roundNumber = parseInt(roundName[roundName.length - 1])
+
+    const [shownRound, setShownRound] = useState(roundNumber);
+
+    const [homePageFixtures, setHomePageFixtures] = useState(currentRoundFixtures[shownRound - 1].response)
+    const [homePageFixturesStats, setHomePageFixturesStats] = useState(currentRoundFixturesStats[shownRound - 1].response)
+
+    const handleBackClick = () => {
+        if (shownRound > 1) {
+            setShownRound(shownRound - 1);
+        }
+    };
+
+    const handleForwardClick = () => {
+        if (shownRound < currentRoundFixtures.length) {
+            setShownRound(shownRound + 1);
+        }
+    };
+
+    useEffect(() => {
+        setHomePageFixtures(currentRoundFixtures[shownRound - 1].response)
+        setHomePageFixturesStats(currentRoundFixturesStats[shownRound - 1].response)
+    }, [shownRound])
+
     return (
         <>
             <TopBar currentLeague={currentLeague} onLeagueChange={setCurrentLeague} />
             {currentLeague === "PremierLeague" ? <PremierLeagueNavBar /> : <NBANavBar />}
 
             <div className='home-page-container'>
+                <div className='title-container'>
+                    <RoundTitle roundNumber={shownRound} onBackClick={handleBackClick} onForwardClick={handleForwardClick} />
+                </div>
+
                 <div className='list-container'>
-                    <ListOfFixtures fixtures={currentRoundFixtures.response}
+                    <ListOfFixtures fixtures={homePageFixtures}
                         standings={standings.response[0].league.standings[0]}
-                        round={currentRound.response[0]}
-                        fixturesExtended={currentRoundFixturesStats.response} />
+                        fixturesExtended={homePageFixturesStats} />
 
                 </div>
 

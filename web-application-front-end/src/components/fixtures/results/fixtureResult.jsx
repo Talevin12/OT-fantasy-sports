@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './fixtureResult.css';
 import premierLeagueTeams from '../colorsTeams';
 import TeamInfo from '../fixtureComponents/teamInfo/teamInfo';
@@ -29,7 +29,7 @@ const FixtureResult = ({
     awayTeamRecord,
     teamsStats,
     teamsEvents,
-    teamsLineups
+    teamsLineups,
 }) => {
     const homeTeamColor = premierLeagueTeams.find((team) => team.name === homeTeam)?.homeColor;
     const awayTeamColor = premierLeagueTeams.find((team) => team.name === awayTeam)?.awayColor;
@@ -67,6 +67,11 @@ const FixtureResult = ({
     const handleSectionChange = (section) => {
         setActiveSection(section);
     };
+
+    const [teamsLineupsInFixtureResult, setTeamsLineupsInFixtureResult] = useState(teamsLineups)
+    useEffect(() => {
+        setTeamsLineupsInFixtureResult(teamsLineups)
+    }, [teamsLineups])
 
     return (
         <div className={`match-result-container ${isExpanded ? 'expanded' : ''}`} style={containerStyle}
@@ -127,7 +132,7 @@ const FixtureResult = ({
                         isExpanded={isExpanded} />
                 </div>
                 <div className={`sub-section ${activeSection === 'matchLineups' ? 'active' : ''}`}>
-                    <MatchLineups teamsLineups={teamsLineups} isExpanded={isExpanded} />
+                    <MatchLineups teamsLineups={teamsLineupsInFixtureResult} isExpanded={isExpanded} />
                 </div>
             </div>
             {/* <div className={`expand-button ${isExpanded ? 'expanded' : ''}`} onClick={toggleExpand}>
