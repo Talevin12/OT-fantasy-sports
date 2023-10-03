@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import './listOfFixtures.css';
 import Fixture from '../futureFixtures/futureFixture';
 import FixtureResult from '../results/fixtureResult';
@@ -32,9 +32,9 @@ const compareFixturesByDateAndStatus = (fixtureA, fixtureB) => {
     return new Date(fixtureA.fixture.date) - new Date(fixtureB.fixture.date);
 }
 
-const ListOfFixtures = ({ round, fixtures, standings, fixturesExtended }) => {
-    const fixturesSorted = fixtures.sort(compareFixturesByDateAndStatus)
-    const fixturesExtendedSorted = fixturesExtended.sort(compareFixturesByDateAndStatus)
+const ListOfFixtures = ({ fixtures, standings, fixturesExtended }) => {
+    let [fixturesSorted, setFixtureSorted] = useState(fixtures.sort(compareFixturesByDateAndStatus))
+    let [fixturesExtendedSorted, setFixturesExtendedSorted] = useState(fixturesExtended.sort(compareFixturesByDateAndStatus))
 
     const dateOptions = { year: 'numeric', month: 'long', day: 'numeric' }
     const timeOptions = { hour: 'numeric', minute: '2-digit' }
@@ -55,9 +55,13 @@ const ListOfFixtures = ({ round, fixtures, standings, fixturesExtended }) => {
         records[team.team.name] = team.all.win + " - " + team.all.draw + " - " + team.all.lose;
     }
 
+    useEffect(() => {
+        setFixtureSorted(fixtures.sort(compareFixturesByDateAndStatus))
+        setFixturesExtendedSorted(fixturesExtended.sort(compareFixturesByDateAndStatus))
+    }, [fixtures, fixturesExtended])
+
     return (
         <div className='fixtures-container'>
-            <div className="round-title">Matchweek {round[round.length - 1]}</div>
             <div className="fixtures-list-container">
                 <button className="scroll-button" onClick={() => scroll(-600)}>❮</button>
                 <div className="horizontal-list" ref={scrollContainer}>

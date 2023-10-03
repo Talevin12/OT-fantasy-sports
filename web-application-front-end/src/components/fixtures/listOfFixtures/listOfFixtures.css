@@ -6,19 +6,6 @@
     margin-inline: 10px;
 }
 
-.round-title {
-    background-image: url("../../../assets/background-EPL.png");
-    background-size: cover;
-    color: white;
-    font: italic small-caps bold 40px cursive;
-    padding-block: 20px;
-    border-radius: 25px;
-    margin-top: 40px;
-    text-align: center;
-    width: 50%;
-    align-self: center;
-}
-
 .fixtures-list-container {
     display: flex;
     flex-direction: row;

@@ -43,7 +43,7 @@ const LineupPosition = ({ players, substitutes }) => {
             </div>
             <div className="substitutes-container">
                 {/* <div className='substitutes-header'>Substitutes</div> */}
-                {substitutes.map((player, index) => (
+                {substitutes && substitutes.map((player, index) => (
                     <div className="substitutes-position" key={index} onMouseEnter={() => handleMouseEnter(player)} onMouseLeave={handleMouseLeave}>
                         {player && (
                             <img

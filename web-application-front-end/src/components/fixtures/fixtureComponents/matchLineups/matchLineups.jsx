@@ -34,35 +34,48 @@ const MatchLineups = ({ teamsLineups, isExpanded }) => {
     };
 
     useEffect(() => {
-        if (selectedTeamId !== null && selectedFormation !== null && !grid[selectedTeamId]) {
-            const players = teamsLineups.find(lineup => lineup.team.id === selectedTeamId).startXI;
-            const updatedGrid = {
-                ...grid,
-                [selectedTeamId]: insertPlayersIntoGrid(createGrid(selectedFormation), players)
-            };
-            setGrid(updatedGrid);
+        if (selectedTeamId && selectedFormation && teamsLineups && grid) {
+            const selectedTeam = teamsLineups.find(lineup => lineup.team.id === selectedTeamId)
+            if (selectedTeam) {
+                const players = selectedTeam.startXI;
+                const updatedGrid = {
+                    ...grid,
+                    [selectedTeamId]: insertPlayersIntoGrid(createGrid(selectedFormation), players)
+                };
+                setGrid(updatedGrid);
+            }
         }
     }, [selectedTeamId, selectedFormation, teamsLineups, grid]);
 
+    useEffect(() => {
+        if (teamsLineups) {
+            setSelectedTeamId(teamsLineups[0].team.id)
+            setSelectedFormation(teamsLineups[0].formation)
+        }
+    }, [teamsLineups])
 
     return (
         <div className={`match-lineups-container ${isExpanded ? 'expanded' : ''}`}>
             <div className="team-logos">
-                {teamsLineups.map(lineup => (
-                    <img
-                        key={lineup.team.id}
-                        src={lineup.team.logo}
-                        alt={lineup.team.name}
-                        onClick={() => handleLogoClick(lineup.team.id, lineup.formation)}
-                        className={selectedTeamId === lineup.team.id ? 'highlighted-team' : ''}
-                    />
-                ))}
+                {
+                    teamsLineups.map(lineup => (
+                        <img
+                            key={lineup.team.id}
+                            src={lineup.team.logo}
+                            alt={lineup.team.name}
+                            onClick={() => handleLogoClick(lineup.team.id, lineup.formation)}
+                            className={selectedTeamId === lineup.team.id ? 'highlighted-team' : ''}
+                        />
+                    ))}
             </div>
             {selectedTeamId !== null && selectedFormation !== null && (
                 <div className="lineup" key={selectedTeamId}>
                     <div className='lineup-info'>
                         <div className='selected-team-name'>
-                            {teamsLineups.find(lineup => lineup.team.id === selectedTeamId).team.name}
+                            {
+                                teamsLineups.find(lineup => lineup.team.id === selectedTeamId) &&
+                                teamsLineups.find(lineup => lineup.team.id === selectedTeamId).team.name
+                            }
                         </div>
                         <div className="formation">{selectedFormation}</div>
                     </div>
@@ -70,7 +83,11 @@ const MatchLineups = ({ teamsLineups, isExpanded }) => {
                     {grid[selectedTeamId] && (
                         <LineupPosition
                             players={grid[selectedTeamId]}
-                            substitutes={teamsLineups.find(lineup => lineup.team.id === selectedTeamId).substitutes}
+                            substitutes=
+                            {
+                                teamsLineups.find(lineup => lineup.team.id === selectedTeamId) &&
+                                teamsLineups.find(lineup => lineup.team.id === selectedTeamId).substitutes
+                            }
                         />
                     )}
                 </div>
