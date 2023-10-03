@@ -1,0 +1,58 @@
+.round-title {
+    background-image: url("../../assets/background-EPL.png");
+    background-size: cover;
+    color: white;
+    font: italic small-caps bold 40px cursive;
+    padding-block: 20px;
+    border-radius: 25px;
+    text-align: center;
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+    background-color: blue;
+}
+
+.title-text {
+    flex-grow: 1;
+    height: fit-content;
+    align-self: center;
+}
+
+.icon-button {
+    background-color: transparent;
+    border: none;
+    padding: 10px;
+    font-size: 24px;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.arrow-button {
+    background-color: transparent;
+    border: none;
+    padding: 10px;
+    font-size: 24px;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.arrow-button:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+}
+
+.arrow-button i {
+    display: inline-block;
+    font-size: 60px;
+    transform: scale(1.2);
+    /* Increase icon size */
+    transition: transform 0.3s;
+    margin-inline: 10px;
+}
+
+.arrow-button:hover i {
+    transform: scale(1.4);
+    /* Enlarge icon on hover */
+}
