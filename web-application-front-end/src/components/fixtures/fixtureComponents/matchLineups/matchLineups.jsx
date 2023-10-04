@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import './matchLineups.css';
 import LineupPosition from './lineupPosition/lineupPosition';
 
-const MatchLineups = ({ teamsLineups, isExpanded }) => {
+const MatchLineups = ({ teamsLineups, playersStats, isExpanded,toggleExpand }) => {
     const [selectedTeamId, setSelectedTeamId] = useState(teamsLineups[0].team.id);
     const [selectedFormation, setSelectedFormation] = useState(teamsLineups[0].formation);
     const [grid, setGrid] = useState({});
@@ -34,18 +34,21 @@ const MatchLineups = ({ teamsLineups, isExpanded }) => {
     };
 
     useEffect(() => {
-        if (selectedTeamId && selectedFormation && teamsLineups && grid) {
+        if (selectedTeamId && selectedFormation && teamsLineups) {
             const selectedTeam = teamsLineups.find(lineup => lineup.team.id === selectedTeamId)
             if (selectedTeam) {
                 const players = selectedTeam.startXI;
-                const updatedGrid = {
-                    ...grid,
-                    [selectedTeamId]: insertPlayersIntoGrid(createGrid(selectedFormation), players)
-                };
-                setGrid(updatedGrid);
+                setGrid(prevGrid => {
+                    const updatedGrid = {
+                        ...prevGrid,
+                        [selectedTeamId]: insertPlayersIntoGrid(createGrid(selectedFormation), players)
+                    };
+                    return updatedGrid;
+                });
             }
         }
-    }, [selectedTeamId, selectedFormation, teamsLineups, grid]);
+    }, [selectedTeamId, selectedFormation, teamsLineups]);
+    
 
     useEffect(() => {
         if (teamsLineups) {
@@ -53,6 +56,7 @@ const MatchLineups = ({ teamsLineups, isExpanded }) => {
             setSelectedFormation(teamsLineups[0].formation)
         }
     }, [teamsLineups])
+
 
     return (
         <div className={`match-lineups-container ${isExpanded ? 'expanded' : ''}`}>
@@ -88,6 +92,8 @@ const MatchLineups = ({ teamsLineups, isExpanded }) => {
                                 teamsLineups.find(lineup => lineup.team.id === selectedTeamId) &&
                                 teamsLineups.find(lineup => lineup.team.id === selectedTeamId).substitutes
                             }
+                            playersStats={playersStats.find(stats => stats.team.id === selectedTeamId)?.players}
+                            toggleExpand={toggleExpand}
                         />
                     )}
                 </div>

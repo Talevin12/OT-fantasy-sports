@@ -5,6 +5,11 @@
     height: fit-content;
 }
 
+.football-pitch.expanded {
+    display: none;
+}
+
+
 .football-pitch::-webkit-scrollbar {
     width: 0;
     background: transparent;
