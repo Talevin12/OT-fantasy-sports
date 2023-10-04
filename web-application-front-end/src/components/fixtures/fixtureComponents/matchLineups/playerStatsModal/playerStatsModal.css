@@ -1,0 +1,101 @@
+.player-stats-modal {
+    position: absolute;
+    height: 70%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: linear-gradient(to right, #ffffff, #ccdbec);
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow-y: scroll;
+}
+
+.player-stats-modal::-webkit-scrollbar {
+    width: 0;
+    background: transparent;
+}
+
+.player-name-modal {
+    font-family: 'Open Sans', sans-serif;
+    font-style: italic;
+    font-size: 32px;
+    font-weight: bold;
+    color: #333;
+    text-align: start;
+    margin-bottom: 10px;
+}
+
+.player-photo {
+    display: block;
+    margin: 0 auto;
+    border-radius: 50%;
+    max-width: 120px;
+    border: 3px solid #333;
+    margin-bottom: 15px;
+}
+
+.modal-overlay {
+    background-color: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+}
+
+.modal-content {
+    z-index: -1;
+    margin: 5% auto;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    color: #333333;
+}
+
+.close {
+    color: #777777;
+    font-size: 28px;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: #000000;
+    text-decoration: none;
+}
+
+.stat-item {
+    margin-bottom: 15px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #333333;
+}
+
+.stat-item p {
+    margin: 8px 0;
+    font-size: 18px;
+    font-weight: 500;
+    font-family: Arial, sans-serif;
+    color: #333333;
+    line-height: 1.6;
+    letter-spacing: 0.5px;
+}
+
+
+
+.stat-header {
+    font-size: 22px;
+    font-weight: bold;
+    margin-top: 15px;
+    margin-bottom: 8px;
+    color: #333333;
+    font-family: 'Open Sans', sans-serif;
+    font-style: italic;
+}
