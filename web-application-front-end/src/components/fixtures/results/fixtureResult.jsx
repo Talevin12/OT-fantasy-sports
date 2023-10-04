@@ -30,6 +30,7 @@ const FixtureResult = ({
     teamsStats,
     teamsEvents,
     teamsLineups,
+    playersStats,
 }) => {
     const homeTeamColor = premierLeagueTeams.find((team) => team.name === homeTeam)?.homeColor;
     const awayTeamColor = premierLeagueTeams.find((team) => team.name === awayTeam)?.awayColor;
@@ -132,7 +133,7 @@ const FixtureResult = ({
                         isExpanded={isExpanded} />
                 </div>
                 <div className={`sub-section ${activeSection === 'matchLineups' ? 'active' : ''}`}>
-                    <MatchLineups teamsLineups={teamsLineupsInFixtureResult} isExpanded={isExpanded} />
+                    <MatchLineups teamsLineups={teamsLineupsInFixtureResult} playersStats ={playersStats} isExpanded={isExpanded}toggleExpand={handleMouseLeave} />
                 </div>
             </div>
             {/* <div className={`expand-button ${isExpanded ? 'expanded' : ''}`} onClick={toggleExpand}>

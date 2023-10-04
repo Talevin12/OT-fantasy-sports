@@ -1,10 +1,25 @@
 import React, { useState } from 'react';
 import "./lineupPosition.css";
 import PlayerTooltip from '../playerTooltip/playerTooltip';
+import PlayerStatsModal from '../playerStatsModal/playerStatsModal';
 import footballPitchImage from '../../../../../assets/soccerFieldImage.jpg'
 
-const LineupPosition = ({ players, substitutes }) => {
+const LineupPosition = ({ players, substitutes, playersStats,toggleExpand }) => {
     const [tooltipInfo, setTooltipInfo] = useState(null);
+    const [showModal, setShowModal] = useState(false);
+    const [modalStats, setModalStats] = useState(null);
+
+    const handlePlayerClick = (player) => {
+        const playerStats = playersStats.find(stats => stats.player.id === player.player.id);
+        setModalStats(playerStats);
+        setShowModal(true);
+    };
+
+    const handleCloseModal = () => {
+        setShowModal(false);
+        toggleExpand();
+        setModalStats(null)
+  };
 
     const handleMouseEnter = (player) => {
         setTooltipInfo(player);
@@ -13,6 +28,8 @@ const LineupPosition = ({ players, substitutes }) => {
     const handleMouseLeave = () => {
         setTooltipInfo(null);
     };
+
+    
 
     return (
         <div className="football-pitch">
@@ -24,6 +41,7 @@ const LineupPosition = ({ players, substitutes }) => {
                             {row.slice().reverse().map((player, colIndex) => (
                                 <div className="position" key={colIndex}
                                     onMouseEnter={() => handleMouseEnter(player)}
+                                    onClick={() => handlePlayerClick(player)}
                                     onMouseLeave={handleMouseLeave}
                                     style={players.length === 5 ? ({ marginBottom: '25px' }) : ({ marginBottom: '50px' })}>
                                     {player && (
@@ -41,10 +59,14 @@ const LineupPosition = ({ players, substitutes }) => {
                     ))}
                 </div>
             </div>
+            
             <div className="substitutes-container">
-                {/* <div className='substitutes-header'>Substitutes</div> */}
                 {substitutes && substitutes.map((player, index) => (
-                    <div className="substitutes-position" key={index} onMouseEnter={() => handleMouseEnter(player)} onMouseLeave={handleMouseLeave}>
+                    <div className="substitutes-position" key={index} 
+                        onMouseEnter={() => handleMouseEnter(player)} 
+                        onMouseLeave={handleMouseLeave}
+                        onClick={() => handlePlayerClick(player)}
+                    >
                         {player && (
                             <img
                                 src={`https://media.api-sports.io/football/players/${player.player.id}.png`}
@@ -57,6 +79,9 @@ const LineupPosition = ({ players, substitutes }) => {
                     </div>
                 ))}
             </div >
+            {showModal && modalStats && (
+                <PlayerStatsModal isOpen={showModal} onClose={handleCloseModal} stats={modalStats} />
+            )}
         </div >
     );
 };
