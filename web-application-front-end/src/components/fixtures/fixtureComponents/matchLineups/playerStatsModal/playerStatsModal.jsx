@@ -40,7 +40,7 @@ const PlayerStatsModal = ({ isOpen, onClose, stats }) => {
             <div className="stat-header">Shots & Offsides</div>
             <p>Total Shots: {stat.shots.total !== null ? stat.shots.total : 0}</p>
             <p>Offsides: {stat.offsides !== null ? stat.offsides : 0}</p>
-            
+
             <div className="stat-header">Playing Time</div>
             <p>Minutes Played: {stat.games.minutes !== null ? stat.games.minutes : 0}</p>
 
@@ -54,7 +54,7 @@ const PlayerStatsModal = ({ isOpen, onClose, stats }) => {
             <p>Yellow Cards: {stat.cards.yellow !== null ? stat.cards.yellow : 0}</p>
 
             <div className="stat-header">Dribbles</div>
-            <p>Attempts: {stat.dribbles.attempts !== null ? stat.dribbles.attempts  : 0}</p>
+            <p>Attempts: {stat.dribbles.attempts !== null ? stat.dribbles.attempts : 0}</p>
             <p>Success: {stat.dribbles.success !== null ? stat.dribbles.success : 0}</p>
             <p>Past: {stat.dribbles.past !== null ? stat.dribbles.past : 0}</p>
           </div>

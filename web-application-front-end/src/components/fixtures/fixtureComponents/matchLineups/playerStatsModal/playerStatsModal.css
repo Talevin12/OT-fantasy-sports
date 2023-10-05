@@ -8,6 +8,7 @@
     border-radius: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     overflow-y: scroll;
+    width: 25%;
 }
 
 .player-stats-modal::-webkit-scrollbar {
@@ -21,7 +22,7 @@
     font-size: 32px;
     font-weight: bold;
     color: #333;
-    text-align: start;
+    text-align: center;
     margin-bottom: 10px;
 }
 
@@ -50,8 +51,8 @@
 .modal-content {
     z-index: -1;
     margin: 5% auto;
-    padding: 30px;
     border-radius: 12px;
+    padding-inline: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     color: #333333;
 }
@@ -60,7 +61,7 @@
     color: #777777;
     font-size: 28px;
     position: absolute;
-    top: 20px;
+    top: 10px;
     right: 20px;
     cursor: pointer;
 }
