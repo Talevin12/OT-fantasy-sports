@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './futureFixture.css';
-import premierLeagueTeams from '../colorsTeams';
+import premierLeagueTeams from '../../../assets/colorsTeams.json';
 import MatchInfo from '../fixtureComponents/matchInfo/matchInfo';
 import TeamInfo from '../fixtureComponents/teamInfo/teamInfo';
 
@@ -17,9 +17,8 @@ const Fixture = ({
     homeTeamRecord,
     awayTeamRecord
 }) => {
-    // Find the team colors based on team names
-    const homeTeamColor = premierLeagueTeams.find((team) => team.name === homeTeam)?.homeColor;
-    const awayTeamColor = premierLeagueTeams.find((team) => team.name === awayTeam)?.awayColor;
+    const homeTeamColor = premierLeagueTeams[homeTeam]?.homeColor;
+    const awayTeamColor = premierLeagueTeams[awayTeam]?.awayColor;
 
     const [containerStyle, setContainerStyle] = useState({
         background: 'white',

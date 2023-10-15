@@ -11,8 +11,8 @@ router.get("/stats/getPlayerStatsByFixtureId", async (req, res) => {
 
 //GET PLAYERS SEASON INFO AND STATS BY TEAM DATA
 router.get("/stats/getPlayersInfoAndStatsByTeam", async (req, res) => {
-    let { teamId } = req.query;
-    const PlayersInfoAndStatsByTeamData = await playersStatsRequests.getPlayersInfoAndStatsByTeam(teamId);
+    let { teamId, page } = req.query;
+    const PlayersInfoAndStatsByTeamData = await playersStatsRequests.getPlayersInfoAndStatsByTeam(teamId, page);
     res.status(200).send(PlayersInfoAndStatsByTeamData);
 })
 

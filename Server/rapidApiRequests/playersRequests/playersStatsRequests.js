@@ -24,14 +24,15 @@ const getPlayerStatsByFixtureId = async (fixtureId, teamId) => {
     }
 };
 
-const getPlayersInfoAndStatsByTeam = async (teamId) => {
+const getPlayersInfoAndStatsByTeam = async (teamId, page) => {
     const options = {
         method: 'GET',
         url: 'https://api-football-v1.p.rapidapi.com/v3/players',
         params: {
             team: teamId,
             league: rapidApiConsts.EPL_LEAGUE_ID,
-            season: rapidApiConsts.CURRENT_SEASON
+            season: rapidApiConsts.CURRENT_SEASON,
+            page: page
         },
         headers: {
             'X-RapidAPI-Key': process.env.RAPID_API_KEY,

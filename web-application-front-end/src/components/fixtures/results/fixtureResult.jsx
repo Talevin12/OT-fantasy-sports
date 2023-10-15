@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './fixtureResult.css';
-import premierLeagueTeams from '../colorsTeams';
+import premierLeagueTeams from '../../../assets/colorsTeams.json';
 import TeamInfo from '../fixtureComponents/teamInfo/teamInfo';
 import MatchInfo from '../fixtureComponents/matchInfo/matchInfo';
 import MatchStats from '../fixtureComponents/matchStats/matchStats';
@@ -32,8 +32,8 @@ const FixtureResult = ({
     teamsLineups,
     playersStats,
 }) => {
-    const homeTeamColor = premierLeagueTeams.find((team) => team.name === homeTeam)?.homeColor;
-    const awayTeamColor = premierLeagueTeams.find((team) => team.name === awayTeam)?.awayColor;
+    const homeTeamColor = premierLeagueTeams[homeTeam]?.homeColor;
+    const awayTeamColor = premierLeagueTeams[awayTeam]?.awayColor;
 
     const [containerStyle, setContainerStyle] = useState({
         background: '#fff',
@@ -133,7 +133,7 @@ const FixtureResult = ({
                         isExpanded={isExpanded} />
                 </div>
                 <div className={`sub-section ${activeSection === 'matchLineups' ? 'active' : ''}`}>
-                    <MatchLineups teamsLineups={teamsLineupsInFixtureResult} playersStats ={playersStats} isExpanded={isExpanded}toggleExpand={handleMouseLeave} />
+                    <MatchLineups teamsLineups={teamsLineupsInFixtureResult} playersStats={playersStats} isExpanded={isExpanded} toggleExpand={handleMouseLeave} />
                 </div>
             </div>
             {/* <div className={`expand-button ${isExpanded ? 'expanded' : ''}`} onClick={toggleExpand}>

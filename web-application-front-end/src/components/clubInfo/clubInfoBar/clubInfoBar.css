@@ -1,0 +1,52 @@
+.club-info-bar {
+    display: flex;
+    align-items: center;
+    color: white;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s;
+    cursor: pointer;
+    margin: 20px;
+}
+
+.club-info-logo {
+    height: 90%;
+    padding: 10px;
+    width: auto;
+    overflow: hidden;
+    border-radius: 50%;
+    box-shadow: 0 20px 20px rgba(0, 0, 0, 0.2);
+}
+
+.club-info-logo img {
+    width: 100%;
+    height: auto;
+}
+
+.club-info-details {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    padding-left: 20px;
+    /* background-color: aqua; */
+}
+
+.club-info-name {
+    align-self: center;
+    text-align: center;
+    margin: 15px;
+    font-size: 100px;
+}
+
+.club-info-stadium {
+    font-size: 28px;
+    margin: 5px;
+    margin-top: 5px;
+}
+
+.club-info-founded-year {
+    font-size: 20px;
+    margin: 5px;
+    margin-top: 5px;
+}
