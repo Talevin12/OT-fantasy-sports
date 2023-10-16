@@ -1,6 +1,6 @@
 import React from 'react';
 import './clubSquad.css';
-import ClubPlayerInfo from '../clubPlayerInfo/clubPlayerInfo';
+import ClubPlayerInfo from './clubPlayerInfo/clubPlayerInfo';
 
 const ClubSquad = ({ clubColor, ClubSquad, clubSquadExtended }) => {
     const positions = ['Goalkeeper', 'Defender', 'Midfielder', 'Attacker'];

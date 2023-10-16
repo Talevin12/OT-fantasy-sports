@@ -1,0 +1,43 @@
+.club-stats {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.stat-selector {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 10px;
+}
+
+.stat-bubble {
+    border-radius: 30%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+    background-color: linear-gradient(135deg, #eee, #ccc);
+    cursor: pointer;
+    padding: 70px;
+    margin: 30px;
+    text-align: center;
+    font-weight: normal;
+    color: #333;
+    transition: all 0.2s ease-in-out;
+}
+
+.stat-bubble:hover {
+    transform: scale(1.1);
+}
+
+.stat-label {
+    display: block;
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.stat-value {
+    display: block;
+    font-size: 24px;
+    font-weight: normal;
+}
