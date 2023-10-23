@@ -32,7 +32,7 @@ const compareFixturesByDateAndStatus = (fixtureA, fixtureB) => {
     return new Date(fixtureA.fixture.date) - new Date(fixtureB.fixture.date);
 }
 
-const ListOfFixtures = ({ fixtures, standings, fixturesExtended }) => {
+const ListOfFixtures = ({ fixtures, standings, fixturesExtended, currentRound = null }) => {
     let [fixturesSorted, setFixtureSorted] = useState(fixtures.sort(compareFixturesByDateAndStatus))
     let [fixturesExtendedSorted, setFixturesExtendedSorted] = useState(fixturesExtended.sort(compareFixturesByDateAndStatus))
 
@@ -40,7 +40,10 @@ const ListOfFixtures = ({ fixtures, standings, fixturesExtended }) => {
     const timeOptions = { hour: 'numeric', minute: '2-digit' }
 
     const scrollContainer = useRef(null);
+    const itemRef = useRef();
 
+
+    console.log(currentRound)
     const scroll = (scrollOffset) => {
         scrollContainer.current.scrollBy({
             top: 0,
@@ -48,6 +51,12 @@ const ListOfFixtures = ({ fixtures, standings, fixturesExtended }) => {
             behavior: 'smooth'
         });
     };
+
+    const scrollCurrentRoundToCenter = () => {
+        if (itemRef.current) {
+            itemRef.current.scrollIntoView({ behavior: "smooth", inline: "center", block: "nearest" });
+        }
+    }
 
     let records = {};
     for (let rank in standings) {
@@ -60,15 +69,22 @@ const ListOfFixtures = ({ fixtures, standings, fixturesExtended }) => {
         setFixturesExtendedSorted(fixturesExtended.sort(compareFixturesByDateAndStatus))
     }, [fixtures, fixturesExtended])
 
+    useEffect(() => {
+        scrollCurrentRoundToCenter();
+    }, []);
+
     return (
         <div className='fixtures-container'>
             <div className="fixtures-list-container">
-                <button className="scroll-button" onClick={() => scroll(-600)}>❮</button>
+                <button className="scroll-button" onClick={() => scroll(-1000)}>❮</button>
                 <div className="horizontal-list" ref={scrollContainer}>
-                    {fixturesSorted.map((item, index) => (
-                        <div className="list-item" key={index}>
+                    {fixturesSorted.map((item, index) =>
+                    (
+                        <div className="list-item" key={index}
+                            ref={currentRound && item.league.round.split(" - ")[1] === currentRound.split(" - ")[1] ? itemRef : null}>
                             {item.fixture.status.short === "NS" ?
                                 <Fixture
+                                    round={item.league.round.split(" - ")[1]}
                                     homeTeam={item.teams.home.name}
                                     awayTeam={item.teams.away.name}
                                     date={new Date(item.fixture.date).toLocaleDateString("en-US", dateOptions)}
@@ -82,6 +98,7 @@ const ListOfFixtures = ({ fixtures, standings, fixturesExtended }) => {
                                     awayTeamRecord={records[item.teams.away.name]} />
                                 :
                                 < FixtureResult
+                                    round={item.league.round.split(" - ")[1]}
                                     homeTeam={item.teams.home.name}
                                     awayTeam={item.teams.away.name}
                                     homeTeamScore={item.goals.home}
@@ -100,13 +117,13 @@ const ListOfFixtures = ({ fixtures, standings, fixturesExtended }) => {
                                     teamsStats={fixturesExtendedSorted[index].statistics}
                                     teamsEvents={fixturesExtendedSorted[index].events}
                                     teamsLineups={fixturesExtendedSorted[index].lineups}
-                                    playersStats = {fixturesExtendedSorted[index].players}
-                                     />
+                                    playersStats={fixturesExtendedSorted[index].players}
+                                />
                             }
                         </div>
                     ))}
                 </div>
-                <button className="scroll-button" onClick={() => scroll(600)}>❯</button>
+                <button className="scroll-button" onClick={() => scroll(1000)}>❯</button>
             </div>
         </div>
     );

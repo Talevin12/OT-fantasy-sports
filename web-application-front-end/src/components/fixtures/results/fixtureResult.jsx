@@ -12,6 +12,7 @@ import pitch from '../../../assets/football-pitch.svg'
 
 
 const FixtureResult = ({
+    round,
     homeTeam,
     awayTeam,
     homeTeamScore,
@@ -77,6 +78,7 @@ const FixtureResult = ({
     return (
         <div className={`match-result-container ${isExpanded ? 'expanded' : ''}`} style={containerStyle}
             onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
+            <div className='fixture-result-round-header'>{`Matchweek ${round}`}</div>
             <div className="team-details">
                 <TeamInfo teamName={homeTeam} teamLogo={homeTeamLogo} teamRecord={homeTeamRecord} />
                 <div className='gameStatus'>
@@ -136,9 +138,6 @@ const FixtureResult = ({
                     <MatchLineups teamsLineups={teamsLineupsInFixtureResult} playersStats={playersStats} isExpanded={isExpanded} toggleExpand={handleMouseLeave} />
                 </div>
             </div>
-            {/* <div className={`expand-button ${isExpanded ? 'expanded' : ''}`} onClick={toggleExpand}>
-                <i className={`fas fa-arrow-${isExpanded ? 'up' : 'down'} ${isExpanded ? 'expanded' : ''}`}></i>
-            </div> */}
         </div >
     );
 };

@@ -3,8 +3,8 @@ import './homePage.css';
 
 import TopBar from "../../components/topBar/topBar";
 import PremierLeagueNavBar from "../../components/leagueNavBar/premierLeagueNavBar";
+// import NBANavBar from "../../components/leagueNavBar/NBANavBar";
 
-import NBANavBar from "../../components/leagueNavBar/NBANavBar";
 import StandingsTable from '../../components/premierLeagueTables/standingsTable/standingsTable';
 import TopScorersTable from '../../components/premierLeagueTables/topScorersTable/topScorersTable';
 import TopAssistsTable from '../../components/premierLeagueTables/topAssistsTable/topAssistsTable';
@@ -48,8 +48,9 @@ const HomePage = () => {
 
     return (
         <>
-            <TopBar currentLeague={currentLeague} onLeagueChange={setCurrentLeague} />
-            {currentLeague === "PremierLeague" ? <PremierLeagueNavBar /> : <NBANavBar />}
+            <TopBar currentLeague={currentLeague} /*onLeagueChange={setCurrentLeague}*/ />
+            <PremierLeagueNavBar />
+            {/* {currentLeague === "PremierLeague" ? <PremierLeagueNavBar /> : <NBANavBar />} */}
 
             <div className='home-page-container'>
                 <div className='title-container'>
@@ -57,10 +58,11 @@ const HomePage = () => {
                 </div>
 
                 <div className='list-container'>
-                    <ListOfFixtures fixtures={homePageFixtures}
-                        standings={standings.response[0].league.standings[0]}
-                        fixturesExtended={homePageFixturesStats} />
-
+                    <div className='list-abs'>
+                        <ListOfFixtures fixtures={homePageFixtures}
+                            standings={standings.response[0].league.standings[0]}
+                            fixturesExtended={homePageFixturesStats} />
+                    </div>
                 </div>
 
                 <div className='tables-container'>

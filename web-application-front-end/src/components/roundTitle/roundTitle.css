@@ -2,11 +2,11 @@
     background-image: url("../../assets/background-EPL.png");
     background-size: cover;
     color: white;
-    font: italic small-caps bold 40px cursive;
+    font: italic small-caps bold 70px cursive;
     padding-block: 20px;
     border-radius: 25px;
     text-align: center;
-    width: 50%;
+    width: 75%;
     display: flex;
     justify-content: space-between;
     background-color: blue;
@@ -23,7 +23,6 @@
     border: none;
     padding: 10px;
     font-size: 24px;
-    color: white;
     cursor: pointer;
     transition: background-color 0.3s, color 0.3s;
 }
@@ -32,8 +31,7 @@
     background-color: transparent;
     border: none;
     padding: 10px;
-    font-size: 24px;
-    color: white;
+    /* font-size: 24px; */
     cursor: pointer;
     transition: background-color 0.3s, color 0.3s;
 }
@@ -43,16 +41,16 @@
     border-radius: 50%;
 }
 
-.arrow-button i {
+.arrow-button img {
     display: inline-block;
-    font-size: 60px;
+    width: 70px;
+    height: 80%;
     transform: scale(1.2);
-    /* Increase icon size */
     transition: transform 0.3s;
     margin-inline: 10px;
 }
 
-.arrow-button:hover i {
+.arrow-button:hover img {
     transform: scale(1.4);
     /* Enlarge icon on hover */
 }

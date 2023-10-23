@@ -5,6 +5,7 @@ import MatchInfo from '../fixtureComponents/matchInfo/matchInfo';
 import TeamInfo from '../fixtureComponents/teamInfo/teamInfo';
 
 const Fixture = ({
+    round,
     homeTeam,
     awayTeam,
     date,
@@ -51,6 +52,7 @@ const Fixture = ({
     return (
         <div className={`pending-match-container ${isExpanded ? 'expanded' : ''}`} style={containerStyle}
             onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
+            <div className='future-fixture-round-header'>{`Matchweek ${round}`}</div>
             <div className="team-details">
                 <TeamInfo teamName={homeTeam} teamLogo={homeTeamLogo} teamRecord={homeTeamRecord} />
                 <div className="team-vs">VS</div>
@@ -61,10 +63,6 @@ const Fixture = ({
                     referee={referee} stadium={stadium} location={location}
                     isExpanded={isExpanded} />
             </div>
-            {/* <MatchInfo date={date} time={time} referee={referee} stadium={stadium} location={location} isExpanded={isExpanded} /> */}
-            {/* <div className={`expand-button ${isExpanded ? 'expanded' : ''}`} onClick={toggleExpand}>
-                <i className={`fas fa-arrow-${isExpanded ? 'up' : 'down'} ${isExpanded ? 'expanded' : ''}`}></i>
-            </div> */}
         </div>
     );
 };
