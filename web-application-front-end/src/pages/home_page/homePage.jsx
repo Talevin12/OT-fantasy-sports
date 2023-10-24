@@ -48,7 +48,7 @@ const HomePage = () => {
 
     return (
         <>
-            <TopBar currentLeague={currentLeague} /*onLeagueChange={setCurrentLeague}*/ />
+            <TopBar currentLeague={currentLeague} onLeagueChange={setCurrentLeague} />
             <PremierLeagueNavBar />
             {/* {currentLeague === "PremierLeague" ? <PremierLeagueNavBar /> : <NBANavBar />} */}
 

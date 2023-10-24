@@ -42,8 +42,6 @@ const ListOfFixtures = ({ fixtures, standings, fixturesExtended, currentRound = 
     const scrollContainer = useRef(null);
     const itemRef = useRef();
 
-
-    console.log(currentRound)
     const scroll = (scrollOffset) => {
         scrollContainer.current.scrollBy({
             top: 0,
