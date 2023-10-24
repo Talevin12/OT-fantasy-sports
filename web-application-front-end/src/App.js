@@ -1,12 +1,10 @@
 import './App.css';
-// import HomePage from "./pages/home_page/homePage";
-import ClubInfoPage from './pages/clubInfo/clubInfoPage';
+import HomePage from "./pages/home_page/homePage";
 
 function App() {
   return (
     <>
-      {/* <HomePage /> */}
-      <ClubInfoPage />
+      <HomePage />
     </>
   );
 }
