@@ -20,13 +20,18 @@ const PlayerInfoPage = ({/* playerId */}) => {
         setActiveStat(activeStat === index ? null : index);
     }
 
-    const getTeamGradient = (teamName) => {
+    const getTeamColorInfo = (teamName) => {
         const team = premierLeagueTeamsColors.find(team => team.name === teamName);
-        if (team) {
-            const { homeColor, awayColor } = team;
-            return `linear-gradient(to right, ${homeColor}, ${awayColor})`;
-        }
-        return 'linear-gradient(to right, #fff, #04f7ff52)';
+        const { homeColor} = team;
+
+        return `linear-gradient(45deg, #fff 30%, ${homeColor})`;
+    }
+
+    const getTeamColorStats = (teamName) => {
+        const team = premierLeagueTeamsColors.find(team => team.name === teamName);
+        const { homeColor} = team;
+
+        return `linear-gradient(45deg, #fff 20%, ${homeColor})`;
     }
 
     useEffect(() => {
@@ -55,48 +60,49 @@ const PlayerInfoPage = ({/* playerId */}) => {
             <div className='player-page-container'>
                 <h3 className="stat-header-stats">Info</h3>
                 {playerData && (
-                    <div className="golden-frame player-info" style={{ backgroundImage: getTeamGradient(playerData[0].statistics[0].team.name) }}>
-                        <h2 className="player-name">{playerData[0].player.firstname +  " " + playerData[0].player.lastname}</h2>
-                        <div className="player-photo-container">
-                            <img src={playerData[0].player.photo} alt={playerData[0].player.name} className="player-photo-info" />
-                            <div className="team-details">
-                                <img src={playerData[0].statistics[0].team.logo} alt={playerData[0].statistics[0].team.name} className="team-logo" />
-                                <p className="team-name">{playerData[0].statistics[0].team.name}</p>
+                    <div className="player-info-frame" style={{ backgroundImage: getTeamColorInfo(playerData[0].statistics[0].team.name) }}>
+                        <div className="player-info">
+                            <h2 className="player-name">{playerData[0].player.firstname +  " " + playerData[0].player.lastname}</h2>
+                            <div className="player-photo-container">
+                                <img src={playerData[0].player.photo} alt={playerData[0].player.name} className="player-photo-info" />
                             </div>
-                        </div>
-                        <div className="group-info">
-                            <div className="player-details">
-                                <div className="player-info-small">
-                                    <div className="info-item">
-                                        <h4 className="title">Height:</h4>
-                                        <p className="content">{playerData[0].player.height}</p>
-                                    </div>
-                                    <div className="info-item">
-                                        <h4 className="title">Weight:</h4>
-                                        <p className="content">{playerData[0].player.weight}</p>
-                                    </div>
-                                    <div className="info-item">
-                                        <h4 className="title">Team:</h4>
-                                        <p className="content">{playerData[0].statistics[0].team.name}</p>
-                                    </div>
-                                    <div className="info-item">
-                                        <h4 className="title">Age:</h4>
-                                        <p className="content">{playerData[0].player.age}</p>
-                                    </div>
-                                    <div className="info-item">
-                                        <h4 className="title">Birth Date:</h4>
-                                        <p className="content">{playerData[0].player.birth.date}</p>
-                                    </div>
-                                    <div className="info-item">
-                                        <h4 className="title">Birth Place:</h4>
-                                        <p className="content">{playerData[0].player.birth.place}</p>
-                                    </div>
-                                    <div className="info-item">
-                                        <h4 className="title">Nationality:</h4>
-                                        <p className="content">{playerData[0].player.nationality}</p>
+                            <div className="group-info">
+                                <div className="player-details">
+                                    <div className="player-info-small">
+                                        <div className="info-item">
+                                            <h4 className="title">Height:</h4>
+                                            <p className="content">{playerData[0].player.height}</p>
+                                        </div>
+                                        <div className="info-item">
+                                            <h4 className="title">Weight:</h4>
+                                            <p className="content">{playerData[0].player.weight}</p>
+                                        </div>
+                                        <div className="info-item">
+                                            <h4 className="title">Team:</h4>
+                                            <p className="content">{playerData[0].statistics[0].team.name}</p>
+                                        </div>
+                                        <div className="info-item">
+                                            <h4 className="title">Age:</h4>
+                                            <p className="content">{playerData[0].player.age}</p>
+                                        </div>
+                                        <div className="info-item">
+                                            <h4 className="title">Birth Date:</h4>
+                                            <p className="content">{playerData[0].player.birth.date}</p>
+                                        </div>
+                                        <div className="info-item">
+                                            <h4 className="title">Birth Place:</h4>
+                                            <p className="content">{playerData[0].player.birth.place}</p>
+                                        </div>
+                                        <div className="info-item">
+                                            <h4 className="title">Nationality:</h4>
+                                            <p className="content">{playerData[0].player.nationality}</p>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
+                        </div>
+                        <div className="team-details">
+                            <img src={playerData[0].statistics[0].team.logo} alt={playerData[0].statistics[0].team.name} className="team-logo" />
                         </div>
                     </div>
                 )}
@@ -118,11 +124,11 @@ const PlayerInfoPage = ({/* playerId */}) => {
                                 <option value="2023">2023</option>
                             </select>
                         </div>
-                        <div className="golden-frame player-statistics" style={{ backgroundImage: getTeamGradient(playerData[0].statistics[0].team.name) }}>
+                        <div className="player-statistics-frame">
                             <ul className="stats-list">
                                 {playerData[0].statistics.map((stat, index) => (
                                     stat.games.appearences > 0 && (
-                                        <li key={index} className="stat-item" onClick={() => toggleStat(index)}>
+                                        <li key={index} className="stat-item" onClick={() => toggleStat(index)} style={{ backgroundImage: getTeamColorStats(playerData[0].statistics[0].team.name) }}>
                                             <div className="stat-header" >
                                                 <strong>{stat.league.name}</strong>:
                                                 <hr className="stat-line" />
