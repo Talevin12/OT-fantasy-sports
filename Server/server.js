@@ -3,6 +3,7 @@
 const express = require('express');
 require('dotenv').config();
 
+const cors = require('cors');
 const apiIndex = require('./routes/apiIndex');
 const setupRoutes = require('./routeSetup');
 
@@ -12,6 +13,9 @@ const HOST = '0.0.0.0';
 
 // App
 const app = express();
+
+app.use(cors());
+
 app.get('/', (req, res) => {
     res.send('Hello World + ' + process.env.RAPID_API_KEY);
 });
