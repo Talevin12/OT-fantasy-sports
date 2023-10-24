@@ -4,9 +4,9 @@ import TopBar from "../../components/topBar/topBar";
 import PremierLeagueNavBar from "../../components/leagueNavBar/premierLeagueNavBar";
 import NBANavBar from "../../components/leagueNavBar/NBANavBar";
 import axios from 'axios';
-import premierLeagueTeamsColors from '../../components/fixtures/colorsTeams';
+import premierLeagueTeamsColors from '../../assets/colorsTeams.json';
 
-const PlayerInfoPage = ({/* playerId */}) => {
+const PlayerInfoPage = () => {
     const [currentLeague, setCurrentLeague] = useState("PremierLeague");
     const [playerData, setPlayerData] = useState(null);
     const [activeStat, setActiveStat] = useState(null);
@@ -21,14 +21,13 @@ const PlayerInfoPage = ({/* playerId */}) => {
     }
 
     const getTeamColorInfo = (teamName) => {
-        const team = premierLeagueTeamsColors.find(team => team.name === teamName);
+        const team = premierLeagueTeamsColors[teamName];
         const { homeColor} = team;
-
         return `linear-gradient(45deg, #fff 30%, ${homeColor})`;
     }
 
     const getTeamColorStats = (teamName) => {
-        const team = premierLeagueTeamsColors.find(team => team.name === teamName);
+        const team = premierLeagueTeamsColors[teamName];
         const { homeColor} = team;
 
         return `linear-gradient(45deg, #fff 20%, ${homeColor})`;
