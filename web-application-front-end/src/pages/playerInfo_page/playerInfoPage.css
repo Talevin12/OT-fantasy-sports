@@ -1,9 +1,20 @@
 .player-page-container {
     align-items: center;
     width: 100%;
-  }
+}
+
+.player-info-frame {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    margin-bottom: 20px;
+}
   
-.golden-frame {
+.player-statistics-frame{
     max-width: 100%;
     margin: 0 auto;
     padding: 20px;
@@ -23,13 +34,16 @@
 }
 
 .team-details {
+    flex: 1;
+    justify-content: center;
+    justify-items: center;
     align-items: center;
     text-align: center;
     margin-bottom: 10px;
 }
 
 .team-logo {
-    width: 100px; 
+    width: 25%; 
     height: auto;
     margin-bottom: 5px;
 }
@@ -102,6 +116,7 @@
 }
 
 .stat-item {
+    cursor: pointer;
     margin-bottom: 30px;
     box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.1);
     border-radius: 20px;
@@ -109,9 +124,7 @@
     transition: transform 0.3s;
 }
 
-.player-photo-container:hover,
 .stat-item:hover,
-.player-info-small:hover,
 .player-photo:hover {
     transform: translateY(-15px);
 }
