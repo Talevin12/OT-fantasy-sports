@@ -6,6 +6,8 @@ require('dotenv').config();
 const cors = require('cors');
 const apiIndex = require('./routes/apiIndex');
 const setupRoutes = require('./routeSetup');
+const mongoose = require("mongoose");
+
 
 // Constants
 const PORT = 8080;
@@ -15,6 +17,14 @@ const HOST = '0.0.0.0';
 const app = express();
 
 app.use(cors());
+
+mongoose.connect(process.env.MONGO_URL)
+  .then(() => {
+    console.log("Connected to MongoDB");
+  })
+  .catch((error) => {
+    console.error("Error connecting to MongoDB:", error);
+  });
 
 app.get('/', (req, res) => {
     res.send('Hello World + ' + process.env.RAPID_API_KEY);
