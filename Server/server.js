@@ -10,8 +10,8 @@ const mongoose = require("mongoose");
 
 
 // Constants
-const PORT = 8080;
-const HOST = '0.0.0.0';
+const PORT = process.env.PORT;
+const HOST = process.env.HOST;
 
 // App
 const app = express();
@@ -27,11 +27,11 @@ mongoose.connect(process.env.MONGO_URL)
   });
 
 app.get('/', (req, res) => {
-    res.send('Hello World + ' + process.env.RAPID_API_KEY);
+  res.send('Hello World + ' + process.env.RAPID_API_KEY);
 });
 
 app.listen(PORT, HOST, () => {
-    console.log(`Running on http://${HOST}:${PORT}`);
+  console.log(`Running on http://${HOST}:${PORT}`);
 });
 
 setupRoutes(app, apiIndex);

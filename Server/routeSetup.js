@@ -1,5 +1,5 @@
 function setupRoutes(app, apiIndex) {
-  app.use("/api/fixtures", apiIndex.fixtures);
+  app.use("/ap i/fixtures", apiIndex.fixtures);
   app.use("/api/teams", apiIndex.teams);
   app.use("/api/teams", apiIndex.teamsStats);
   app.use("/api/players", apiIndex.players);
