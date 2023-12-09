@@ -5,7 +5,8 @@
   "author": "Tal Levin <levintal085@gmail.com>",
   "main": "server.js",
   "scripts": {
-    "start": "nodemon"
+    "start": "nodemon",
+    "test": "mocha test/**/*.js"
   },
   "dependencies": {
     "axios": "^1.5.0",
@@ -27,5 +28,9 @@
   "bugs": {
     "url": "https://github.com/Talevin12/OT-fantasy-sports/issues"
   },
-  "homepage": "https://github.com/Talevin12/OT-fantasy-sports#readme"
+  "homepage": "https://github.com/Talevin12/OT-fantasy-sports#readme",
+  "devDependencies": {
+    "chai": "^4.3.10",
+    "mocha": "^10.2.0"
+  }
 }
