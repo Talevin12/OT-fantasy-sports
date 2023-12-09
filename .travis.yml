@@ -8,14 +8,14 @@ before_install:
 script:
   - docker run -e CI=true ot-fantasy-sports/node-server npm run test
 
-# deploy:
-#   provider: elasticbeanstalk
-#   region: "eu-north-1"
-#   app: "Docker-react"
-#   env: "Docker-react-env"
-#   bucket_name: "elasticbeanstalk-eu-north-1-076750411957"
-#   bucket_path: "Docker-react"
-#   on:
-#    branch: master
-#   access_key_id: $AWS_ACCESS_KEY
-#   secret_access_key: "$AWS_SECRET_KEY"
+deploy:
+  provider: elasticbeanstalk
+  region: "eu-north-1"
+  app: "ot-fantasy-sports"
+  env: "ot-fantasy-sports-node-server"
+  bucket_name: "elasticbeanstalk-eu-north-1-076750411957"
+  bucket_path: "ot-fantasy-sports"
+  on:
+   branch: master
+  access_key_id: $AWS_ACCESS_KEY
+  secret_access_key: "$AWS_SECRET_KEY"
