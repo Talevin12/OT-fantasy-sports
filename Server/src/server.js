@@ -27,7 +27,7 @@ mongoose.connect(process.env.MONGO_URL)
   });
 
 app.get('/', (req, res) => {
-  res.send('Hello World + ' + process.env.RAPID_API_KEY);
+  res.send('Hello World');
 });
 
 app.listen(PORT, HOST, () => {
