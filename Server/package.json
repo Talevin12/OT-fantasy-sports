@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Node.js on Docker",
   "author": "Tal Levin <levintal085@gmail.com>",
-  "main": "Server/server.js",
+  "main": "server.js",
   "scripts": {
     "start": "node Server/server.js",
     "build": "babel src -d build",
