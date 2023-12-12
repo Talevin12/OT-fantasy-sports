@@ -3,7 +3,7 @@ services:
   - docker
 
 before_install:
-  - docker build -t ot-fantasy-sports/node-server -f Dockerfile.dev .
+  - docker build -t ot-fantasy-sports/node-server -f Server/Dockerfile.dev .
 
 script:
   - docker run -e CI=true ot-fantasy-sports/node-server npm run test
