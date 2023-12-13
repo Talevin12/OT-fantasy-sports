@@ -5,11 +5,11 @@ services:
   - docker
 
 before_install:
-  - cd Server
   - docker build -t ot-fantasy-sports/node-server -f Dockerfile.dev .
 
 script:
   - docker run -e CI=true ot-fantasy-sports/node-server npm run test
+  - cd Server
 
 deploy:
   provider: elasticbeanstalk
