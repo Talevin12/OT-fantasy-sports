@@ -11,7 +11,7 @@ const setupRoutes = require('./routeSetup');
 
 // Constants
 const PORT = process.env.PORT;
-const HOST = process.env.HOST || 'ot-fantasy-sports-node-server.eba-8zfjic2b.eu-north-1.elasticbeanstalk.com';
+const HOST = process.env.HOST //|| 'ot-fantasy-sports-node-server.eba-8zfjic2b.eu-north-1.elasticbeanstalk.com';
 
 // App
 const app = express();
