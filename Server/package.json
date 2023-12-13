@@ -6,7 +6,7 @@
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
-    "build": "babel src -d build",
+    "build": "babel Server/src -d build",
     "test": "mocha test/**/*.js"
   },
   "dependencies": {
