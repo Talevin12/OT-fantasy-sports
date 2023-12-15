@@ -9,7 +9,6 @@ before_install:
 
 script:
   - docker run -e CI=true talevin2000/node-server-test npm test
-  - cd Server
 
 after_success:
   - docker build -t talevin2000/fantasy-client-react ./client-react
