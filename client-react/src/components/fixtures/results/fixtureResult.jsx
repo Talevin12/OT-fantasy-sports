@@ -6,8 +6,8 @@ import MatchInfo from '../fixtureComponents/matchInfo/matchInfo';
 import MatchStats from '../fixtureComponents/matchStats/matchStats';
 import MatchEvents from '../fixtureComponents/matchEvents/matchEvents';
 import MatchLineups from '../fixtureComponents/matchLineups/matchLineups';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faInfoCircle, faTimeline, faChartPie } from '@fortawesome/free-solid-svg-icons';
+// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+// import { faInfoCircle, faTimeline, faChartPie } from '@fortawesome/free-solid-svg-icons';
 import pitch from '../../../assets/football-pitch.svg'
 
 
@@ -100,19 +100,22 @@ const FixtureResult = ({
                         onClick={() => handleSectionChange('matchInfo')}
                         className={`custom-button ${activeSection === 'matchInfo' ? 'active' : ''}`}
                     >
-                        <FontAwesomeIcon icon={faInfoCircle} fontSize={16} /> Info
+                        {/* <FontAwesomeIcon icon={faInfoCircle} fontSize={16} />  */}
+                        Info
                     </button>
                     <button
                         onClick={() => handleSectionChange('matchStats')}
                         className={`custom-button ${activeSection === 'matchStats' ? 'active' : ''}`}
                     >
-                        <FontAwesomeIcon icon={faChartPie} fontSize={16} /> Stats
+                        {/* <FontAwesomeIcon icon={faChartPie} fontSize={16} />  */}
+                        Stats
                     </button>
                     <button
                         onClick={() => handleSectionChange('matchEvents')}
                         className={`custom-button ${activeSection === 'matchEvents' ? 'active' : ''}`}
                     >
-                        <FontAwesomeIcon icon={faTimeline} fontSize={16} /> Events
+                        {/* <FontAwesomeIcon icon={faTimeline} fontSize={16} /> */}
+                        Events
                     </button>
                     <button
                         onClick={() => handleSectionChange('matchLineups')}
