@@ -5,8 +5,8 @@
   "author": "Tal Levin <levintal085@gmail.com>",
   "main": "server.js",
   "scripts": {
-    "start": "node src/server.js",
-    "build": "babel Server/src -d build",
+    "dev": "NODE_ENV=development nodemon",
+    "start": "NODE_ENV=production node src/server.js",
     "test": "mocha test/**/*.js"
   },
   "dependencies": {

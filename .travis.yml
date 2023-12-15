@@ -5,20 +5,31 @@ services:
   - docker
 
 before_install:
-  - docker build -t ot-fantasy-sports/node-server -f Server/Dockerfile.dev .
+  - docker build -t talevin2000/node-server-test -f ./server/Dockerfile.dev ./server
 
 script:
-  - docker run -e CI=true ot-fantasy-sports/node-server npm run test
+  - docker run -e CI=true talevin2000/node-server-test npm test
   - cd Server
 
-deploy:
-  provider: elasticbeanstalk
-  region: "eu-north-1"
-  app: "ot-fantasy-sports"
-  env: "ot-fantasy-sports-node-server"
-  bucket_name: "elasticbeanstalk-eu-north-1-076750411957"
-  bucket_path: "ot-fantasy-sports"
-  on:
-   branch: main
-  access_key_id: $AWS_ACCESS_KEY
-  secret_access_key: "$AWS_SECRET_KEY"
+after_success:
+  - docker build -t talevin2000/fantasy-client-react ./client-react
+  - docker build -t talevin2000/fantasy-node-server ./server
+
+  # Log in to the docker CLI
+  - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
+  
+  # Take those images and push them to docker hub
+  - docker push talevin2000/fantasy-client-react
+  - docker push talevin2000/fantasy-node-server 
+
+# deploy:
+#   provider: elasticbeanstalk
+#   region: "eu-north-1"
+#   app: "ot-fantasy-sports"
+#   env: "ot-fantasy-sports-node-server"
+#   bucket_name: "elasticbeanstalk-eu-north-1-076750411957"
+#   bucket_path: "ot-fantasy-sports"
+#   on:
+#    branch: main
+#   access_key_id: $AWS_ACCESS_KEY
+#   secret_access_key: "$AWS_SECRET_KEY"
