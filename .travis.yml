@@ -13,13 +13,15 @@ script:
 after_success:
   - docker build -t talevin2000/fantasy-client-react ./client-react
   - docker build -t talevin2000/fantasy-node-server ./server
+  - docker build -t talevin2000/fantasy-nginx ./nginx
 
   # Log in to the docker CLI
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
   
   # Take those images and push them to docker hub
   - docker push talevin2000/fantasy-client-react
-  - docker push talevin2000/fantasy-node-server 
+  - docker push talevin2000/fantasy-node-server
+  - docker push talevin2000/fantasy-nginx
 
 # deploy:
 #   provider: elasticbeanstalk
