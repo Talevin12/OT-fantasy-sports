@@ -1,4 +1,5 @@
 const axios = require('axios');
+const keys = require('../../keys');
 rapidApiConsts = require('./rapid_api_consts.json');
 
 const getCurrentRound = async () => {
@@ -11,8 +12,8 @@ const getCurrentRound = async () => {
             current: true
         },
         headers: {
-            'X-RapidAPI-Key': process.env.RAPID_API_KEY,
-            'X-RapidAPI-Host': process.env.RPID_API_HOST
+            'X-RapidAPI-Key': keys.rapidAPI_key,
+            'X-RapidAPI-Host': keys.rapidAPI_host
         }
     };
 

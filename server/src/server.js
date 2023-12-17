@@ -1,24 +1,25 @@
 'use strict';
 
 const express = require('express');
-require('dotenv').config();
+
+const keys = require('../keys.js');
 
 const cors = require('cors');
 const apiIndex = require('./routes/apiIndex');
 const setupRoutes = require('./routeSetup');
-// const mongoose = require("mongoose");
-
+// const mongoose = require('mongoose');
 
 // Constants
-const PORT = process.env.PORT;
-const HOST = process.env.HOST //|| 'ot-fantasy-sports-node-server.eba-8zfjic2b.eu-north-1.elasticbeanstalk.com';
+const PORT = 5000;
+const HOST = '0.0.0.0';
+console.error(keys.mongo_url);
 
 // App
 const app = express();
 
 app.use(cors());
 
-// mongoose.connect(process.env.MONGO_URL)
+// mongoose.connect(keys.mongo_url)
 //   .then(() => {
 //     console.log("Connected to MongoDB");
 //   })

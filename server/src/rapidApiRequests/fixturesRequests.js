@@ -1,4 +1,5 @@
 const axios = require('axios');
+const keys = require('../../keys');
 rapidApiConsts = require('./rapid_api_consts.json');
 
 const getFixturesByDate = async (date) => {
@@ -11,8 +12,8 @@ const getFixturesByDate = async (date) => {
             season: 2023
         },
         headers: {
-            'X-RapidAPI-Key': process.env.RAPID_API_KEY,
-            'X-RapidAPI-Host': process.env.RPID_API_HOST
+            'X-RapidAPI-Key': keys.rapidAPI_key,
+            'X-RapidAPI-Host': keys.rapidAPI_host
         }
     };
 
@@ -34,8 +35,8 @@ const getFixturesByTeam = async (season, teamId) => {
             team: teamId
         },
         headers: {
-            'X-RapidAPI-Key': process.env.RAPID_API_KEY,
-            'X-RapidAPI-Host': process.env.RPID_API_HOST
+            'X-RapidAPI-Key': keys.rapidAPI_key,
+            'X-RapidAPI-Host': keys.rapidAPI_host
         }
     };
 
@@ -57,8 +58,8 @@ const getFixturesByRound = async (round) => {
             round: 'Regular Season - ' + round
         },
         headers: {
-            'X-RapidAPI-Key': process.env.RAPID_API_KEY,
-            'X-RapidAPI-Host': process.env.RPID_API_HOST
+            'X-RapidAPI-Key': keys.rapidAPI_key,
+            'X-RapidAPI-Host': keys.rapidAPI_host
         }
     };
 
@@ -78,8 +79,8 @@ const getFixturesByIds = async (ids) => {
             ids: ids
         },
         headers: {
-            'X-RapidAPI-Key': process.env.RAPID_API_KEY,
-            'X-RapidAPI-Host': process.env.RPID_API_HOST
+            'X-RapidAPI-Key': keys.rapidAPI_key,
+            'X-RapidAPI-Host': keys.rapidAPI_host
         }
     };
 
@@ -100,8 +101,8 @@ const getLiveFixtures = async () => {
             league: rapidApiConsts.EPL_LEAGUE_ID
         },
         headers: {
-            'X-RapidAPI-Key': process.env.RAPID_API_KEY,
-            'X-RapidAPI-Host': process.env.RPID_API_HOST
+            'X-RapidAPI-Key': keys.rapidAPI_key,
+            'X-RapidAPI-Host': keys.rapidAPI_host
         }
     };
 
@@ -122,8 +123,8 @@ const getLastXFixtures = async (x) => {
             league: rapidApiConsts.EPL_LEAGUE_ID
         },
         headers: {
-            'X-RapidAPI-Key': process.env.RAPID_API_KEY,
-            'X-RapidAPI-Host': process.env.RPID_API_HOST
+            'X-RapidAPI-Key': keys.rapidAPI_key,
+            'X-RapidAPI-Host': keys.rapidAPI_host
         }
     };
 
@@ -144,8 +145,8 @@ const getNextXFixtures = async (x) => {
             league: rapidApiConsts.EPL_LEAGUE_ID
         },
         headers: {
-            'X-RapidAPI-Key': process.env.RAPID_API_KEY,
-            'X-RapidAPI-Host': process.env.RPID_API_HOST
+            'X-RapidAPI-Key': keys.rapidAPI_key,
+            'X-RapidAPI-Host': keys.rapidAPI_host
         }
     };
 
@@ -167,8 +168,8 @@ const getLastXTeamFixtures = async (x, teamId) => {
             league: rapidApiConsts.EPL_LEAGUE_ID
         },
         headers: {
-            'X-RapidAPI-Key': process.env.RAPID_API_KEY,
-            'X-RapidAPI-Host': process.env.RPID_API_HOST
+            'X-RapidAPI-Key': keys.rapidAPI_key,
+            'X-RapidAPI-Host': keys.rapidAPI_host
         }
     };
 
@@ -190,8 +191,8 @@ const getNextXTeamFixtures = async (x, teamId) => {
             league: rapidApiConsts.EPL_LEAGUE_ID
         },
         headers: {
-            'X-RapidAPI-Key': process.env.RAPID_API_KEY,
-            'X-RapidAPI-Host': process.env.RPID_API_HOST
+            'X-RapidAPI-Key': keys.rapidAPI_key,
+            'X-RapidAPI-Host': keys.rapidAPI_host
         }
     };
 

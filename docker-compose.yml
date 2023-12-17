@@ -1,25 +1,21 @@
-version: '3'
+version: "3"
+
 services:
-  api:
-    build:
-      context: ./server
-      dockerfile: Dockerfile.dev
-    volumes:
-      - /app/node_modules
-      - ./server:/app
   client:
-    build:
-      context: ./client-react
-      dockerfile: Dockerfile.dev
-    volumes:
-      - /app/node_modules
-      - ./client:/app
+    image: "talevin2000/fantasy-client-react"
+    mem_limit: 128m
+    hostname: client
+  server:
+    image: "talevin2000/fantasy-node-server"
+    mem_limit: 128m
+    hostname: api
     environment:
-      - WDS_SOCKET_PORT=0
+      - RAPID_API_KEY=$RAPID_API_KEY
+      - RAPID_API_HOST=$RAPID_API_HOST
+      - MONGO_URL:$MONGO_URL
   nginx:
-    restart: always
-    build:
-      context: ./nginx
-      dockerfile: Dockerfile.dev
+    image: "talevin2000/fantasy-nginx"
+    mem_limit: 128m
+    hostname: nginx
     ports:
-      - '3050:80'
+      - "80:80"

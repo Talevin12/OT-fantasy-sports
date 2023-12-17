@@ -1,4 +1,5 @@
 const axios = require('axios');
+const keys = require('../../../keys');
 rapidApiConsts = require('../rapid_api_consts.json');
 
 const getTeamsStats = async (teamId, season, date) => {
@@ -14,8 +15,8 @@ const getTeamsStats = async (teamId, season, date) => {
         url: 'https://api-football-v1.p.rapidapi.com/v3/teams/statistics',
         params: params,
         headers: {
-            'X-RapidAPI-Key': process.env.RAPID_API_KEY,
-            'X-RapidAPI-Host': process.env.RPID_API_HOST
+            'X-RapidAPI-Key': keys.rapidAPI_key,
+            'X-RapidAPI-Host': keys.rapidAPI_host
         }
     };
 

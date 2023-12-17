@@ -1,4 +1,5 @@
 const axios = require('axios');
+const keys = require('../../../keys');
 rapidApiConsts = require('../rapid_api_consts.json');
 
 const getTopScorers = async (season) => {
@@ -10,8 +11,8 @@ const getTopScorers = async (season) => {
             season: season
         },
         headers: {
-            'X-RapidAPI-Key': process.env.RAPID_API_KEY,
-            'X-RapidAPI-Host': process.env.RPID_API_HOST
+            'X-RapidAPI-Key': keys.rapidAPI_key,
+            'X-RapidAPI-Host': keys.rapidAPI_host
         }
     };
 
@@ -32,8 +33,8 @@ const getTopAssists = async (season) => {
             season: season
         },
         headers: {
-            'X-RapidAPI-Key': process.env.RAPID_API_KEY,
-            'X-RapidAPI-Host': process.env.RPID_API_HOST
+            'X-RapidAPI-Key': keys.rapidAPI_key,
+            'X-RapidAPI-Host': keys.rapidAPI_host
         }
     };
 

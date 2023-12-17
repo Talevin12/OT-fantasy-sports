@@ -1,4 +1,5 @@
 const axios = require('axios');
+const keys = require('../../../keys');
 rapidApiConsts = require('../rapid_api_consts.json');
 
 const getPlayerStatsByFixtureId = async (fixtureId, teamId) => {
@@ -11,8 +12,8 @@ const getPlayerStatsByFixtureId = async (fixtureId, teamId) => {
 
         },
         headers: {
-            'X-RapidAPI-Key': process.env.RAPID_API_KEY,
-            'X-RapidAPI-Host': process.env.RPID_API_HOST
+            'X-RapidAPI-Key': keys.rapidAPI_key,
+            'X-RapidAPI-Host': keys.rapidAPI_host
         }
     };
 
@@ -35,8 +36,8 @@ const getPlayersInfoAndStatsByTeam = async (teamId, page) => {
             page: page
         },
         headers: {
-            'X-RapidAPI-Key': process.env.RAPID_API_KEY,
-            'X-RapidAPI-Host': process.env.RPID_API_HOST
+            'X-RapidAPI-Key': keys.rapidAPI_key,
+            'X-RapidAPI-Host': keys.rapidAPI_host
         }
     };
 
@@ -57,8 +58,8 @@ const getPlayerStatsBySeason = async (playerId, season) => {
             season: season
         },
         headers: {
-            'X-RapidAPI-Key': process.env.RAPID_API_KEY,
-            'X-RapidAPI-Host': process.env.RPID_API_HOST
+            'X-RapidAPI-Key': keys.rapidAPI_key,
+            'X-RapidAPI-Host': keys.rapidAPI_host
         }
     };
 
